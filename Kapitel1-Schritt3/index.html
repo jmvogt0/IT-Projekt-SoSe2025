@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 1 - Schritt 3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./../styles/variables.css">
+  <link rel="stylesheet" href="./../styles/layout.css">
+  <link rel="stylesheet" href="./../styles/base.css">
+  <link rel="stylesheet" href="./../styles/header.css">
+  <link rel="stylesheet" href="./../styles/animations.css">
+  <link rel="stylesheet" href="./../styles/components/situationToggleSwitch.css">
+  <link rel="stylesheet" href="./../styles/components/sliders.css">
+  <link rel="stylesheet" href="./../styles/components/neuron.css">
+  <link rel="stylesheet" href="./../styles/components/input.css">
+  <link rel="stylesheet" href="./../styles/components/activationFunction.css">
+  <!--<link rel="stylesheet" href="style.css">-->
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <img src="../src/AI-Learning_Logo.svg" alt="MI-Learning-Logo" class="mi-learning">
+      <div class="middle-content"></div>
+      <img src="../src/HSO-Logo.png" alt="HSO-Logo" class="header-logo">
+    </div>
+  </header>
+  <div class="container">
+    <!--TASK-->
+    <h1>Bedeutung des Bias</h1>
+    <p><strong>Deine Aufgabe:</strong>
+    <br><br>Untersuche, wie ein Bias das Verhalten deines Neurons verändert. Teste mehrere Bias-Werte und vergleiche, wie sich das Ergebnis des Neurons verändert.
+    <br>Verändere den Bias, sodass folgende Ausgaben erreicht werden:
+    <br><br>- Situation A - Licht einschalten
+    <br>- Situation B und C - Licht ausgeschaltet lassen</p>
+    <!--INPUT-->
+    <!--INPUT VALUES-->
+    <div class="tile-group-wrapper">
+      <div class="inputs">
+        <h3>Inputwerte und Szenarien</h3>
+        <div class="situation-box">
+          <div class="situation-toggle">
+            <button id="situation1Btn" class="active">Abend leise</button>
+            <button id="situation2Btn">Party am Tag</button>
+            <button id="situation3Btn">Dunkel und laut</button>
+          </div>
+        </div>
+        <div class="inputValues">
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/walking16x16.svg" alt="Icon laufen">
+              <span>Bewegung (x1):</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x1Progress" class="progressBar"></div>
+              </div>
+              <span id="x1">1.0</span>
+            </div>
+          </div>
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/moon16x16.svg" alt="Icon laufen">
+              <span>Dunkelheit (x2):</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x2Progress" class="progressBar"></div>
+              </div>
+              <span id="x2">1.0</span>
+            </div>
+          </div>
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/sound16x16.svg" alt="Icon laufen">
+              <span>Geräuschpegel (x3):</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x3Progress" class="progressBar"></div>
+              </div>
+              <span id="x3">1.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--INPUT Bias-->
+      <div class="sliders">
+        <h3>Bias</h3>
+        <div class="slidergroup">
+          <div class="slider-container"> <input type="range" min="0" max="5" step="0.1" value="0.0" class="biasSlider"
+              id="biasSlider" autocomplete="off"> <span id="biasVal">0.0</span> </div>
+        </div>
+      </div>
+
+      <!--INPUT ACTIVATION FUNCTION-->
+      <div class="function">
+        <h3> Aktivierungsfunktion</h3>
+        <p>g = b + x1*w1 + x2*w2 + x3*w3</p>
+
+        <div class="calculation-grid">
+          <div class="grid-header">
+            <p>Input (x)</p>
+          </div>
+          <div class="grid-header">
+            <p>Gewicht (w)</p>
+          </div>
+          <div class="grid-header">
+            <p>Produkt</p>
+          </div>
+
+          <div class="grid-cell">
+            <p id="x1Func">1.0</p>
+          </div>
+          <div class="grid-cell">
+            <p id="w1Func">1.0</p>
+          </div>
+          <div class="grid-cell">
+            <p id="prod1">1.0</p>
+          </div>
+
+          <div class="grid-cell">
+            <p id="x2Func">0.8</p>
+          </div>
+          <div class="grid-cell">
+            <p id="w2Func">1.0</p>
+          </div>
+          <div class="grid-cell">
+            <p id="prod2">0.8</p>
+          </div>
+
+          <div class="grid-cell">
+            <p id="x3Func">0.1</p>
+          </div>
+          <div class="grid-cell">
+            <p id="w3Func">1.0</p>
+          </div>
+          <div class="grid-cell">
+            <p id="prod3">0.1</p>
+          </div>
+
+          <div class="grid-cell">
+            <p id="biasFunc">0.0</p>
+          </div>
+          <div class="grid-cell">
+            <p id="placeholder"></p>
+          </div>
+          <div class="grid-cell">
+            <p id="biasFuncProd">+ 0.0</p>
+          </div>
+
+          <div class="grid-sum" colspan="3">
+            <p id="sum">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+     <!-- Dynamic neuron output visualization -->
+    <div class="dynamicNeuron">
+      <div class="grid">
+        <div class="input input1">
+          <div class="inputElement inactive">
+            <div class="iconText">
+              <img class="icons" src="../src/walking16x16.svg" alt="Icon laufen">
+              <p>Bewegung (x1)</p>
+            </div>
+            <p id="x1Out" class="value">1.0</p>
+          </div>
+        </div>
+        <div class="input input2">
+          <div class="inputElement inactive">
+            <div class="iconText">
+              <img class="icons" src="../src/moon16x16.svg" alt="Icon Dunkelheit">
+              <p>Dunkelheit (x2)</p>
+            </div>
+            <p id="x2Out" class="value">0.8</p>
+          </div>
+        </div>
+        <div class="input input3">
+          <div class="inputElement inactive">
+            <div class="iconText">
+              <img class="icons" src="../src/sound16x16.svg" alt="Icon Lautstärke">
+              <p>Lautstärke (x3)</p>
+            </div>
+            <p id="x3Out" class="value">0.8</p>
+          </div>
+        </div>
+        <div class="weight weight1">
+          <div class="weightElement inactive">
+            <p>(w1)</p>
+            <p id="w1ValOut">1.0</p>
+          </div>
+        </div>
+        <div class="weight weight2">
+          <div class="weightElement inactive">
+            <p>(w2)</p>
+            <p id="w2ValOut">1.0</p>
+          </div>
+        </div>
+        <div class="weight weight3">
+          <div class="weightElement inactive">
+            <p>(w3)</p>
+            <p id="w3ValOut">1.0</p>
+          </div>
+        </div>
+        <div class="bias">
+          <div class="biasElement">
+            <p>Bias</p>
+            <p id="biasOut">1.0</p>
+          </div>
+        </div>
+        <div class="activation1">
+          <div class="activationElement">
+            <p>g</p>
+          </div>
+        </div>
+        <div class="output output1">
+          <div class="outputElement">
+            <div class="outputText"><span id="sum2"></span></div>
+            <div class="outputGraphic">
+              <div class="progressElement">
+                <div id="resultProgress" class="progressBar"></div>
+              </div>
+              <div class="threshold"></div>
+              <svg id="resultIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="34" viewBox="0 0 24 34"
+                fill="none">
+                <path
+                  d="M8.66659 27C7.74992 27 6.9652 26.6736 6.31242 26.0208C5.65964 25.368 5.33325 24.5833 5.33325 23.6666V21.5833C3.74992 20.5 2.52075 19.1111 1.64575 17.4166C0.770752 15.7222 0.333252 13.9166 0.333252 12C0.333252 8.74998 1.4652 5.99303 3.72909 3.72915C5.99297 1.46526 8.74992 0.333313 11.9999 0.333313C15.2499 0.333313 18.0069 1.46526 20.2708 3.72915C22.5346 5.99303 23.6666 8.74998 23.6666 12C23.6666 13.9166 23.2291 15.7153 22.3541 17.3958C21.4791 19.0764 20.2499 20.4722 18.6666 21.5833V23.6666C18.6666 24.5833 18.3402 25.368 17.6874 26.0208C17.0346 26.6736 16.2499 27 15.3333 27H8.66659ZM8.66659 33.6666C8.19436 33.6666 7.79853 33.5069 7.47909 33.1875C7.15964 32.868 6.99992 32.4722 6.99992 32V30.3333H16.9999V32C16.9999 32.4722 16.8402 32.868 16.5208 33.1875C16.2013 33.5069 15.8055 33.6666 15.3333 33.6666H8.66659Z"
+                  fill="#E4EB19" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SVG-Ebene für Verbindungslinien -->
+      <svg class="connections"
+        style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;"></svg>
+    </div>
+
+  </div>
+  <!-- Fallback for unsupported devices-->
+  <div class="notAvailable">
+    <h1>Nicht verfügbar</h1>
+    <p>Die interaktive Anwendung ist auf Smartphones leider nicht verfügbar. Bitte verwende ein Tablet oder einen Laptop/PC, um alles richtig nutzen zu können.</p>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="text-content">
+        <p>Prof. Dr. Claudia Schmidt, c.schmidt@hs-offenburg.de</p>
+        <p>Prof. Dr. Volker Sänger, volker.saenger@hs-offenburg.de</p>
+      </div>
+      <img src="../src/CC-Logo.png" alt="CC-Lizenz" class="cc-logo">
+    </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+<script src="./drawSVGConnections.js"></script>
+
+</html>

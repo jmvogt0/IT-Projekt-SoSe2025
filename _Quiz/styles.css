@@ -1,0 +1,298 @@
+/*
+* {
+  box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}*/
+
+
+
+:root{
+	--blue: #1E3287;
+	--blue2: #0063B2;
+	--blue3: #ADCDFC;
+	--darkGray: #9B9187;
+	--middleGray: #E1DEDB;
+	--lightGray: #EFEFEF;
+	--green1: #259200;
+	--green2: #a7df6f;
+	--green3: #3F7133;
+	--orange: #FF8900;
+	--orange2: #FAC074;
+	--red:  #B7002B;
+	--greyBlue:  #507A85;
+	--lila: #B174BA;
+	--rosa: #FDACED;
+	--rosa-Red: #AF6161 ;
+}
+
+.hidden{
+	visibility: hidden;
+}
+
+.text-style{
+	font-family:  Arial;
+	font-size: 13px;
+}
+
+.margin-left-50{
+	margin-left: 50px;
+}
+
+#question{
+	font-weight: bold;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.buttons{
+
+	position: absolute;
+	top: 90%;
+	
+	/*-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);*/
+	text-align: center;
+	width: 100%;
+	/*height: 3.90%;*/
+	
+}
+
+#box{
+	/*border: solid black 1px;*/
+	margin-left: 50px;
+	height: 300px;
+	width: 620px;
+}
+
+
+.svgbox{
+	height: 305px;
+	width: 625px;	
+}
+
+.svgbox2{
+	height: 450px;
+	widows: 625px;
+	font-size: 10px;
+}
+
+.outer{
+	fill: none;
+	stroke-width: 1px;
+	stroke: black;
+}
+
+.classes{
+	fill: #EFEFEF;
+	stroke-width: 1px;
+	stroke: #1E3287;
+}
+
+.bold-text{
+	font-weight: bold;
+}
+
+.generalisation-int{
+	stroke: #1E3287;
+	stroke-width: 1px;
+	
+}
+
+.opt{ 
+	cursor: pointer;
+}
+
+
+.sol1 {
+	stroke: red;
+}
+
+.sol2 {
+}
+
+.noselect{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+}
+
+.ot-top{
+	position: absolute;
+	top: 200px;
+	
+}
+
+.ot-top-xl{
+	position: absolute;
+	top: 300px;
+}
+
+#opt1{
+	left: 500px;
+}
+
+#opt2{
+	left: 620px;
+}
+
+#ot1{
+	left: 500px;
+}
+
+#ot2{
+	left: 620px;
+}
+
+#ot3{
+	left: 740px;
+}
+
+.drop-area-gen{
+	position: absolute; 
+	top: 260px; 
+	left: 250px; 
+	width: 150px; 
+	height: 70px; 
+	
+}
+
+.drop-area1{
+	position: absolute; 
+	top: 175px; 
+	left: 175px; 
+	width: 100px; 
+	height: 50px; 
+	
+}
+
+.drop-area2{
+	position: absolute; 
+	top: 200px; 
+	left: 70px; 
+	width: 100px; 
+	height: 30px; 
+}
+
+.drop-area3{
+	position: absolute; 
+	top: 220px; 
+	left: 280px; 
+	width: 140px; 
+	height: 30px; 
+	
+}
+
+.drop-area4{
+	position: absolute; 
+	top: 350px; 
+	left: 270px; 
+	width: 120px; 
+	height: 50px; 
+	
+}
+
+.border{
+	border: solid 1px;
+}
+
+.sol{
+	visibility: hidden;
+	stroke: red;
+}
+
+#sol9{
+	stroke: red;
+}
+
+#sol7{
+	stroke: red;
+}
+
+#sol5{
+	stroke: red;
+}
+
+.buttons{
+
+	position: absolute;
+	top: 90%;
+	
+	/*-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);*/
+	text-align: center;
+	width: 100%;
+	/*height: 3.90%;*/
+	
+}
+
+.bg-gray {
+	background-color: #9B9187;
+	box-shadow: 3px 2px #1E3287;
+	color: white;
+	vertical-align: middle;
+	font-weight: bolder;
+	font-family: Arial;
+}
+
+#result{
+	color: #1E3287;
+}
+
+#box2{
+	/*border: solid black 1px;*/
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	margin-left: 0px;
+	height: 300px;
+	width: 410px;
+	visibility: hidden;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td, caption {
+    border: 1px solid #1E3287;
+    background-color: #EFEFEF;
+}
+
+td, th, caption {
+    font-family: arial;
+    font-size: 8pt;
+    text-align: center;
+    padding: 5px;
+
+}
+
+th, caption {
+  

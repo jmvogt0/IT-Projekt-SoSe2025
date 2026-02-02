@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Deep Learning</title>
+    <!-- CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizDropzoneImage.css">
+    <!-- JS files-->
+    <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/imageDragDrop.js"></script>
+</head>
+<body>
+<div id="wapper">
+    <div id="header">
+        <div id="hand">
+            <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+        </div>
+        <!-- horizontal menu -->
+        <nav id="nav_main">
+			<a href="../../maschinelles_lernen/grundlagen/index.html">Maschinelles Lernen</a>
+            <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+            <a href="index.html" class="currentPage">Deep Learning</a>
+            <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+            <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+			<a href="../../ethik/index.html">Ethik</a>
+        </nav>
+        <div id="logoHSO">
+            <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                      alt="Hochschule Offenburg"></a>
+        </div>
+    </div>
+
+    <!-- vertical menu -->
+    <div id="nav_left" data-current="Deep Learning">
+        <div id="menuItem">
+            <a href="../../deep_learning/prinzipien/index.html">Prinzipien</a><br>
+            <a href="index.html" class="currentPage">Convolutional Networks</a><br>
+            <a href="../../deep_learning/autoencoder/index.html">Autoencoder</a><br>
+            <a href="../../deep_learning/gans/index.html">GANs</a><br>
+
+        </div>
+
+    </div>
+
+<!-- nav_left -->
+<div id="content">
+    <div>
+        <img src="../../bilder/nummer1.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+        <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+        <img src="../../bilder/nummer1.png" class="pageNr_second" width="25" height="40">
+    </div>
+
+    <!--Erste Anwendung innerhalb des Kapitels, somit kein Zuürückpfeil nötig: <a href="seite1.html"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40" style="left: 120px;top: 25px;"></a>-->
+    <a href="seite2-info.html"><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40" style="right: 120px;top: 25px;"></a>
+    
+    <h1>Visuelle Erkundung von "CNNs"</h1> <!--Titel für eine  zusammmenhängende Einheit: hier schon darauf hinweisen, um was in der Einheit geht-->
+    
+    <h2 class="linkText">Öffne die externe Seite zur <a href="https://adamharley.com/nn_vis/cnn/2d.html" target="_blank">2D-Visualisierung</a> oder <a href="https://adamharley.com/nn_vis/cnn/3d.html" target="_blank">3D-Visualisierung </a>des CNNs</h2> <!--verlinkte externe Anwendung/Tool wird in einem neuen Tab geöffent-->
+
+    <div class="quizContent" >
+        <div id="quizNavigation">
+          <a href="index.html" class="quizNavigationElement">
+            <img src="../../bilder/infoSeite2.png" width="33" height="33" />
+          </a>
+          <a href="seite1-Q1.html" class="quizNavigationElement active" data-title="Schichten eines CNNs">
+            <p>Q1</p>
+          </a>
+          <a href="seite1-Q2.html" class="quizNavigationElement">
+            <p>Q2</p>
+          </a>
+          <a href="seite1-Q3.html" class="quizNavigationElement">
+            <p>Q3</p>
+          </a>
+          <a href="seite1-Q4.html" class="quizNavigationElement">
+            <p>Q4</p>
+          </a>
+          <a href="index.html" id="exit_icon">
+            <img src="../../bilder/exit4.png" width="60" height="60" id="exitIcon"/>
+          </a>
+        </div>
+        <div class="quiz" data-correct='{"Input":"Input","Convolution6":"C6", "Convolution16":"C16", "FC120":"FC120", "FC100":"FC100", "Output":"Output", "Pooling1":"MaxPool1", "Pooling2":"MaxPool2"}'>
+          <h4 id="unitQuestion_top">
+            Zeichne eine beliebige Ziffer in das Eingabefeld.  und untersuche die Ausgabe des Netzwerks Schicht für Schicht. Entwickle ein Gespür dafür, 
+            wie CNNs eine hierarchische Abstraktion von der Eingabe bis zur Ausgabe durchführen.<!--konkrete Aufgabenstellung, was Studierende mit der Anwendung machen sollen-->
+            <br><br>
+            Ordne die Schichten den passenden Stellen im Bild zu.
+          </h4>
+          <div class="quiz-row">
+            <div class="imageDropzone_unit">
+              <img id="imageForDrop" src="../../bilder/3_Deep_Learning/CNN_Schichten.PNG" width="520" height="270" style="filter: grayscale(100%) brightness(140%) drop-shadow(0px 0px 10px gray);">
+
+              <div class="unit_ImageDropzone" id="Input" style="width: 150px; height: 25px; left: 330px; top: 200px;">
+                <img id="sym_Input">
+              </div>
+      
+              <div class="unit_ImageDropzone" id="Convolution6" style="width: 150px; height: 25px; left: 330px; top: 140px;">
+                <img id="sym_Convolution6">
+              </div>
+              
+              <div class="unit_ImageDropzone" id="Convolution16" style="width: 150px; height: 25px; left: 5px; top: 68px;">
+                  <img id="sym_Convolution16"> 
+              </div>
+          
+              <div class="unit_ImageDropzone" id="FC120" style="width: 150px; height: 25px; left: 5px; top: 35px;">
+                  <img id="sym_FC120">
+              </div>
+
+              <div class="unit_ImageDropzone" id="FC100" style=" width: 150px; height: 25px;left: 330px; top: 15px;">
+                  <img id="sym_FC100">
+              </div>
+
+              <div class="unit_ImageDropzone" id="Output" style="width: 150px; height: 25px; left: 5px; top: -5px;">
+                  <img id="sym_Output">
+              </div>
+
+              <div class="unit_ImageDropzone" id="Pooling1" style="width: 150px; height: 25px; left: 330px; top: 100px;">
+                <img id="sym_Pooling1">
+              </div>
+
+              <div class="unit_ImageDropzone" id="Pooling2" style="width: 150px; height: 25px; left: 330px; top: 50px;">
+                <img id="sym_Pooling2">
+              </div>
+              
+            </div>
+
+            <div id="unit_ImageDropzone_Draggables">
+                <div class="unit_ImageDropzone_SingleDraggable" draggable="true" id="FC120">FC-Schicht (120)</div>
+                <div class="unit_ImageDropzone_SingleDraggable" draggable="true" id="C16">Conv-Schicht (16 Filter)</div>
+                <div class="unit_ImageDropzone_SingleDraggable" draggable="true" id="MaxPool2">2.Max-Pooling-Schicht</div>
+                <div class="unit_ImageDropzone_SingleDraggable" draggable="true" id="Input">Eingabeschicht</div>
+                <div class="unit_ImageDropzone_SingleDraggable" draggable="true" id="FC100">FC-Schicht (100)</div>
+                <div class="unit_ImageDropzone_SingleDraggable" draggable="true" id="C6">Conv-Schicht (6 Filter)</div>
+                <div class="unit_ImageDropzone_SingleDraggable" draggable="true" id="MaxPool1">1.Max-Pooling-Schicht</div>
+                <div class="unit_ImageDropzone_SingleDraggable" draggable="true" id="Output">Ausgabeschicht</div>
+            </div>
+          </div>
+
+            <!--Text, der auf das Fragenformat hinweist und sich dynamisch verändert, wenn Studierende das Quiz bearbeiten und überprüfen lassen-->   
+            <h5 id="unitImageDrop_msg">Ziehe die Bezeichnungen an die richtigen Stellen!</h5> <!--Anfangstext passend zu Frage, mit left: und top: passend positionieren--> 
+
+            <a href="seite1-Q1.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40" style="bottom: 5px; right: 280px;"/></a> <!--Button, dass alle gemachten Eingaben gelöscht werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+            <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50" style="bottom: 5px; right: 220px;"/> <!--Button, dass die gemachten Eingaben überprüft werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+
+        </div>
+    </div>
+</div>
+<footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+        </p>
+</footer>
+</div>
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</html>

@@ -1,0 +1,78 @@
+/* Header */
+header {
+    background-color: var(--site-background);
+    margin-bottom: 20px;
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .mi-learning {
+            background-color: #FFFFFF;
+            border-radius: var(--border-radius-standard);
+        }
+
+        .middle-content {
+            background-color: #FFFFFF;
+            width: 100%;
+            border-radius: var(--border-radius-standard);
+        }
+
+        img {
+            height: 35px;
+        }
+    }
+}
+
+
+/* Footer */
+footer {
+    margin-top: 8px;
+
+    .footer-content {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 20px;
+
+        .text-content {
+            display: flex;
+            justify-content: end;
+            gap: 20px;
+        }
+
+        .cc-logo {
+            height: 22px;
+        }
+
+        p {
+            color: var(--neutral-text-white);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    footer .footer-content {
+        align-items: end;
+        justify-content: space-between;
+
+        .text-content {
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+
+        .text-content {
+            flex-direction: column;
+
+        }
+    }
+}

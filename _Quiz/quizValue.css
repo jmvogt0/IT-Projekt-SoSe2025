@@ -1,0 +1,48 @@
+.unitValuequestion {
+    max-width: 340px;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: Open Sans;
+    margin: 30px 20px;
+}
+
+.unitValuequestion label {
+    color: #0d4715;
+    font-weight: 600;
+    display: flex;
+    margin: 5px 0;
+}
+
+.value {
+    color: #566a2b;
+    font-size: 14px;
+    text-align: center;
+    border:3px solid #566a2b;
+    display: inline-block;
+}
+
+.value:placeholder-shown {
+	border:3px solid #aebd38;
+
+}
+
+.unitValuequestion img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+#unitValue_msg {
+    position: absolute;
+	width: 340px;
+    color: #566a2b;
+    top: 340px;
+}
+
+#Value_msg_standAlone {
+    width: 600px;
+    color: #566a2b;
+    position: absolute;
+    top: 480px;
+    left: 100px;
+}

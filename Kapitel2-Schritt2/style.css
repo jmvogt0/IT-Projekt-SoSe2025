@@ -1,0 +1,19 @@
+/*//////////////////////////////////////////////////////////////////////////// Output */
+.weightsInOutput span {
+  border-radius: 12px;
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+  color: #F8F9F6;
+  padding-left: 117px;
+}
+.activation {
+  cursor: pointer;
+}
+.output {
+  cursor: pointer;
+}
+.outputElement {
+  border: 2px solid var(--warning) !important;
+}

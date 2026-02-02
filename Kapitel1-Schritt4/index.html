@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang = "de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kapitel 1 - Schritt 4</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./../styles/variables.css">
+<link rel="stylesheet" href="./../styles/layout.css">
+<link rel="stylesheet" href="./../styles/base.css">
+<link rel="stylesheet" href="./../styles/header.css">
+<link rel="stylesheet" href="./../styles/animations.css">
+<link rel="stylesheet" href="./../styles/components/situationToggleSwitch.css">
+<link rel="stylesheet" href="./../styles/components/sliders.css">
+<link rel="stylesheet" href="./../styles/components/neuron.css">
+<link rel="stylesheet" href="./../styles/components/input.css">
+<link rel="stylesheet" href="./../styles/components/activationFunction.css">
+<link rel="stylesheet" href="./../styles/components/dropdown.css">
+<!--<link rel="stylesheet" href="style.css">-->
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <img src="../src/AI-Learning_Logo.svg" alt="MI-Learning-Logo" class="mi-learning">
+      <div class="middle-content"></div>
+      <img src="../src/HSO-Logo.png" alt="HSO-Logo" class="header-logo">
+    </div>
+  </header>
+  <div class="container">
+  <!--TASK-->
+    <h1>Bedeutung des Aktivierungsfunktion</h1>
+    <p><strong>Deine Aufgabe:</strong>
+    <br><br>Vergleiche die Aktivierungsfunktionen. Teste die Funktionen jeweils an den Szenarien des smarten Lichtsystems und analysiere deren Entscheidungsverhalten.</p>
+
+
+    <!--INPUT VALUES-->
+    <div class="tile-group-wrapper oneTwo">
+      <div class="inputs">
+        <h3>Inputwerte * Gewichte und Bias</h3>
+        <div class="inputValues">
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/walking16x16.svg" alt="Icon laufen">
+              <span>Bewegung (x1*w1):</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x1Progress" class="progressBar"></div>
+              </div>
+              <span id="x1">1.0</span>
+            </div>
+          </div>
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/moon16x16.svg" alt="Icon laufen">
+              <span>Dunkelheit (x2*w2):</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x2Progress" class="progressBar"></div>
+              </div>
+              <span id="x2">0.8</span>
+            </div>
+          </div>
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/sound16x16.svg" alt="Icon laufen">
+              <span>Geräuschpegel (x3*w3):</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x3Progress" class="progressBar"></div>
+              </div>
+              <span id="x3">0.1</span>
+            </div>
+          </div>
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/bias16x16.svg" alt="Icon laufen">
+              <span>Bias (b):</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x4Progress" class="progressBar"></div>
+              </div>
+              <span id="biasVal">1.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--INPUT ACTIVATION FUNCTION-->
+      <div class="function">
+        <h3> Aktivierungsfunktion</h3>
+        <p>g = x1*w1 + x2*w2 + x3*w3 + b</p>
+
+        <div class="function-layout">
+          <div class="calculation-grid">
+            <div class="grid-header"><p>Input (x)</p></div>
+            <div class="grid-header"><p>Gewicht (w)</p></div>
+            <div class="grid-header"><p>Produkt</p></div>
+          
+            <div class="grid-cell"><p id="x1Func">1.0</p></div>
+            <div class="grid-cell"><p id="w1Func">2.5</p></div>
+            <div class="grid-cell"><p id="prod1">2.5</p></div>
+          
+            <div class="grid-cell"><p id="x2Func">0.8</p></div>
+            <div class="grid-cell"><p id="w2Func">0.3</p></div>
+            <div class="grid-cell"><p id="prod2">2.0</p></div>
+          
+            <div class="grid-cell"><p id="x3Func">0.1</p></div>
+            <div class="grid-cell"><p id="w3Func">2.5</p></div>
+            <div class="grid-cell"><p id="prod3">0.25</p></div>
+
+            <div class="grid-cell" style="display: flex; justify-content: center; align-items: center; gap: 8px;"><p id="biasFunc">1.0</p><p>(Bias)</p></div>
+            <div class="grid-cell"><p id="placeholder"></p></div>
+            <div class="grid-cell"><p id="biasFuncProd">+ 1</p></div>
+          
+            <div class="grid-sum" colspan="3"><p id="sum">0</p></div>
+          </div>
+          <div class="activation-selector">
+            <select id="activationDropdown" class="dropdown">
+              <option value="step" selected>Schwellenwert</option>
+              <option value="sigmoid">Sigmoid</option>
+              <option value="relu">ReLU</option>
+              <option value="tanh">Tanh</option>
+            </select>
+            <div class="activationResult">
+              <img id="functionImage" src="threshold.svg" alt="Schwellenwert-Funktion" style="max-width: 100%; border-radius: 12px;">
+              <p id="functionResult">=</p>    
+            </div>
+            <div>
+              <img id="functionPlot" src="thresholdFunction.png" alt="Aktivierungsfunktion Graph" style="max-width: 50%; margin-top: 1rem; border-radius: 12px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+     <!-- Dynamic neuron output visualization -->
+    <div class="dynamicNeuron">
+      <div class="grid">
+        <div class="input input1">
+          <div class="inputElement inactive">
+            <div class="iconText">
+              <img class="icons" src="../src/walking16x16.svg" alt="Icon laufen">
+              <p>Bewegung (x1)</p>
+            </div>
+            <p id="x1Out" class="value">1.0</p>
+          </div>
+        </div>
+        <div class="input input2">
+          <div class="inputElement inactive">
+            <div class="iconText">
+              <img class="icons" src="../src/moon16x16.svg" alt="Icon Dunkelheit">
+              <p>Dunkelheit (x2)</p>
+            </div>
+            <p id="x2Out" class="value">0.8</p>
+          </div>
+        </div>
+        <div class="input input3">
+          <div class="inputElement inactive">
+            <div class="iconText">
+              <img class="icons" src="../src/sound16x16.svg" alt="Icon Lautstärke">
+              <p>Geräuschpegel (x3)</p>
+            </div>
+            <p id="x3Out" class="value">0.8</p>
+          </div>
+        </div>
+        <div class="weight weight1">
+          <div class="weightElement inactive">
+            <p>(w1)</p>
+            <p id="w1ValOut">2.5</p>
+          </div>
+        </div>
+        <div class="weight weight2">
+          <div class="weightElement inactive">
+            <p>(w2)</p>
+            <p id="w2ValOut">0.3</p>
+          </div>
+        </div>
+        <div class="weight weight3">
+          <div class="weightElement inactive">
+            <p>(w3)</p>
+            <p id="w3ValOut">2.5</p>
+          </div>
+        </div>
+        <div class="bias">
+          <div class="biasElement">
+            <p>Bias</p>
+            <p id="biasOut">1.0</p>
+          </div>
+        </div>
+        <div class="activation1">
+          <div class="activationElement">
+            <p>g</p>
+          </div>
+        </div>
+        <div class="output output1">
+          <div class="outputElement">
+            <div class="outputText"><span id="sum2"></span></div>
+            <div class="outputGraphic">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SVG-Ebene für Verbindungslinien -->
+      <svg class="connections"
+        style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;"></svg>
+    </div>
+  </div>
+  <!-- Fallback for unsupported devices-->
+  <div class="notAvailable">
+    <h1>Nicht verfügbar</h1>
+    <p>Die interaktive Anwendung ist auf Smartphones leider nicht verfügbar. Bitte verwende ein Tablet oder einen Laptop/PC, um alles richtig nutzen zu können.</p>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="text-content">
+        <p>Prof. Dr. Claudia Schmidt, c.schmidt@hs-offenburg.de</p>
+        <p>Prof. Dr. Volker Sänger, volker.saenger@hs-offenburg.de</p>
+      </div>
+      <img src="../src/CC-Logo.png" alt="CC-Lizenz" class="cc-logo">
+    </div>
+  </footer>
+</body>
+<script src="drawSVGConnections.js"></script>
+<script src="script.js"></script>
+</html>

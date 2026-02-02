@@ -1,0 +1,144 @@
+
+#unitSingleDropzone { /* ul-Liste an Optionen, zu denen Drag-Elemente zugeordnet werden sollen*/
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    gap:10px;
+    width: 690px;
+    list-style: none;
+    padding:0;
+    margin: 0 10px;
+    text-align: center;
+ }
+ 
+ #unitSingleDropzone li { /* einzelne Auflistungselemente innerhalb der ul-Liste an Optionen, zu denen Drag-Elemente zugeordnet werden sollen*/
+     box-shadow: 5px 0px 5px 0px rgba(120, 12, 40);
+     padding-left: 10px;
+     padding-top: 10px;
+     background-color: rgba(130, 54, 52, 0.3);
+     color: #950e1d;
+
+ }
+
+ #unitSingleDropzone_Draggables { /*beinhaltet Liste an Optionen von Drag-Elementen*/
+    font-family: Open Sans;
+    text-align: center;
+    margin: 15px 10px;
+    width: 690px;
+}
+
+.SingleDraggable {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: rgba(149, 14, 29, 0.6);
+    border-radius: 5px;
+    box-shadow: 5px 0px 10px 0px rgba(157, 156, 133);
+    cursor: pointer;
+    max-height: 120px;
+    color: #f1f0e9;
+
+}
+
+.SingleDraggable:hover {
+    transform: scale(1.1);
+    background-color: rgb(149, 14, 29);
+}
+
+.Singledropzone {
+    border: 2px dashed #ffffff;
+    border-radius: 5px;;
+    text-align: center;
+    margin: 5px auto;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* verhindert Überlauf von Drag-Elementen */
+}
+
+.Singledropzone:hover { /*farbige Hervorhebung der Dropzone*/
+    background-color: #f1f0e9;
+}
+
+#unitSingleDrop_msg {
+    position: absolute;
+	width: 600px;
+    color: #566a2b;
+    top: 350px;
+    left: 110px;
+}
+
+#SingleDrop_msg_standAlone {
+    width: 600px;
+    color: #566a2b;
+    position: absolute;
+    top: 480px;
+    left: 100px;
+}
+
+#SingleDropzone_standAlone { /* ul-Liste an Optionen, zu denen Drag-Elemente zugeordnet werden sollen*/
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #0d4715;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    gap:10px;
+    width: 760px;
+    max-height: 200px;
+    list-style: none;
+    padding:0;
+    margin: 20px auto;
+    text-align: center;
+    box-sizing: border-box;
+ }
+
+ #SingleDropzone_standAlone li { /* einzelne Auflistungselemente innerhalb der ul-Liste an Optionen, zu denen Drag-Elemente zugeordnet werden sollen*/
+    box-shadow: 5px 0px 5px 0px rgba(13, 71, 21);
+    padding: 10px;
+    background-color: #cae0bc;
+    border-radius: 5px;
+    flex: 1 1 0;
+    min-width: 120px; /* optional */
+    max-width: 100%;  /* nie breiter als das ul */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden; /* verhindert Überlauf */
+}
+
+
+
+#SingleDropzone_Draggables_standAlone { /*beinhaltet Liste an Optionen von Drag-Elementen*/
+    font-family: Open Sans;
+    text-align: center;
+    margin: 10px auto;
+    width: 740px;
+}
+
+.SingleDraggable_standAlone {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: rgba(13, 71, 21, 0.8);
+    border-radius: 5px;
+    box-shadow: 5px 0px 10px 0px rgba(157, 156, 133);
+    cursor: pointer;
+    max-height: 120px;
+    padding: 2px;
+    color: #f1f0e9;
+
+}
+
+.SingleDraggable_standAlone:hover {
+    transform: scale(1.1);
+    background-color: rgb(13, 71, 21);
+}

@@ -1,0 +1,73 @@
+#unitTrueFalse_msg {
+	position: absolute;
+	width: 300px;
+    color: #566a2b;
+    top: 340px;
+}
+
+
+.true_false_container {
+    display: flex;
+    flex-direction: column;   /* Elemente werden untereinander angeordnet */
+    gap: 12px;                /* Abstand zwischen den Elementen */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.true_false {
+    display: flex;
+    flex-direction: row;      /* Elemente nebeneinander */
+    align-items: center;      /* Vertikal zentriert */
+    gap: 20px;                /* Abstand zwischen Button und Bild */
+  }
+
+.true_false_container #check_true {
+    width: 200px;
+    height: 160px;
+    background-size: 100% 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.true_false_container #check_false {
+    width:200px;
+    height:160px;
+    background-size:100% 100%;
+    border:none;
+    cursor: pointer;
+}
+
+
+.true_false_container_standAlone {
+    display: flex;
+    flex-direction: row;   /* Standard: horizontal nebeneinander */
+    gap: 100px;
+    align-items: center;   /* Vertikale Zentrierung */
+    justify-content: center; 
+    height: 350px;
+}
+
+.true_false_container_standAlone #check_true {
+    width: 250px;
+    height: 210px;
+    background-size: 100% 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.true_false_container_standAlone #check_false {
+    width:250px;
+    height:210px;
+    background-size:100% 100%;
+    border:none;
+    cursor: pointer;
+}
+
+
+#TrueFalse_msg_standAlone {
+	width: 600px;
+    color: #566a2b;
+    position: absolute;
+    top: 480px;
+    left: 100px;
+}

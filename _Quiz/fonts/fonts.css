@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/oswald-v56-latin/oswald-v56-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/oswald-v56-latin/oswald-v56-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open-sans-v43-latin/open-sans-v43-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open-sans-v43-latin/open-sans-v43-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open-sans-v43-latin/open-sans-v43-latin-800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open-sans-v43-latin/open-sans-v43-latin-italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+  }
+

@@ -1,0 +1,860 @@
+/*Import der Fonts
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/oswald-4');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/open-sans');*/
+/* Initialization of the page */
+html {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    line-height: 0%;
+}
+
+#wapper {
+    width: 1050px;
+    height: 695px;
+    margin: auto;
+    background-color: #3f4f44;
+
+}
+#content {
+    width: 810px;/*fixed width of the content area do not change it.*/
+    height: 600px;
+    float: right;
+    right: 10px;
+    top: 10px;
+    line-height: normal;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+
+#hand { /*Logo*/
+    float: left;
+    width: 210px;
+    height: 35px;
+    margin-left: 10px;
+    position: relative;
+    margin-top: 10px; /*!!!*/
+    background-color: #ffffff; /*Hintergrundfarbe des Logos*/
+    border-radius: 8px;
+}
+
+#hand_img {
+    position: relative;
+    bottom: 3px;
+    left: 30px;
+}
+
+#nav_main  { /*horizontale Naviagtion*/
+    width: 700px;
+    float: left;
+    height: 35px;
+    margin-top: 10px;
+    position: relative;
+    margin-left: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+
+}
+
+#nav_main a { /*einzelne Themenbereiche innerhalb der horziontalen Navigation*/
+    color: #3f4f44;
+/*    color: rgb(30,50,135);*/
+    font-family: Oswald;
+    font-size:18px;
+    font-style: normal !important;
+    text-decoration: none;
+    line-height: 30px;
+    margin-left: 15px;
+}
+
+#nav_main a.currentPage { /*ausgewählter Themenbereich innerhalb der horizontalen Navigation*/
+    font-weight: bold; /* Bold font weight for the current page link */
+    text-underline-offset: 3px;
+    text-decoration: underline; /*Hervorhebung, dass Nutzenden sehen in welchem Themenbereich sie aktuell sind*/
+    text-decoration-color: #6e8e59;
+    text-decoration-thickness: 3px;
+}
+
+#nav_main a:hover { 
+    text-underline-offset: 3px;
+    text-decoration: underline;
+    text-decoration-color: #7fa038;
+    text-decoration-thickness: 3px;
+
+}
+
+#logoHSO {
+    float: right;
+    vertical-align: text-bottom;
+    position: relative;
+    width: 80px; /* Adjust based on the image dimensions */
+    top: 10px;
+    right: 25px;
+}
+
+#logoHSO img {
+    width: 100%;  /* Ensures the image scales properly */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
+#nav_left { /*vertikale Navigations*/
+    background: #ffffff;
+    height: 629px;
+    background-image: linear-gradient(to bottom, rgb(246, 246, 252), rgba(239, 239, 241, 0)), url('bilder/AI_Foto2.png');
+    background-size: 140% auto; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Ensure the image does not repeat */
+    background-position: right; /* Position the background image right */
+    width: 210px;
+    display: block; /* Added value */
+    border-radius: 10px;
+    float: left;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 55px;
+    z-index: 1; /* z-index is for the layer */
+}
+
+#nav_left a { /*einzelne Themenbereiche innerhalb der vertikalen Navigation*/
+    color:#3f4f44;
+    /*color: rgb(30,50,135);*/
+    font-family: Oswald;
+    font-size: 10pt;
+    text-decoration: none;
+    line-height: 25px;
+    margin-left: 20px;
+}
+
+#nav_left::before {
+    content: attr(data-current); /* Get the current page name from data attribute */
+    display: block; /* Display it as a block */
+    font-weight: bold; /* Make it bold */
+    margin-top: 50px;
+    font-family: Oswald;
+    margin-bottom: -50px;
+    color: #3f4f44;
+    margin-left: 20px;
+    font-size: 12pt;
+    text-underline-offset: 3px;
+
+}
+
+#nav_left a.currentPage { /*ausgewählter Themenbereich innerhalb der vertikalen Navigation*/
+    font-weight: bold; /* Bold font weight for the current page link */
+    text-underline-offset: 3px;
+    text-decoration: underline;
+    text-decoration-color: #6e8e59;
+    text-decoration-thickness: 3px;
+}
+
+
+footer {
+    clear: both; /* Ensure footer is below any floated elements */
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    bottom: 0;
+}
+
+#nameProf {
+    color: #ffffff;
+    /*color: rgb(159, 166, 177);*/
+    font-family: Open Sans;
+    font-size: 9pt;
+    position: relative;
+    left: 280px;
+    padding-top: 6px;
+}
+
+#mail {
+    color: #ffffff;
+    /*color: rgb(30,50,135);*/
+    font-family: arial;
+    font-size: 9pt;
+    text-decoration: none;
+}
+
+#menuItem {
+    margin-top: 90px; /*Position der Themenbereiche in dem linken Content-Bereich, dass als Hintergrund das Bild hat*/
+}
+
+#content p {
+    color: #333333;
+    font-family: Open Sans;
+    font-size: 16px;
+    text-align: left; 
+    font-weight: normal;  
+}
+
+#content a {
+    color: #7fa038;
+    /*color: rgb(51, 121, 216);*/
+}
+
+
+#content h1 {
+    color: #598234;
+    font-family: Oswald;
+    font-size: 30px;
+    text-align: center; 
+    font-weight: bold;  
+}
+
+#content h2 {
+    font-family: Open Sans;
+    font-size: 19px;
+    color: #41644a;
+    text-align: left;
+}
+
+#content h3 {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 900;
+    color: #cae0bc;
+    text-align: center;
+}
+
+
+#content h4 {
+    font-family: Open Sans;
+    color: #2c3930;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#content h5 {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.pageination {
+    /*filter: blur(1px);
+    filter: grayscale(1);*/
+    filter: opacity(0.5) blur(1px);
+}
+
+.pageNr_first {
+    position: absolute;
+    left: 730px;
+    top: 15px;
+    
+}
+
+.pageDiv {
+    font-family: Oswald;
+    color: #0d4715;
+    position: absolute;
+    left: 730px;
+    top:25px;
+}
+
+.pageNr_second {
+    position: absolute;
+    left: 760px;
+    top:45px;
+}
+
+.intro_image { /*Einführungsinhalt, sei es ein Bild, ein weiterer Text oder ein Video*/
+    margin-left: 15px;
+    border-style: none;
+}
+
+video.intro_image  {
+    box-shadow: 5px 0px 10px 0px rgba(13, 71, 21);
+}
+
+.info_image { /*Hintergrundbild für die "Technischen Voraussetzungen"*/
+    position: absolute;
+    top: 130px;
+    left: 480px;
+   
+}
+
+#info-headline { /*Überschrift "Technische Voraussetzungen*/
+    position: absolute;
+    top: 170px;
+    left: 530px;
+    z-index: 2;
+    color: #ffffff !important;
+    text-align: center !important; 
+    font-weight: bold !important;
+}
+
+.info-list { /*Aufzählungsliste der benötigten technischen Voraussetzungen*/
+    position: absolute;
+    top: 225px;
+    left: 485px;
+    color: #ffffff;
+    padding-bottom: 2px;
+    line-height: 1.5em;
+    z-index: 2;
+    width: 200px;
+}
+
+#introText {
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.introHeadline {
+    position: absolute;
+    left: 40px;
+}
+
+.linkText {
+    position: absolute;
+    left: 40px;
+}
+
+.infoBox{
+    width: 760px;
+    height: 470px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 20px rgba(113, 129, 109, .2);
+    margin-left: 30px;
+    margin-top: 28px;
+    position: absolute;
+    z-index: 0;
+}
+
+.linienBox {
+    width: 760px;
+    height: 450px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 20px rgba(113, 129, 109, .2);
+    margin-left: 30px;
+    position: absolute;
+    z-index: 0;
+}
+
+#contextual_question_standAlone{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    text-align: center !important;
+    font-size: 16px !important;
+}
+
+.questionBox_left { /*linke Box beim Quiz mit Standardbreite und -höhe, wenn diese indivuell verändert werden soll, dann mit Inlinestyle in der HTML-Datei*/
+    width: 400px;
+    height: 450px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 20px rgba(113, 129, 109, .2);
+    margin-left: 40px;
+    position: absolute;
+    z-index: 0;
+}
+
+.unitBox_right { /*rechte Box beim Quiz mit Standardbreite und -höhe, wenn diese indivuell verändert werden soll, dann mit Inlinestyle in der HTML-Datei*/
+    width: 400px;
+    height: 450px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 20px rgba(113, 129, 109, .2);
+    border-left: 3px solid #566a2b;
+    margin-left: 340px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+#unitQuestion_left{
+    width: 280px;
+    padding-left: 20px;
+    padding-top: 25px;
+}
+
+#unitQuestion_top{
+    width: 690px;
+    margin: 10px 10px;
+}
+
+#question_standAlone {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center !important;
+    position: relative;
+}
+
+
+#imgCenter {
+    margin-left: 40px;
+}
+
+#nextButton {
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  transition: opacity 0.3s, visibility 0.3s;
+  /* Animation wird per JavaScript aktiviert */
+}
+
+#nextButton.active {
+  opacity: 1;
+  visibility: visible;
+  animation: nextButton-pulse 1s infinite;
+}
+
+@keyframes nextButton-pulse {
+  0% { transform: translateX(0) scale(1); }
+  50% { transform: translateX(10px) scale(1.2); }
+  100% { transform: translateX(0) scale(1); }
+}
+
+
+
+#doubleQuestion_msg_standAlone {
+    width: 600px;
+    color: #566a2b;
+    position: absolute;
+    top: 480px;
+    left: 100px;
+}
+
+
+
+
+.gapUnit_dropzone {
+    display: inline-block;
+    width: 150px;
+    height: 25px;
+    border: 2px solid #aebd38;
+    background-color: #cae0bc;
+    position: relative;
+    top:3px;
+}
+
+.gapUnit_dropzone:hover {
+    background-color: #566a2b;
+}
+
+
+
+
+.multipleDropzone {
+    padding: 15px;
+    width: 250px;
+    min-height: 150px;
+    background-color: #0d4715;
+    color: #fff;
+    margin-top: 80px;
+    margin-left: 60px;
+    box-shadow: 5px 0px 10px 0px rgba(13, 71, 21);
+}
+
+.multipleDropzone h6 {
+    font-family: Open Sans; 
+    font-size: 16px;
+    margin-top: 0; 
+    text-align: center;
+}
+
+
+
+
+
+
+
+.gap_draggable {
+    width: 150px;
+    height: 30px;
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 900;
+    background-color: #566a2b;
+    border: 2px solid #aebd38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.gap_draggable:hover {
+    transform: scale(1.1);
+}
+
+.gapUnit_draggable {
+    position: relative;
+    width: 150px;
+    height: 25px;
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 900;
+    background-color: #566a2b;
+    border: 2px solid #aebd38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.gapUnit_draggable:hover {
+    transform: scale(1.1);
+}
+
+#gapDraggables {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Spalten */
+    grid-template-rows: repeat(2, auto); /* 2 Zeilen */
+    gap: 10px; /* Abstand zwischen den Elementen */
+    width: 60%;
+    margin: 20px 90px;
+    text-align: center;
+    position: fixed;
+    top:100px;
+}
+
+#gapUnitDraggables {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Spalten */
+    grid-template-rows: repeat(2, auto); /* 2 Zeilen */
+    gap: 10px; /* Abstand zwischen den Elementen */
+    width: 60%;
+    text-align: center;
+    position: fixed; /* Fixiert das Element an der Position */
+    top: 465px; /* Position von oben */
+    left: 870px; /* Position von links */
+    transform: translateX(-50%); /* Zentriert das Element horizontal */
+    z-index: 2;
+    width: 720px;
+}
+
+
+#dragUnit_gaptext {
+    position: relative;
+    z-index: 2;
+    margin-top: 120px;
+    margin-left: 20px;
+    line-height: 30px;
+    width: 770px;
+}
+
+#dragUnit_gaptext p {
+    font-size: 14px;
+} 
+
+
+
+
+.listL{ /*linke Liste bei der Zuordnung mit Linien*/
+    list-style-type: none;
+    max-width: 150px;
+}
+
+.listL li{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.individual_listL{ /*linke Liste bei der Zuordnung mit Linien*/
+    list-style-type: none;
+    max-width: 150px;
+}
+
+.individual_listL li{
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+
+.listR{ /*rechte Liste bei der Zuordnung mit Linien*/
+    list-style-type: none;
+    width: 220px;
+    margin-left: 80px;
+    margin-right: 13px;
+}
+
+.individual_listR{ /*rechte Liste bei der Zuordnung mit Linien*/
+    list-style-type: none;
+    max-width: 300px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+}
+
+.individual_listR li{
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+
+
+.matchingBox .individual_hookL { /*Punkte für die linke Liste als Anker für Linie*/
+    background-color: #566a2b;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 130px;
+    position: relative;
+    bottom: 55px;
+
+}
+
+.matchingBox .individual_hookR { /*Punkte für die rechte Liste als Anker für Linie*/
+    background-color: #566a2b;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    right: 35px;
+    top: 50px;
+}
+
+
+#undo_button {
+    position: absolute;
+    z-index: 2;
+    transition: 0.2s;
+}
+
+#undo_button:hover {
+    transform: scale(1.2);
+}
+
+#check_button {
+    position: absolute;
+    z-index: 2;
+    transition: 0.2s;
+}
+
+#check_button:hover {
+    transform: scale(1.2);
+}
+
+#license {
+    float: right;
+    margin-right: 30px;
+    position: relative;
+    margin-top: 10px;
+}
+
+#Icon_next { /*Pfeil für nächste Seite*/
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    z-index: 2;
+    transition: 0.2s;
+}
+
+#Icon_next:hover {
+    transform: scale(1.2);
+}
+
+#Icon_back { /*Pfeil für vorherige Seite*/
+    position: absolute;
+    left:40px;
+    bottom: 25px;
+    z-index: 2;
+    transition: 0.2s;
+}
+
+#Icon_back:hover {
+    transform: scale(1.2);
+}
+
+#startQuiz {
+    position: absolute;
+    bottom: 20px;
+    left: 150px;
+}
+
+#Icon_quiz { /*Button zur 1.Quizfragen zu externer Anwendung*/
+    position: absolute;
+    top: 395px;
+    left:110px;
+    transition: 0.2s;
+}
+
+#Icon_quiz:hover {
+    transform: scale(1.1);
+}
+
+#Text_quiz{
+    position: absolute;
+    left: 250px;
+    top:395px;
+}
+
+#Icon_topNext { /*Pfeil für nächste Anwendung*/
+    position: absolute;
+    border-radius: 20px;
+    float: right;
+    transition: 0.2s;
+    right: 120px;
+    top: 25px;
+}
+
+#Icon_topNext:hover {
+    transform: scale(1.2);
+}
+
+#Icon_topBack { /*Pfeil für vorherige Anwendung*/
+    position: absolute;
+    border-radius: 20px;
+    float: right;
+    z-index: 2;
+    transition: 0.2s;
+    left: 120px;
+    top: 25px;
+}
+
+#Icon_topBack:hover {
+    transform: scale(1.2);
+}
+
+#Icon_done { /*Button zum Beenden der Einheit zu externer Anwendung*/
+    position: absolute;
+    background-size:100% 100%;
+    border:none;
+    right: 28px;
+    bottom: 30px;
+    border-radius: 20px;
+    float: right;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#Icon_done:hover {
+    transform: scale(1.2);
+}
+
+/* The PopUp (background) */
+.popUp {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    padding: 0 30px 30px; /* Location of the box */
+    color: #333;
+    top: 48%;
+    width: 500px;
+    min-height: 120px;
+    overflow: auto; /* Enable scroll if needed */
+    background: #ffffff;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Open Sans;
+    box-shadow: 5px 0px 10px rgb(89, 130, 52);
+  }
+
+  .popUp_standAlone {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    padding: 0 30px 30px; /* Location of the box */
+    color: #333;
+    left:50%;
+    top: 48%;
+    width: 500px;
+    min-height: 120px;
+    overflow: auto; /* Enable scroll if needed */
+    background: #ffffff;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Open Sans;
+    box-shadow: 5px 0px 10px rgb(89, 130, 52);
+  }
+
+
+  .popUp img {
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .popUp_standAlone img {
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .popUp button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    background: #566a2b;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 5px 0px 5px rgb(89, 130, 52);
+
+  }
+
+    .popUp_standAlone button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    background: #566a2b;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 5px 0px 5px rgb(89, 130, 52);
+
+  }
+
+.valuequestion {
+    position: relative;
+    z-index: 2;
+    left: 450px;
+    top: 50px;
+    width: 320px;
+}
+
+.valuequestion label {
+    color: #823634;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    margin-top:20px;
+    margin-bottom: 5px;
+    
+}
+
+.value {
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #780c28;
+    text-align: center;
+}
+
+.value:placeholder-shown {
+	border:2px solid #780c28;
+}
+
+ 
+body{
+    margin: 0; 
+    padding: 0; 
+}

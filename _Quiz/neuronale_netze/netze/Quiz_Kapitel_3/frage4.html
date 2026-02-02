@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training eines kleinen neuronalen Netzes</title>
+
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../../quizLine.css">
+
+    <!--JS files-->
+    <script type="text/javascript" src="../../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../../js/Line.js"></script>
+
+</head>
+
+<body>
+    <div id="wapper">
+        <div id="header">
+            <div id="hand">
+                <img id="hand_img" src="../../../bilder/AI-Learning_Logo.svg" width="140px">
+            </div>
+            <!--<h1 id="headline">Artificial Intelligence</h1>-->
+            <!-- horizontal menu -->
+            <nav id="nav_main">
+                <a href="../../../maschinelles_lernen/grundlagen/index.html">Maschinelles Lernen</a>
+                <a href="index.html" class="currentPage">Neuronale Netze</a>
+                <a href="../../../deep_learning/prinzipien/index.html">Deep Learning</a>
+                <a href="../../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+                <a href="../../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+                <a href="../../../ethik/index.html">Ethik</a>
+            </nav>
+            <div id="logoHSO">
+                <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                        alt="Hochschule Offenburg"></a>
+            </div>
+        </div>
+
+        <!-- vertical menu -->
+        <div id="nav_left" data-current="Neuronale Netze">
+            <div id="menuItem">
+                <a href="../../../neuronale_netze/neuron/Quiz_Kapitel_1/teil1_info.html" >Neuron</a><br>
+                <a href="info.html" class="currentPage">Netze</a><br>
+            </div>
+
+        </div>
+        <!-- menuItem -->
+
+        <!-- nav_left -->
+        <div id="content">
+            <!-- Seitenindikator (Nummerierung anpassen) -->
+            <div>
+                <img src="../../../bilder/nummer8.png" id="pageIndicator" class="pageNr_first" width="25" height="40">
+                <img src="../../../bilder/slash.png" class="pageDiv" width="50" height="50">
+                <img src="../../../bilder/nummer8.png" class="pageNr_second" width="25" height="40">
+            </div>
+            <!-- obere Navigation (Links anpassen) -->
+             <a href="../Quiz_Kapitel_2/teil3_info.html"><img src="../../../bilder/topBack.png" id="Icon_topBack" width="40" height="40"></a> 
+            <!--<a href=""><img src="../../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>-->
+                    <!-- Titel der Einheit -->
+            <h1>Training eines kleinen neuronalen Netzes</h1> <!--hier schon darauf hinweisen, um was in der Einheit geht -->
+            
+            </h2> <!--verlinkte externe Anwendung/Tool wird in einem neuen Tab geöffnet-->
+            <div class="quizContent">
+                <!-- Quiz-Navigation(Links und Tooltips anpassen) -->
+                <div id="quizNavigation">
+                    <a href="info.html" class="quizNavigationElement">
+                        <img src="../../../bilder/infoSeite2.png" width="33" height="33" /> </a>
+                    <!-- Für jede Quizfrage einen Eintrag hinzufügen und je nachdem welche Frage die class=”active” hinzufügen-->
+                    <a href="frage1.html" class="quizNavigationElement" data-title="Frage1">
+                        <p>Q1</p>
+                    </a>
+                    <a href="frage2.html" class="quizNavigationElement" data-title="Frage2">
+                        <p>Q2</p>
+                    </a>
+                    <a href="frage3.html" class="quizNavigationElement" data-title="Frage3">
+                        <p>Q3</p>
+                    </a>
+                    <a href="frage4.html" class="quizNavigationElement active" data-title="Frage4">
+                        <p>Q4</p>
+                    </a>
+                    <!-- ...weitere Fragen in derselben Syntax ergänzen... --> <a
+                        href="info.html" id="exit_icon">
+                        <img src="../../../bilder/exit4.png" width="60" height="60" /> </a>
+                </div>
+                <div class="quiz">
+                    <!-- Aufgabenstellung und Quizfrage -->
+                    <h4 id="unitQuestion_top">
+                        Ordne die Begriffe den entsprechenden Beschreibungen zu!
+                        <br><br>
+                        Klicke auf die jeweiligen Punkte, die du verbinden möchtest.
+                    </h4>
+                    <!-- Zuordnungsbox: data-mappings gibt die richtigen Paare an -->
+                    <div class="unit_matchingBox" data-mappings='{"left1":["right2"],"left2":["right4"],"left3":["right1"],"left4":["right3"],"left5":["right5"]}'>
+                        <!--für_1zu1_Matchin g_und_'{"left1":["right3","right4"],"left2":["right1","right2"],...}' für_me
+                        hrfach_Matching-->
+                        <ul class="unit_listLeft">
+                            <!-- Für jedes Anfangselement einen Block ergänzen -->
+                            <li>
+                                <img id="sym_left1">Hohe Lernrate
+                                <div class="dotLeft" id="left1" onclick="setSource(this)"></div>
+                            </li>
+                            <li>
+                                <img id="sym_left2">Niedrige Lernrate <div class="dotLeft" id="left2"
+                                    onclick="setSource(this)"></div>
+                            </li>
+                            <li>
+                                <img id="sym_left3">Viele Epochen <div class="dotLeft" id="left3"
+                                    onclick="setSource(this)"></div>
+                            </li>
+                            <li>
+                                <img id="sym_left4">Weniger Epochen
+                                <div class="dotLeft" id="left4" onclick="setSource(this)"></div>
+                            </li>
+                            <li>
+                                <img id="sym_left5">Hohe Sample Size
+                                <div class="dotLeft" id="left5" onclick="setSource(this)"></div>
+                            </li>
+                            <!-- ...weitere Anfangselemente nach Bedarf... -->
+                        </ul>
+                        <!--SVG-Element, welches ermöglicht, dass in diesem Bereich die Linien erstellt werden können-->
+                        <div class="svg-container">
+                            <svg id="svgCanvas" width="100%" height="100%"></svg>
+                        </div>
+                        <ul class="unit_listRight">
+                            <!-- Für jedes Endelement einen Block ergänzen -->
+                            <li>
+                                <div class="dotRight" id="right1" onclick="setTarget(this)" style="font-size: 10px;"></div>
+                                <p style="font-size: 12px;">Bessere Modellanpassung durch wiederholtes Lernen, aber Risiko für Overfitting</p>
+                            </li>
+                            <li>
+                                <div class="dotRight" id="right2" onclick="setTarget(this)"></div>
+                                <p style="font-size: 12px;">Modell lernt schnell, kann aber instabil werden und wichtige Muster überspringen.</p>
+                            </li>
+                            <li>
+                                <div class="dotRight" id="right3" onclick="setTarget(this)"></div>
+                                <p style="font-size: 12px;">Kürzere Trainingszeit, aber Modell bleibt oft untertrainiert.</p>
+                            </li>
+                            <li>
+                                <div class="dotRight" id="right4" onclick="setTarget(this)"></div>
+                                <p style="font-size: 12px;">Modell lernt langsamer, aber der Trainingsprozess ist stabiler und zuverlässiger.</p>
+                            </li>
+                            <li>
+                                <div class="dotRight" id="right5" onclick="setTarget(this)"></div>
+                                <p style="font-size: 12px;">Besseres Generalisierungsvermögen, da das Modell auf vielfältigeren Daten lernt.</p>
+                            </li>
+                            <!-- ...weitere Endelemente nach Bedarf... -->
+                        </ul>
+                    </div>
+                    <!-- Feedback-Text (wird per JS geändert) -->
+                    <h5 id="unitLine_msg">Verbinde die zusammengehörigen Punkte!</h5>
+                    <!-- Reset-Buttons (Link anpassen) -->
+                    <a href="frage4.html"><img id="undo_button" src="../../../bilder/undo_enabled3.png"
+                            width="40" height="40" style="right:390px; bottom:5px;" /></a>
+                    <!-- Check-Buttons -->
+                    <img id="check_button" src="../../../bilder/check_disable.png" width="40" height="50"
+                        style="right:330px; bottom:5px;" />
+                </div>
+            </div>
+        </div>
+        <footer>
+            <img src="../../../bilder/license.png" id="license">
+
+            <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail"
+                    href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+                &nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail"
+                    href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

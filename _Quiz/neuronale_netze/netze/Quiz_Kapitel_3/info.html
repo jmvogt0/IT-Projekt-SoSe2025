@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Training eines kleinen neuronalen Netzes</title>
+    <!-- CSS file for framework only. Not for content -->
+    <link rel="stylesheet" type="text/css" href="../../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../../quizNavigation.css">
+
+    <script type="text/javascript" src="../../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../../js/unitNavigation.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="wapper">
+        <div id="header">
+            <div id="hand">
+                <img id="hand_img" src="../../../bilder/AI-Learning_Logo.svg" width="140px">
+            </div>
+            <!-- horizontal menu -->
+            <nav id="nav_main">
+                <a href="../../../maschinelles_lernen/grundlagen/index.html">Maschinelles Lernen</a>
+                <a href="index.html" class="currentPage">Neuronale Netze</a>
+                <a href="../../../deep_learning/prinzipien/index.html">Deep Learning</a>
+                <a href="../../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+                <a href="../../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+                <a href="../../../ethik/index.html">Ethik</a>
+            </nav>
+            <div id="logoHSO">
+                <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                        alt="Hochschule Offenburg"></a>
+            </div>
+        </div>
+
+        <!-- vertical menu -->
+        <div id="nav_left" data-current="Neuronale Netze">
+            <div id="menuItem">
+                <a href="../../../neuronale_netze/neuron/Quiz_Kapitel_1/teil1_info.html" >Neuron</a><br>
+                <a href="info.html" class="currentPage">Netze</a><br>
+            </div>
+
+        </div>
+        <!-- menuItem -->
+
+        <!-- nav_left -->
+        <div id="content">
+            <!-- Seitenindikator (Nummerierung anpassen) -->
+            <div>
+                <img src="../../../bilder/nummer8.png" id="pageIndicator" class="pageNr_first" width="25" height="40">
+                <img src="../../../bilder/slash.png" class="pageDiv" width="50" height="50">
+                <img src="../../../bilder/nummer8.png" class="pageNr_second" width="25" height="40">
+            </div>
+            <!-- obere Navigation (Links anpassen) -->
+            <a href="../Quiz_Kapitel_2/teil3_info.html"><img src="../../../bilder/topBack.png" id="Icon_topBack" width="40"
+                    height="40"></a>
+            <!--<a href=""><img src="../../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>-->
+            <!-- Titel der Einheit -->
+            <h1>Training eines kleinen neuronalen Netzes</h1>
+            <!-- Überschrift für interaktive Einheit mit externer Anwendung -->
+            <h2 class="introHeadline">Teste ein 
+                <a href="https://pa-nnie.student.mi.hs-offenburg.de/TS_aktuell/KI-learning-TS/neuronale_netze/neuron/Kapitel3-autoencoderDemo"
+                    target="_blank">neuronales Netz</a>
+            </h2><br>
+            <div class="quizContent hideExitIcon"> <!--hideExitIcon”,um Exit-Button zu deaktivieren-->
+                <!-- Quiz-Navigation: “active” immer bei erstem a-Element (Links und Tooltips anpassen) -->
+                <div id="quizNavigation">
+                    <a href="info.html" class="quizNavigationElement active"> <img src="../../../bilder/infoSeite2.png"
+                            width="33" height="33" /> </a>
+                    <!-- Für jede Quizfrage einen Eintrag hinzufügen und je nachdem welche Frage die class=”active” hinzufügen-->
+                    <a href="frage1.html" class="quizNavigationElement" data-title="Frage1">
+                        <p>Q1</p>
+                    </a>
+                    <a href="frage2.html" class="quizNavigationElement" data-title="Frage2">
+                        <p>Q2</p>
+                    </a>
+                    <a href="frage3.html" class="quizNavigationElement" data-title="Frage3">
+                        <p>Q3</p>
+                    </a>
+                    <a href="frage4.html" class="quizNavigationElement" data-title="Frage4">
+                        <p>Q4</p>
+                    </a>
+                    <!-- ...weitere Fragen in derselben Syntax ergänzen... --> <a href="info.html" id="exit_icon">
+                        <img src="../../../bilder/exit4.png" width="60" height="60" /> </a>
+                </div>
+                <div class="quiz">
+                    <p id="introText" style="font-size: 11px;">
+                        <b>Was du in diesem Kapitel lernst:</b><br>
+                        - Du lernst, wie ein Autoencoder funktioniert und wie er Bilder rekonstruiert.<br>
+                        - Du verstehst, welche Rolle Trainingsparameter wie Epochen, Lernrate und Sample Size
+                        spielen.<br>
+                        - Du beobachtest, wie sich diese Parameter direkt auf die Qualität der Bildrekonstruktion
+                        auswirken.<br>
+                        - Du analysierst die Leistung eines neuronalen Netzes auf Basis realer Bilddaten. <br><br>
+
+                        <b>Was erwartet dich?</b> <br>
+                        Du arbeitest mit einem einfachen neuronalen Netz, dem Autoencoder. Dieses Netz versucht, ein
+                        Bild – in diesem Fall die Ziffer 8 – nach dem Training wiederherzustellen.
+                        Du beeinflusst, wie gut das gelingt, indem du zentrale Trainingsparameter veränderst.<br><br>
+                        <b>Deine Aufgabe:</b><br>
+                        Wähle über Dropdown-Menüs verschiedene Werte für:<br>
+                        - Anzahl der Epochen<br>
+                        - Lernrate<br>
+                        - Sample Size (Anzahl der Trainingsbeispiele)<br>
+                        Starte das Training des Autoencoders. Danach werden dir zwei Bildreihen angezeigt:<br>
+                        Oben – das Originalbild der Ziffer 8,<br>
+                        Unten – die rekonstruierte Version des Autoencoders.<br>
+                        Vergleiche beide Versionen und bewerte, wie gut dein Netz gelernt hat. Probiere unterschiedliche
+                        Kombinationen und finde heraus, welche Einstellungen die besten Ergebnisse liefern.<br><br>
+
+                        <b>Warum ist das wichtig?</b><br>
+                        Autoencoder sind ein wichtiger Bestandteil moderner KI – sie helfen bei Komprimierung,
+                        Vorverarbeitung und Anomalieerkennung.
+                        Hier lernst du, wie stark die Qualität des Trainings von Parametern abhängt. Ein praktisches
+                        Verständnis dieser Zusammenhänge ist entscheidend, wenn du später eigene Modelle bauen oder
+                        bewerten willst.
+
+                    </p>
+
+                    <!-- Aufforderung zur Bearbeitung -->
+                    <h2 id="Text_quiz">Beantworte die Fragen Q1 bis Q4!</h2> <img src="../../../bilder/startQuiz.png"
+                        id="Icon_quiz" width="130" height="60">
+                    <img src="../../../bilder/cursor2.png" id="cursor" width="40" height="40">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <img src="../../../bilder/license.png" id="license">
+
+            <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail"
+                    href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+                &nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail"
+                    href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

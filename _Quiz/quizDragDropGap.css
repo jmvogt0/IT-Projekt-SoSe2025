@@ -1,0 +1,99 @@
+#unitDragDropGap_msg {
+	position: absolute;
+	width: 340px;
+    color: #566a2b;
+    top: 340px;
+}
+
+#drag_gaptext {
+    line-height: 40px;
+    margin: 20px;
+    width: 340px;
+}
+
+#drag_gapDraggables_grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* erste Zahl = Anazhl an Spalten - je nach Menge und länge der Drag-Elemnte anpassen */
+    grid-template-rows: repeat(4, auto); /* erste Zahl = Anazhl an Zeilen - je nach Menge und länge der Drag-Elemnte anpassen*/
+    gap: 5px; /* Abstand zwischen den Elementen */
+    width: 320px;
+    margin-left: 80px; /* linken Abstand je nach Tabellenform anpassen */
+}
+
+.drag_gapSingleDraggable {
+    height: 25px;
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 900;
+    background-color: #566a2b;
+    border: 2px solid #aebd38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#drag_gapDraggables_grid .drag_gapSingleDraggable:hover {
+    transform: scale(1.1);
+}
+
+.gap_dropzone {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    border: 2px solid #aebd38;
+    background-color: #cae0bc;
+    position: relative;
+    top: 3px;
+}
+
+#unitDragDropGap_long_msg {
+	position: absolute;
+	width: 600px;
+    color: #566a2b;
+    top: 350px;
+    left: 110px;
+}
+
+#drag_gaptext_long {
+    line-height: 20px;
+    margin: 0 20px;
+    width: 670px;
+
+    p {
+        margin: 0;
+    }
+}
+
+#drag_gapDraggables_grid_long {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* erste Zahl = Anazhl an Spalten - je nach Menge und länge der Drag-Elemnte anpassen */
+    grid-template-rows: repeat(2, auto); /* erste Zahl = Anazhl an Zeilen - je nach Menge und länge der Drag-Elemnte anpassen*/
+    gap: 5px; /* Abstand zwischen den Elementen */
+    margin: 20px; /* linken Abstand je nach Tabellenform anpassen */
+}
+
+#drag_gaptext_standAlone {
+    width: 760px;
+    line-height: 30px;
+    margin: 20px auto;
+
+}
+
+#DragDropGap_msg_standAlone {
+    width: 600px;
+    color: #566a2b;
+    position: absolute;
+    top: 480px;
+    left: 100px;
+}
+
+#drag_gapDraggables_grid_standAlone    {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* erste Zahl = Anazhl an Spalten - je nach Menge und länge der Drag-Elemnte anpassen */
+    grid-template-rows: repeat(4, auto); /* erste Zahl = Anazhl an Zeilen - je nach Menge und länge der Drag-Elemnte anpassen*/
+    gap: 10px; /* Abstand zwischen den Elementen */
+    width: 700px;
+    margin: 0 auto; /* linken Abstand je nach Tabellenform anpassen */
+}

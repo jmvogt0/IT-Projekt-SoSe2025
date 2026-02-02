@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Maschinelles Lernen</title>
+    <!-- CSS file for framework only. Not for content -->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizLine.css">
+
+    <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/Line.js"></script>
+</head>
+<body>
+<div id="wapper">
+    <div id="header">
+         <div id="hand">
+            <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+        </div>
+        <!-- horizontal menu -->
+        <nav id="nav_main">
+			<a href="index.html" class="currentPage">Maschinelles Lernen</a>
+            <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+            <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+            <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+            <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+			<a href="../../ethik/index.html">Ethik</a>
+
+        </nav>
+        <div id="logoHSO">
+            <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                      alt="Hochschule Offenburg"></a>
+        </div>
+    </div>
+
+    <!-- vertical menu -->
+    <div id="nav_left" data-current="Maschinelles Lernen">
+        <div id="menuItem">
+			<a href="index.html" class="currentPage">Grundlagen</a><br>
+            <a href="../../maschinelles_lernen/klassifikation/index.html">Klassifikation</a><br>
+            <a href="../../maschinelles_lernen/clustering/index.html">Clustering</a><br>
+            <a href="../../maschinelles_lernen/assoziationsanalyse/index.html">Assoziationsanalyse</a><br>
+        </div>
+
+    </div>
+    <!-- menuItem -->
+
+<!-- nav_left -->
+<div id="content">
+    <div>
+        <img src="../../bilder/nummer2.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+        <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+        <img src="../../bilder/nummer4.png" class="pageNr_second" width="25" height="40">
+    </div>
+
+    <a href="index.html"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40" style="left: 120px;top: 25px;"></a>
+    <a href="seite3.html"><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40" style="right: 120px;top: 25px;"></a>
+    
+    <h1>Wie Maschinen lernen</h1> <!--Titel für eine  zusammmenhängende Einheit: hier schon darauf hinweisen, um was in der Einheit geht-->
+    
+    <h2 class="linkText">Öffne die externe Seite zum <a href="https://inf-schule.de/kids/computerinalltag/entscheide-wie-eine-KI/schritt3" target="_blank">Entscheidungsbaum</a></h2> <!--verlinkte externe Anwendung/Tool wird in einem neuen Tab geöffent-->
+    
+    <div class="quizContent">
+        <div id="quizNavigation">
+          <a href="seite2-info.html" class="quizNavigationElement">
+            <img src="../../bilder/infoSeite2.png" width="33" height="33" />
+          </a>
+          <a href="seite2-Q1.html" class="quizNavigationElement" data-title="Einflussfaktor auf Vorhersagegenauigkeit von KI für neue Daten">
+            <p>Q1</p>
+          </a>
+          <a href="seite2-Q2.html" class="quizNavigationElement" data-title="Einfluss der Anpassung des Schwellenwerts auf Klassifizierungsergebnisse">
+            <p>Q2</p>
+          </a>
+          <a href="seite2-Q3.html" class="quizNavigationElement" data-title="Funktion von Schwellenwerten in einem Entscheidungsbaum">
+            <p>Q3</p>
+          </a>
+          <a href="seite2-Q4.html" class="quizNavigationElement" data-title="Begriffe in Bezug auf das Training eines Entscheidungsbaums">
+            <p>Q4</p>
+          </a>
+          <a href="seite2-Q5.html" class="quizNavigationElement active" data-title="Einfluss an Attributanzahl für Klassifikation">
+            <p>Q5</p>
+          </a>
+          <a href="seite2-info.html" id="exit_icon">
+            <img src="../../bilder/exit4.png" width="60" height="60" />
+          </a>
+        </div>
+      <div class="quiz">
+        <h4 id="unitQuestion_top">
+          Versuche durch geschicktes Auswählen an Attributen und Schwellenwerten falsche Einordnungen zu minimieren. Teste auf der nächsten Seite dann die Genauigkeit der Klassifizierung.<!--konkrete Aufgabenstellung, was Studierende mit der Anwendung machen sollen-->          
+          <br><br>
+          Ordne den 2 Situationen die passenden Aussagen zu.<!--Aufforderung für Drag & Drop Frage-->
+        </h4>
+
+        <div class="unit_matchingBox" data-mappings='{"left1": ["right2", "right4", "right5"],"left2": ["right1", "right3", "right6"]}'>
+                  <ul class="unit_listLeft"><!--Liste auf der linken Seite der Anfangs-Zuordnungselemente-->
+                      <li><img id="sym_left1">Ein Attribut<div class="dotLeft" id="left1" onclick="setSource(this)"></div></li> <!--1.Anfangselement mit Punkt als Anker für die Linie-->
+                      <li><img id="sym_left2">Mehrere Attribute<div class="dotLeft" id="left2" onclick="setSource(this)"></div></li> <!--2.Anfangselement mit Punkt als Anker für die Linie-->
+                     
+                  </ul>
+                  <div class="svg-container">
+                    <svg id="svgCanvas" width="100%" height="100%"></svg> <!--SVG-Element, welches ermöglicht, dass in diesem Bereich die Linien erstellt werden können-->
+                  </div>
+                  <ul class="unit_listRight"> <!--Liste auf der rechten Seite der Ende-Zuordnungselemente-->
+                      <li><div class="dotRight" id="right1" onclick="setTarget(this)"></div>Verbesserung der Kategorisierung durch differenziertere Pfade</li> <!--1.Endelement mit Punkt als Anker für die Linie-->
+                      <li><div class="dotRight" id="right2" onclick="setTarget(this)"></div>Risiko von Fehlentscheidungen</li><!--2.Endelement mit Punkt als Anker für die Linie-->
+                      <li><div class="dotRight" id="right3" onclick="setTarget(this)"></div>Besseres Trennen von gemischten Gruppen</li><!--3.Endelement mit Punkt als Anker für die Linie-->
+                      <li><div class="dotRight" id="right4" onclick="setTarget(this)"></div>Entscheidung erfolgt zu früh</li><!--3.Endelement mit Punkt als Anker für die Linie-->
+                      <li><div class="dotRight" id="right5" onclick="setTarget(this)"></div>Lebensmittel landen in der falschen Kategorie</li><!--3.Endelement mit Punkt als Anker für die Linie-->
+                      <li><div class="dotRight" id="right6" onclick="setTarget(this)"></div>Reduktion falsch zugeordneter Beispiele</li><!--3.Endelement mit Punkt als Anker für die Linie-->
+                  </ul>
+        </div>
+
+          <!--Text, der auf das Fragenformat hinweist und sich dynamisch verändert, wenn Studierende das Quiz bearbeiten und überprüfen lassen-->   
+          <h5 id="unitLine_msg">Klicke die passenden Paare nacheinander an!</h5> <!--Anfangstext passend zu Frage, mit left: und top: passend positionieren--> 
+
+          <a href="seite2-Q5.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40" style="bottom: 5px; right: 390px;"/></a> <!--Button, dass alle gemachten Eingaben gelöscht werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+          <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50" style="bottom: 5px; right: 330px;"/> <!--Button, dass die gemachten Eingaben überprüft werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+
+      </div>
+    </div>
+</div>
+<footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+        </p>
+</footer>
+</div>
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</html>

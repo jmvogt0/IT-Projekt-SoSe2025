@@ -1,0 +1,110 @@
+.checkboxContainer{
+    position: absolute;
+    z-index: 2;
+    width: 350px;
+    height: 430px;
+    margin: 15px;
+}
+
+.answerCheckbox_4items {
+    accent-color: #598234;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 80px;
+
+}
+
+.answerCheckbox_4items p{
+    margin-left: 20px;
+}
+
+.answerCheckbox_4items input[type="checkbox"]{
+    width: 20px;
+    height: 15px;
+    margin-left: 20px;
+}
+
+.answerCheckbox_4items input[type="checkbox"]:hover{
+    transform: scale(1.3);
+}
+
+.answerCheckbox_4items img{
+    position: absolute;
+}
+
+#unitCheckbox_msg {
+	position: absolute;
+	width: 340px;
+    color: #566a2b;
+    top: 340px;
+}
+
+.checkboxContainer_standAlone {
+    width: 750px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert die Kind-Divs horizontal */
+    position: relative;
+}
+
+.horizontal_checkboxContainer_standAlone {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Abstand zwischen den Antworten */
+    align-items: center; /* Optional: Zentriert die Antworten vertikal */
+    flex-wrap: wrap; /* Optional: Zeilenumbruch, falls Platz nicht reicht */
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center; /* Zentriert die Kind-Divs horizontal */
+    position: relative;
+    border-bottom: 2px solid #9dc08b;
+
+    #question_standAlone {
+        margin-top: 10px;
+    }
+
+  .answerCheckbox_standAlone {
+        border-bottom: 0;
+  }
+
+}
+
+.answerCheckbox_standAlone {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* Zentriert Inhalt horizontal in jedem Div */
+    width: 90%;                /* oder eine feste/maximale Breite, z.B. 400px */
+    max-width: 600px;
+    box-sizing: border-box;
+    padding-left: 70px;
+    border-bottom: 2px solid #9dc08b;
+    accent-color: #598234;
+}
+
+  
+.answerCheckbox_standAlone:last-child {
+    border-bottom: none;
+}
+  
+.answerCheckbox_standAlone p {
+    margin: 0 0 0 12px;
+    flex: 1;
+    text-align: left;
+}
+
+
+#Checkbox_msg_standAlone {
+	width: 600px;
+    color: #566a2b;
+    position: absolute;
+    top: 480px;
+    left: 100px;
+}
+
+

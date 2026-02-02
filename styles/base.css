@@ -1,0 +1,40 @@
+/* Globales layout */
+body {
+    font-family: "Open Sans", sans-serif;
+    background: var(--site-background);
+    max-width: 1400px;
+    padding: 30px;
+    margin: 0 auto;
+    color: #333;
+}
+
+/* Typography */
+p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+h2,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--neutral-text);
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--neutral-text);
+    margin-bottom: 10px;
+}

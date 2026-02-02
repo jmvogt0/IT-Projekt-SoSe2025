@@ -1,0 +1,80 @@
+/*////////////////////////////////////////////// Activation function */
+.function p {
+    text-align: center;
+  }
+  
+  .calculation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .calculation-grid.scrollable {
+    max-height: 370px;
+    overflow-y: auto;
+  }
+  
+  .grid-header {
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--akzent2);
+  
+  }
+  
+  .grid-cell {
+    text-align: center;
+    background-color: var(--akzent1);
+  }
+  
+  .grid-cell:nth-child(7),
+  .grid-cell:nth-child(8),
+  .grid-cell:nth-child(9),
+  .grid-cell:nth-child(13),
+  .grid-cell:nth-child(14),
+  .grid-cell:nth-child(15),
+  .grid-cell:nth-child(19),
+  .grid-cell:nth-child(20),
+  .grid-cell:nth-child(21),
+  .grid-cell:nth-child(25),
+  .grid-cell:nth-child(26),
+  .grid-cell:nth-child(27),
+  .grid-cell:nth-child(31),
+  .grid-cell:nth-child(32),
+  .grid-cell:nth-child(33) {
+    text-align: center;
+    background-color: var(--akzent2);
+  }
+  
+  .grid-header:nth-child(2),
+  .grid-cell:nth-child(5),
+  .grid-cell:nth-child(8),
+  .grid-cell:nth-child(11),
+  .grid-cell:nth-child(14),
+  .grid-cell:nth-child(17),
+  .grid-cell:nth-child(20),
+  .grid-cell:nth-child(23),
+  .grid-cell:nth-child(26),
+  .grid-cell:nth-child(29),
+  .grid-cell:nth-child(32) {
+    border-right: 2px solid #333333;
+  }
+  
+  .grid-sum {
+    grid-column: span 3;
+    background-color: var(--akzent2);
+  }
+  
+  .grid-sum p {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333333;
+    padding-right: 15px;
+    padding-top: 10px;
+  }
+
+  .activationResult {
+    display: flex;
+    margin-top: 32px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+  }

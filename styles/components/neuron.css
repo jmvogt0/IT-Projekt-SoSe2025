@@ -1,0 +1,462 @@
+/*/////////////////////////////////////////////////////// Current result for the given weights */
+/* Result light indicator */
+#result span {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.dynamicNeuron {
+  position: relative;
+  background-color: var(--background);
+  margin-top: 32px;
+  border-radius: var(--border-radius-standard);
+
+  .grid.fiveRows {
+    grid-template-rows: repeat(15, 40px);
+    height: 600px;
+  }
+
+  .grid.manyNeurons {
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+
+    .neurons {
+      grid-column: 3 / 4;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(15, 40px);
+
+      .preLayer,
+      .aftLayer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+      }
+
+      .preLayer1,
+      .preLayer2,
+      .preLayer3 {
+        grid-column: 1 / 2;
+      }
+
+      .preLayer1 {
+        grid-row: 4 / 7;
+      }
+
+      .preLayer2 {
+        grid-row: 7 / 10;
+      }
+
+      .preLayer3 {
+        grid-row: 10 / 13;
+      }
+
+      .aftLayer1,
+      .aftLayer2,
+      .aftLayer3 {
+        grid-column: 3 / 4;
+      }
+
+      .aftLayer1 {
+        grid-row: 4 / 7;
+      }
+
+      .aftLayer2 {
+        grid-row: 7 / 10;
+      }
+
+      .aftLayer3 {
+        grid-row: 10 / 13;
+      }
+
+      .circleElement {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        background-color: var(--akzent1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .activationContainer {
+        grid-column: 2 / 3;
+        grid-row: 1 / 16;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        gap: 8px;
+
+        .activationElement {
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+          background-color: var(--akzent1);
+        }
+      }
+
+      .activationContainer.multipleLayers {
+        flex-direction: row;
+        gap: 64px;
+
+        .hiddenLayer {
+          display: flex;
+          flex-direction: column;
+          gap: 64px;
+        }
+      }
+    }
+  }
+
+  .grid.noWeightRow {
+    grid-template-columns: 1fr 0 2fr 1fr;
+  }
+
+  ;
+
+  .grid.threeNeurons {
+
+    .activation1,
+    .activation2,
+    .activation3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.activation1 {
+        grid-row: 4 / 7;
+      }
+
+      &.activation2 {
+        grid-column: 3 / 4;
+        grid-row: 7 / 10;
+      }
+
+      &.activation3 {
+        grid-column: 3 / 4;
+        grid-row: 10 / 13;
+      }
+
+      &.active .activationElement {
+        color: var(--neutral-text-white);
+        background-color: var(--primary-hover);
+      }
+    }
+  }
+
+  .grid.threeOutputs {
+
+    /*.output1,
+    .output2,
+    .output3 {
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+      z-index: 2;
+    }*/
+
+    .noFilter {
+      filter: none;
+    }
+
+    .output1.active,
+    .output2.active,
+    .output3.active {
+      filter: none;
+    }
+
+    .output1 {
+      grid-column: 4 / 5;
+      grid-row: 4 / 7;
+    }
+
+    .output2 {
+      grid-column: 4 / 5;
+      grid-row: 7 / 10;
+      z-index: 2;
+    }
+
+    .output3 {
+      grid-column: 4 / 5;
+      grid-row: 10 / 13;
+      z-index: 2;
+    }
+  }
+
+  .grid {
+    display: grid;
+    width: 100%;
+    height: 360px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(9, 40px);
+
+    .input {
+      grid-column: 1 / 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.input1 {
+        grid-row: 1 / 4;
+      }
+
+      &.input2 {
+        grid-row: 4 / 7;
+      }
+
+      &.input3 {
+        grid-row: 7 / 10;
+      }
+
+      &.input4 {
+        grid-row: 10 / 13;
+      }
+
+      &.input5 {
+        grid-row: 13 / 16;
+      }
+
+      .inputElement {
+        width: 80%;
+        height: 41px;
+        background-color: var(--akzent2);
+        border-radius: 0 var(--border-radius-standard) var(--border-radius-standard) 0;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .iconText {
+          display: flex;
+          align-items: center;
+          margin-left: 8px;
+
+          p {
+            margin-left: 8px;
+          }
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        .value {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .weight {
+      grid-column: 2 / 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+
+      &.weight1 {
+        grid-row: 1 / 4;
+      }
+
+      &.weight2 {
+        grid-row: 4 / 7;
+      }
+
+      &.weight3 {
+        grid-row: 7 / 10;
+      }
+
+      &.weight4 {
+        grid-row: 10 / 13;
+      }
+
+      &.weight5 {
+        grid-row: 13 / 16;
+      }
+
+      .weightElement {
+        height: 33px;
+        width: 75px;
+        background-color: var(--primary-hover);
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+
+        p {
+          margin: 0;
+          color: var(--neutral-text-white);
+        }
+      }
+
+      .inactive {
+        background-color: var(--rahmen);
+
+        p {
+          color: var(--neutral-text);
+        }
+      }
+    }
+
+    .activation1 {
+      grid-column: 3 / 4;
+      grid-row: 4 / 7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .activationElement {
+      height: 80px;
+      width: 80px;
+      border-radius: 100%;
+      background-color: var(--rahmen);
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.1s ease-in-out;
+
+      p {
+        font-size: 24px;
+      }
+      .smallFont {
+        font-size: 1rem;
+      }
+    }
+
+    .bias {
+      grid-column: 3 / 4;
+      grid-row: 8 / 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+
+      .biasElement {
+        height: 42px;
+        width: 80px;
+        background-color: var(--primary-hover);
+        border-radius: 16px 16px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        p {
+          margin: 0;
+          color: var(--neutral-text-white);
+        }
+      }
+    }
+
+    .output {
+      grid-column: 4 / 5;
+      grid-row: 3 / 8;
+      z-index: 2;
+
+      .outputElement {
+        background-color: var(--background);
+        padding-left: 8px;
+        display: flex;
+        align-items: center;
+        border: 2px solid var(--rahmen);
+        border-radius: 24px;
+        height: 100%;
+        margin-right: 16px;
+
+        &.active {
+          border: 2px solid var(--primary);
+        }
+
+        .outputText {
+          width: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .outputGraphic,
+        .outputGraphicHorizontal {
+          margin-left: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          position: relative;
+        }
+
+        .outputGraphic {
+          flex-direction: column-reverse;
+
+          .progressElement {
+            width: 10px;
+            height: 100px;
+            background-color: var(--akzent2);
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+
+            .progressBar {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 70%;
+              background-color: var(--primary);
+              transition: height 0.3s ease-in-out;
+            }
+          }
+
+          .threshold {
+            width: 20px;
+            height: 3px;
+            background-color: red;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
+        .outputGraphicHorizontal {
+          flex-direction: row;
+
+          .progressElement {
+            width: 100px;
+            height: 10px;
+            background-color: var(--akzent2);
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+
+            .progressBar {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 70%;
+              height: 100%;
+              background-color: var(--primary);
+              transition: width 0.3s ease-in-out;
+            }
+          }
+
+          .threshold {
+            width: 3px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
+            bottom: 50%;
+            left: 30px;
+            transform: translateY(50%);
+          }
+          .threshold.twenty {
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

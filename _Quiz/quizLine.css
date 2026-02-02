@@ -1,0 +1,145 @@
+#unitLine_msg{
+    position: absolute;
+	width: 600px;
+    color: #566a2b;
+    top: 350px;
+    left: 110px;
+}
+
+.unit_matchingBox {
+    color: #333333;
+    font-family: Open Sans;
+    font-size: 14px;
+    text-align: left; 
+    font-weight: normal;  
+    max-height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 120px 1fr;
+    align-items: baseline;
+    width: 100%;
+    max-width: 700px;
+}
+
+.unit_listLeft, .unit_listRight  {
+    list-style-type: none;
+    max-width: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+.unit_listLeft li{
+    display: flex;
+    align-items: center;   /* vertikal zentriert */
+    min-height: 40px;
+    justify-content: end;
+    gap: 10px;
+}
+
+.unit_listRight li{
+    display: flex;
+    align-items: center;   /* vertikal zentriert */
+    min-height: 40px;
+    gap: 10px;
+}
+
+.unit_listLeft .dotLeft   {
+    background-color: #950e1d;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.unit_listRight .dotRight   {
+    background-color: #950e1d;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.svg-container {
+    position: relative;
+    width: 150px;
+    height: 100%;
+    min-height: 400px;
+    right: 15px;
+    pointer-events: none;
+  }
+
+#svgCanvas {
+  position: absolute;
+}
+
+.unit_listLeft img{
+    margin-right: 5px;
+}
+
+.matchingBox_standAlone {
+    color: #333333;
+    font-family: Open Sans;
+    font-size: 14px;
+    text-align: left; 
+    font-weight: normal;  
+    max-height: 345px;
+    display: grid;
+    grid-template-columns: 1fr 120px 1fr;
+    align-items: baseline;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#Line_msg_standAlone{
+    width: 600px;
+    color: #566a2b;
+    position: absolute;
+    top: 480px;
+    left: 100px;
+}
+
+.listLeft_standAlone, .listRight_standAlone  {
+    list-style-type: none;
+    max-width: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+.listLeft_standAlone li{
+    display: flex;
+    align-items: center;   /* vertikal zentriert */
+    min-height: 40px;
+    justify-content: end;
+    gap: 10px;
+}
+
+.listRight_standAlone li{
+    display: flex;
+    align-items: center;   /* vertikal zentriert */
+    min-height: 40px;
+    gap: 10px;
+}
+
+
+.matchingBox_standAlone .dotLeft, .dotRight   {
+    background-color: #598234;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.listLeft_standAlone img{
+    margin-right: 5px;
+}
+
+
+

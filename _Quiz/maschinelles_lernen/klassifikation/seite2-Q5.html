@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Maschinelles Lernen</title>
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizDropzoneSingle.css">
+
+
+    <!--JS files-->
+   <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/singleDragDrop.js"></script>
+
+
+</head>
+<body>
+<div id="wapper">
+    <div id="header">
+        <div id="hand">
+            <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+        </div>
+        <!-- horizontal menu -->
+        <nav id="nav_main">
+			<a href="index.html" class="currentPage">Maschinelles Lernen</a>
+            <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+            <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+            <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+            <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+			<a href="../../ethik/index.html">Ethik</a>
+        </nav>
+        <div id="logoHSO">
+            <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                      alt="Hochschule Offenburg"></a>
+        </div>
+    </div>
+
+    <!-- vertical menu -->
+    <div id="nav_left" data-current="Maschinelles Lernen">
+        <div id="menuItem">
+			<a href="../../maschinelles_lernen/grundlagen/index.html">Grundlagen</a><br>
+            <a href="index.html" class="currentPage">Klassifikation</a><br> <!--Klassifikationsabschnitt-->
+            <a href="../../maschinelles_lernen/clustering/index.html">Clustering</a><br>
+            <a href="../../maschinelles_lernen/assoziationsanalyse/index.html">Assoziationsanalyse</a><br>
+
+        </div>
+
+    </div>
+    <!-- menuItem -->
+
+<!-- nav_left -->
+<div id="content">
+    <div>
+        <img src="../../bilder/nummer2.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+        <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+        <img src="../../bilder/nummer6.png" class="pageNr_second" width="25" height="40">
+    </div>
+
+    <a href="index.html"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40"></a>
+    <a href=""><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>
+    
+    <h1>Ähnlichkeit entscheidet</h1> <!--Titel für eine  zusammmenhängende Einheit: hier schon darauf hinweisen, um was in der Einheit geht-->
+
+    <h2 class="linkText">Öffne die externe Seite zur <a href="https://inf-schule.de/ki/menueansicht/maschinelles_lernen_mit_python/data_science/projekt_empfehlungssysteme/modellentwicklung/knn_erlernen/klassen" target="_blank">Erweiterung der Klassen</a></h2> <!--verlinkte externe Anwendung/Tool wird in einem neuen Tab geöffent-->
+    
+    <div class="quizContent">
+        <div id="quizNavigation">
+            <a href="seite2-info.html" class="quizNavigationElement ">
+              <img src="../../bilder/infoSeite2.png" width="33" height="33" />
+            </a>
+            <a href="seite2-Q1.html" class="quizNavigationElement" data-title="Einordnung neuer Verbindungen anhand eines Punktediagramms">
+              <p>Q1</p>
+              <img src="../../bilder/cursor2.png" id="cursor" width="40" height="40">
+            </a>
+            <a href="seite2-Q2.html" class="quizNavigationElement" data-title="Beschreibung des Parameters k">
+              <p>Q2</p>
+            </a>
+            <a href="seite2-Q3.html" class="quizNavigationElement" data-title="Einfluss der Wahl von k-Wert">
+              <p>Q3</p>
+            </a>
+            <a href="seite2-Q4.html" class="quizNavigationElement" data-title="Schritte des k-Nächste-Nachbarn-Algorithmus">
+              <p>Q4</p>
+            </a>
+            <a href="seite2-Q5.html" class="quizNavigationElement active" data-title="Klassifikation neuer Daten anhand verschiedener Werte für k">
+              <p>Q5</p>
+            </a>
+            <a href="seite2-Q6.html" class="quizNavigationElement" data-title="Beispiel für Entscheidungsgrenzen bei k=4">
+              <p>Q6</p>
+            </a>
+            <a href="seite2-Q7.html" class="quizNavigationElement" data-title="Beispiel für Entscheidung bei k=3">
+              <p>Q7</p>
+            </a>
+            <a href="seite2-info.html" id="exit_icon">
+              <img src="../../bilder/exit4.png" width="60" height="60" id="exitIcon"/>
+            </a>
+          </div>
+      <div class="quiz" data-correct='{"div1":"answer1","div2":"answer4"}'>
+        <h4 id="unitQuestion_top">
+            Setze dich mit dem dargestellten Punktediagramm auseinander.<!--konkrete Aufgabenstellung, was Studierende mit der Anwendung machen sollen-->
+            <br><br>
+            Gib jeweils ein Beispiel einer Verbindung für folgende 2 beschriebene Voraussetzungen an.
+        </h4>
+
+        <ul id="unitSingleDropzone">
+            <!-- Dropzonen-->
+            <li>bei der die 3-Nächste-Nachbar-Klassifikation prognostiziert, dass eine Rückerstattung stattfinden kann<section id="div1" class="Singledropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></section><img id="sym_div1"></li>
+     
+            <li>bei der die 2-Nächste-Nachbar-Klassifikation prognostiziert, dass es keine Verspätung geben wird<section id="div2" class="Singledropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></section><img id="sym_div2"></li>
+                 
+        </ul>
+
+        <div id="unitSingleDropzone_Draggables">
+            <!-- Drag-Elemente -->
+            <div class="SingleDraggable" id="answer1" draggable="true" ondragstart="drag(event)">Verbindung 1 <br>(300, 10)</div> <!-- 1.Drag-Element, mit left: so positionieren wie es passt-->
+
+            <div class="SingleDraggable" id="answer2" draggable="true" ondragstart="drag(event)">Verbindung 2 <br>(100, 5)</div> <!--2. Drag-Element, mit left: so positionieren wie es passt-->
+
+            <div class="SingleDraggable" id="answer3" draggable="true" ondragstart="drag(event)">Verbindung 3 <br>(150, 15)</div> <!--3. Drag-Element, mit left: so positionieren wie es passt-->
+                        
+            <div class="SingleDraggable" id="answer4" draggable="true" ondragstart="drag(event)">Verbindung 4 <br>(120, 5)</div> <!--4. Drag-Element, mit left: so positionieren wie es passt-->
+        </div>
+
+          <!--Text, der auf das Fragenformat hinweist und sich dynamisch verändert, wenn Studierende das Quiz bearbeiten und überprüfen lassen-->   
+          <h5 id="unitSingleDrop_msg">Ziehe das richtige Element an die passende Stelle!</h5> <!--Anfangstext passend zu Frage, mit left: und top: passend positionieren--> 
+
+          <a href="seite2-Q5.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40" style="bottom: 5px; right: 390px;"/></a> <!--Button, dass alle gemachten Eingaben gelöscht werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+          <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50" style="bottom: 5px; right: 330px;"/> <!--Button, dass die gemachten Eingaben überprüft werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+
+      </div>
+    </div>   
+</div>
+<footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+    </p>
+</footer>
+</div>
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</html>

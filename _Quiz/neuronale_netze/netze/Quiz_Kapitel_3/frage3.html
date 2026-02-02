@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training eines kleinen neuronalen Netzes</title>
+
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../../quizGapTextMenue.css">
+
+    <!--JS files-->
+    <script type="text/javascript" src="../../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../../js/gapDropwdownMenue.js"></script>
+</head>
+
+<body>
+    <div id="wapper">
+        <div id="header">
+            <div id="hand">
+                <img id="hand_img" src="../../../bilder/AI-Learning_Logo.svg" width="140px">
+            </div>
+            <!--<h1 id="headline">Artificial Intelligence</h1>-->
+            <!-- horizontal menu -->
+            <nav id="nav_main">
+                <a href="../../../maschinelles_lernen/grundlagen/index.html">Maschinelles Lernen</a>
+                <a href="index.html" class="currentPage">Neuronale Netze</a>
+                <a href="../../../deep_learning/prinzipien/index.html">Deep Learning</a>
+                <a href="../../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+                <a href="../../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+                <a href="../../../ethik/index.html">Ethik</a>
+            </nav>
+            <div id="logoHSO">
+                <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                        alt="Hochschule Offenburg"></a>
+            </div>
+        </div>
+
+        <!-- vertical menu -->
+        <div id="nav_left" data-current="Neuronale Netze">
+            <div id="menuItem">
+                <a href="../../../neuronale_netze/neuron/Quiz_Kapitel_1/teil1_info.html" >Neuron</a><br>
+                <a href="info.html" class="currentPage">Netze</a><br>
+            </div>
+
+        </div>
+        <!-- menuItem -->
+
+        <!-- nav_left -->
+        <div id="content">
+            <!-- Seitenindikator (Nummerierung anpassen) -->
+            <div>
+                <img src="../../../bilder/nummer8.png" id="pageIndicator" class="pageNr_first" width="25" height="40">
+                <img src="../../../bilder/slash.png" class="pageDiv" width="50" height="50">
+                <img src="../../../bilder/nummer8.png" class="pageNr_second" width="25" height="40">
+            </div>
+            <!-- obere Navigation (Links anpassen) -->
+            <a href="../Quiz_Kapitel_2/teil3_info.html"><img src="../../../bilder/topBack.png" id="Icon_topBack" width="40"
+                    height="40"></a>
+            <!--<a href=""><img src="../../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>-->
+            <!-- Titel der Einheit -->
+            <h1>Training eines kleinen neuronalen Netzes</h1>
+            <!--hier schon darauf hinweisen, um was in der Einheit geht -->
+
+            </h2> <!--verlinkte externe Anwendung/Tool wird in einem neuen Tab geöffnet-->
+            <div class="quizContent">
+                <!-- Quiz-Navigation(Links und Tooltips anpassen) -->
+                <div id="quizNavigation">
+                    <a href="info.html" class="quizNavigationElement">
+                        <img src="../../../bilder/infoSeite2.png" width="33" height="33" /> </a>
+                    <!-- Für jede Quizfrage einen Eintrag hinzufügen und je nachdem welche Frage die class=”active” hinzufügen-->
+                    <a href="frage1.html" class="quizNavigationElement" data-title="Frage1">
+                        <p>Q1</p>
+                    </a>
+                    <a href="frage2.html" class="quizNavigationElement" data-title="Frage2">
+                        <p>Q2</p>
+                    </a>
+                    <a href="frage3.html" class="quizNavigationElement active" data-title="Frage3">
+                        <p>Q3</p>
+                    </a>
+                    <a href="frage4.html" class="quizNavigationElement" data-title="Frage4">
+                        <p>Q4</p>
+                    </a>
+                    <!-- ...weitere Fragen in derselben Syntax ergänzen... --> <a href="info.html" id="exit_icon">
+                        <img src="../../../bilder/exit4.png" width="60" height="60" /> </a>
+                </div>
+                <div class="quiz">
+                    <!-- Aufgabenstellung und Quizfrage -->
+                    <h4 id="unitQuestion_top">
+                        Fülle die Lücken, in dem du jeweils die passenden Begriffe auswählst.
+                        <br><br>
+                        
+                    </h4>
+
+                    <!-- Lückentext-Container: data-correct-q1, data-correct-q2, ... - hier die richtigen Begriffe der jeweiligen Dropdown-Menüs auflisten-->
+                    <div class="gapText_long" data-correct-q1="größer"
+                        data-correct-q2="besseren" data-correct-q3="sehr kleine" data-correct-q4="auswendig lernt"
+                        data-correct-q5="Overfitting" data-correct-q6="große" data-correct-q7="robusteres"
+                        data-correct-q8="verallgemeinerbare">
+
+                        Je
+                        <select class="list-choice-objects" id="q1" onchange="handleDropdownChange();">
+                            <option value="" disabled selected>Wähle...</option>
+                            <option>größer</option>
+                            <option>besseren</option>
+                            <option>sehr kleine</option>
+                            <option>auswendig lernt</option>
+                            <option>Overfitting</option>
+                            <option>große</option>
+                            <option>robusteres</option>
+                            <option>verallgemeinerbare</option>
+                            <!-- ...weitere Optionen... -->
+                        </select>
+                        <img id="sym_q1" class="feedbackIcon_dropwdonwMenue">
+
+                        die Sample Size, desto mehr Daten stehen dem Modell zur Verfügung, um allgemeine Strukturen in den Eingabedaten zu erkennen. Das führt häufig zu einer
+                        <select class="list-choice-objects" id="q2" onchange="handleDropdownChange();">
+                            <option value="" disabled selected>Wähle...</option>
+                            <option>größer</option>
+                            <option>besseren</option>
+                            <option>sehr kleine</option>
+                            <option>auswendig lernt</option>
+                            <option>Overfitting</option>
+                            <option>große</option>
+                            <option>robusteres</option>
+                            <option>verallgemeinerbare</option>
+                            <!-- ...weitere Optionen... -->
+                        </select>
+                        <img id="sym_q2" class="feedbackIcon_dropwdonwMenue">
+
+                        Generalisierung und besseren Rekonstruktionsergebnissen. Verwendet man jedoch eine
+
+                        <select class="list-choice-objects" id="q3" onchange="handleDropdownChange();">
+                            <option value="" disabled selected>Wähle...</option>
+                            <option>größer</option>
+                            <option>besseren</option>
+                            <option>sehr kleine</option>
+                            <option>auswendig lernt</option>
+                            <option>Overfitting</option>
+                            <option>große</option>
+                            <option>robusteres</option>
+                            <option>verallgemeinerbare</option>
+                        </select>
+                        <img id="sym_q3" class="feedbackIcon_dropwdonwMenue">
+
+                        Sample Size, kann es passieren, dass das Modell diese wenigen Beispiele
+
+                        <select class="list-choice-objects" id="q4" onchange="handleDropdownChange();">
+                            <option value="" disabled selected>Wähle...</option>
+                            <option>größer</option>
+                            <option>besseren</option>
+                            <option>sehr kleine</option>
+                            <option>auswendig lernt</option>
+                            <option>Overfitting</option>
+                            <option>große</option>
+                            <option>robusteres</option>
+                            <option>verallgemeinerbare</option>
+                        </select>
+                        <img id="sym_q4" class="feedbackIcon_dropwdonwMenue">
+
+                        , also sich zu stark an sie anpasst. Dieses Phänomen nennt man
+
+                        <select class="list-choice-objects" id="q5" onchange="handleDropdownChange();">
+                            <option value="" disabled selected>Wähle...</option>
+                            <option>größer</option>
+                            <option>besseren</option>
+                            <option>sehr kleine</option>
+                            <option>auswendig lernt</option>
+                            <option>Overfitting</option>
+                            <option>große</option>
+                            <option>robusteres</option>
+                            <option>verallgemeinerbare</option>
+                        </select>
+                        <img id="sym_q5" class="feedbackIcon_dropwdonwMenue">
+
+                        Eine
+
+                        <select class="list-choice-objects" id="q6" onchange="handleDropdownChange();">
+                            <option value="" disabled selected>Wähle...</option>
+                            <option>größer</option>
+                            <option>besseren</option>
+                            <option>sehr kleine</option>
+                            <option>auswendig lernt</option>
+                            <option>Overfitting</option>
+                            <option>große</option>
+                            <option>robusteres</option>
+                            <option>verallgemeinerbare</option>
+                        </select>
+                        <img id="sym_q6" class="feedbackIcon_dropwdonwMenue">
+
+                        Sample Size sorgt hingegen meist für ein
+
+                        <select class="list-choice-objects" id="q7" onchange="handleDropdownChange();">
+                            <option value="" disabled selected>Wähle...</option>
+                            <option>größer</option>
+                            <option>besseren</option>
+                            <option>sehr kleine</option>
+                            <option>auswendig lernt</option>
+                            <option>Overfitting</option>
+                            <option>große</option>
+                            <option>robusteres</option>
+                            <option>verallgemeinerbare</option>
+                        </select>
+                        <img id="sym_q7" class="feedbackIcon_dropwdonwMenue">
+
+                        Training, weil das Modell lernt,
+
+                        <select class="list-choice-objects" id="q8" onchange="handleDropdownChange();">
+                            <option value="" disabled selected>Wähle...</option>
+                            <option>größer</option>
+                            <option>besseren</option>
+                            <option>sehr kleine</option>
+                            <option>auswendig lernt</option>
+                            <option>Overfitting</option>
+                            <option>große</option>
+                            <option>robusteres</option>
+                            <option>verallgemeinerbare</option>
+                        </select>
+                        <img id="sym_q8" class="feedbackIcon_dropwdonwMenue">
+
+                        Muster zu erkennen und nicht nur individuelle Merkmale einzelner Bilder.
+                    </div>
+
+                    <!--Feedback-Text (wird per JS geändert)-->
+                    <h5 id="unitGaptext_long_msg">Wähle die passenden Begriffe aus!</h5>
+
+                    <!-- Reset-Buttons (Link anpassen) - mit right: und bottom: ggf. mit top: und left: besser positionieren-->
+                    <a href="frage3.html"><img id="undo_button" src="../../../bilder/undo_enabled3.png"
+                            width="40" height="40" style="right:390px; bottom:5px;" /></a>
+
+                    <!-- Check-Buttons - mit right: und bottom: ggf. mit top: und left: besser positionieren-->
+                    <img id="check_button" src="../../../bilder/check_disable.png" width="40" height="50"
+                        style="right:330px; bottom:5px;" />
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <img src="../../../bilder/license.png" id="license">
+
+            <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail"
+                    href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+                &nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail"
+                    href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

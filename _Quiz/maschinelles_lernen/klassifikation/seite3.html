@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Maschinelles Lernen</title>
+   
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizDropzoneImage.css">
+
+    <!--JS files--> 
+    <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/imageDragDrop.js"></script>
+</head>
+<body>
+<div id="wapper">
+    <div id="header">
+        <div id="hand">
+            <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+        </div>
+        <!-- horizontal menu -->
+        <nav id="nav_main">
+			<a href="index.html" class="currentPage">Maschinelles Lernen</a>
+            <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+            <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+            <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+            <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+			<a href="../../ethik/index.html">Ethik</a>
+        </nav>
+        <div id="logoHSO">
+            <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                      alt="Hochschule Offenburg"></a>
+        </div>
+    </div>
+
+    <!-- vertical menu -->
+    <div id="nav_left" data-current="Maschinelles Lernen">
+        <div id="menuItem">
+			<a href="../../maschinelles_lernen/grundlagen/index.html">Grundlagen</a><br>
+            <a href="index.html" class="currentPage">Klassifikation</a><br> <!--Klassifikationsabschnitt-->
+            <a href="../../maschinelles_lernen/clustering/index.html">Clustering</a><br>
+            <a href="../../maschinelles_lernen/assoziationsanalyse/index.html">Assoziationsanalyse</a><br>
+
+        </div>
+    </div>
+    <div id="content">
+        <div>
+            <img src="../../bilder/nummer3.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+            <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+            <img src="../../bilder/nummer6.png" class="pageNr_second" width="25" height="40">
+        </div>
+    
+    <a href="index.html"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40"></a>
+    <a href="seite4.html"><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>
+
+    <h1>Kreditrisiko</h1>
+    
+    <h2 id="contextual_question_standAlone">
+        Gegeben ist der folgende Entscheidungsbaum mit dem das Kreditrisiko 
+        von Kunden aufgrund der Attribute Einkommen, Kreditwürdigkeit und Verschuldung 
+        ermittelt werden soll. Welches Risiko gilt für die Kunden: Bill, Clara und Dieter?
+    </h2> 
+ 
+    <div class="imageMatching" data-correct='{"imgdiv1":"Bill50","imgdiv2":"","imgdiv3":"Dieter","imgdiv4":"Clara","imgdiv5":"","imgdiv6":"","imgdiv7":"","imgdiv8":"Bill"}'>
+
+        <div class="imageDropzone_standAlone">
+            <img src="../../bilder/1_Maschinelles_Lernen/klassifikation/seite3/decisiontree_default.png" 
+                id="imageForDrop" 
+                width="750px" 
+                height="250px" style="bottom: 15px">
+        
+
+            <!-- Drop Zones -->
+            <!-- Drop Zone 1 -->
+            <div id="imgdiv1" 
+                class="singleImageDropzone_standAlone" style="width: 90px; height: 15px; left: 118px; top: 80px;">
+                <img id="sym_imgdiv1">
+            </div>
+    
+            
+            <!-- Drop Zone 2 -->
+            <div id="imgdiv2" 
+                class="singleImageDropzone_standAlone" 
+                style="width: 90px; height: 15px; left: 142px; top: 146px;">
+                <img id="sym_imgdiv2">
+
+            </div>
+            
+            <!-- Drop Zone 3 -->
+            <div id="imgdiv3" 
+                class="singleImageDropzone_standAlone"
+                style="width: 90px; height: 15px; left: 268px; top: 146px;">
+                <img id="sym_imgdiv3">
+            </div>
+          
+            
+            <!-- Drop Zone 4 -->
+            <div id="imgdiv4" 
+                class="singleImageDropzone_standAlone"
+                style="width: 90px; height: 15px; left: 393px; top: 146px;">
+                <img id="sym_imgdiv4">
+            </div>
+        
+
+            <!-- Drop Zone 5 -->
+            <div id="imgdiv5" 
+                class="singleImageDropzone_standAlone"
+                style="width: 90px; height: 15px; left: 518px; top: 146px;">
+                <img id="sym_imgdiv5">
+
+            </div>
+
+            <!-- Drop Zone 6 -->
+            <div id="imgdiv6" 
+                class="singleImageDropzone_standAlone" 
+                style="width: 90px; height: 15px; left: 644px; top: 146px;">
+                <img id="sym_imgdiv6">
+            </div>
+            
+
+            <!-- Drop Zone 7 -->
+            <div id="imgdiv7" 
+                class="singleImageDropzone_standAlone"
+                style="width: 90px; height: 15px;left: 15px; top: 218px;">
+                <img id="sym_imgdiv7">
+            </div>
+            
+
+            <!-- Drop Zone 8 -->
+            <div id="imgdiv8" 
+                class="singleImageDropzone_standAlone"
+                style="width: 90px; height: 15px; border-width: thin; left: 140px; top: 218px;">
+                <img id="sym_imgdiv8">
+            </div>
+            
+        </div>
+    
+        <div class="imageDropzone_Draggables_standAlone">
+            <!-- Drag-Elemente-->
+
+            <div class="contextual_imageDraggable">
+                <div class="imageDropzone_SingleDraggable" id="Bill" draggable="true" style="background-color: #df6c11;">
+                    Bill
+                </div>
+                <!-- Info Bill -->
+                <p>
+                    unbekannte frühere Kreditwürdigkeit, 30.000 EUR Einkommen, niedrige Verschuldung
+                </p>
+            </div>
+            
+
+
+            <!-- Customer 2: Clara -->
+            <div class="contextual_imageDraggable">
+                <div class="imageDropzone_SingleDraggable" 
+                    id="Clara" 
+                    draggable="true" 
+                    style="background-color: #ab6194;">
+                    Clara
+                </div>
+                <!-- Customer Info for Clara -->
+                <p>
+                    40.000 EUR Einkommen, unbekannte Kreditwürdigkeit, hohe Verschuldung
+                </p>
+            </div>
+            
+
+            <!-- Customer 3: Dieter -->
+            <div class="contextual_imageDraggable">
+                <div class="imageDropzone_SingleDraggable"
+                    id="Dieter" 
+                    draggable="true" 
+                    style="background-color: #5d3483;">
+                    Dieter
+                </div>
+                 <!-- Customer Info for Dieter -->
+                <p>
+                    frühere Kreditwürdigkeit ist gut, niedrige Verschuldung, Einkommen bei 20.000 EUR
+                </p>
+            </div>
+           
+
+            <!-- Customer 4: Bill 50% -->
+            <div class="contextual_imageDraggable">
+                <div class="imageDropzone_SingleDraggable"
+                    id="Bill50" 
+                    draggable="true" 
+                    style="background-color: #f7a42d;">
+                    Bill 50%
+                </div>
+                <!-- Customer Info for Bill 50% -->
+                <p>
+                    Was ändert sich an dem Ergebnis von Bill, wenn er seine Arbeitsstelle auf 50 Prozent reduziert
+                    und nur noch 14.000 EUR verdient?
+                </p>
+            </div>
+            
+        </div>
+    </div>
+ 
+
+    <h5 id="ImageDrop_msg_standAlone">Ziehe die Ausschnitte an die richtige Stelle!</h5>
+    
+
+    <!--Button, dass alle gemachten Eingaben gelöscht werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+    <a href="seite3.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40" style="right:430px; bottom:5px;"/></a> 
+
+    <!--Button, dass die gemachten Eingaben überprüft werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+    <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50" style="right:370px; bottom:5px;"/>
+
+    </div>
+    <footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+    </p>
+    </footer>
+
+</div>
+
+<!-- Zusatzscript, damit Bild wechselt, wenn ein oder mehrere Antworten richtig sind (=Pfeile erscheinen) -->
+<script>
+// Warte bis alle Scripts geladen sind
+window.addEventListener('load', function() {
+    
+    // Funktion um die Bildänderung basierend auf korrekten Antworten zu handhaben
+    function updateDecisionTreeImage() {
+        // Bestimme welche Antworten korrekt platziert sind
+        const correctMapping = {
+            "imgdiv1": "Bill50",
+            "imgdiv2": "",
+            "imgdiv3": "Dieter", 
+            "imgdiv4": "Clara",
+            "imgdiv5": "",
+            "imgdiv6": "",
+            "imgdiv7": "",
+            "imgdiv8": "Bill"
+        };
+        
+        const correctlyPlacedAnswers = {
+            Bill: false,
+            Clara: false,
+            Dieter: false,
+            Bill50: false
+        };
+        
+        // Überprüfe jede Dropzone
+        const dropzonesOnImage = document.querySelectorAll(".singleImageDropzone_standAlone");
+        dropzonesOnImage.forEach(zone => {
+            const dropzoneId = zone.id;
+            const correctDraggableId = correctMapping[dropzoneId];
+            const placedDraggable = zone.querySelector('.imageDropzone_SingleDraggable');
+            
+            if (placedDraggable && placedDraggable.id === correctDraggableId && correctDraggableId !== "") {
+                correctlyPlacedAnswers[correctDraggableId] = true;
+            }
+        });
+        
+        // Zähle richtige Antworten
+        const correctCount = Object.values(correctlyPlacedAnswers).filter(val => val === true).length;
+        const allCorrectOverall = correctCount === 4;
+        
+        // Bildpfad und Message-Element
+        let decisionTreeImage = document.getElementById("imageForDrop");
+        const basePath = "../../bilder/1_Maschinelles_Lernen/klassifikation/seite3/";
+        let msgElement = document.getElementById("ImageDrop_msg_standAlone");
+        
+        if (!decisionTreeImage || !msgElement) {
+            console.log("Elemente nicht gefunden");
+            return;
+        }
+        
+        const isBillCorrect = correctlyPlacedAnswers.Bill;
+        const isClaraCorrect = correctlyPlacedAnswers.Clara;
+        const isDieterCorrect = correctlyPlacedAnswers.Dieter;
+        const isBill50Correct = correctlyPlacedAnswers.Bill50;
+        
+        // Alle richtig
+        if (allCorrectOverall) { 
+            msgElement.innerHTML = "Super! Das ist richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_bill_clara_dieter_bill50.png";
+        }
+        // Drei richtig
+        else if (isBill50Correct && isDieterCorrect && isClaraCorrect && !isBillCorrect) {
+            msgElement.innerHTML = "Bill 50%, Dieter und Clara sind richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_clara_dieter_bill50.png";
+        } else if (isBill50Correct && isDieterCorrect && !isClaraCorrect && isBillCorrect) {
+            msgElement.innerHTML = "Bill, Dieter und Bill 50% sind richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_bill_dieter_bill50.png";
+        } else if (isBill50Correct && !isDieterCorrect && isClaraCorrect && isBillCorrect) {
+            msgElement.innerHTML = "Bill 50%, Clara und Bill sind richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_bill_clara_bill50.png";
+        } else if (!isBill50Correct && isDieterCorrect && isClaraCorrect && isBillCorrect) {
+            msgElement.innerHTML = "Bill, Clara und Dieter sind richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_bill_clara_dieter.png";
+        }
+        // Zwei richtig
+        else if (isBill50Correct && isDieterCorrect && !isClaraCorrect && !isBillCorrect) {
+            msgElement.innerHTML = "Bill 50% und Dieter sind richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_dieter_bill50.png";
+        } else if (isBill50Correct && !isDieterCorrect && isClaraCorrect && !isBillCorrect) {
+            msgElement.innerHTML = "Bill 50% und Clara sind richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_clara_bill50.png";
+        } else if (isBill50Correct && !isDieterCorrect && !isClaraCorrect && isBillCorrect) {
+            msgElement.innerHTML = "Bill 50% und Bill sind richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_bill_bill50.png";
+        } else if (!isBill50Correct && isDieterCorrect && isClaraCorrect && !isBillCorrect) {
+            msgElement.innerHTML = "Dieter und Clara sind richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_clara_dieter.png";
+        } else if (!isBill50Correct && isDieterCorrect && !isClaraCorrect && isBillCorrect) {
+            msgElement.innerHTML = "Dieter und Bill sind richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_bill_dieter.png";
+        } else if (!isBill50Correct && !isDieterCorrect && isClaraCorrect && isBillCorrect) {
+            msgElement.innerHTML = "Clara und Bill sind richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_bill_clara.png";
+        }
+        // Eins richtig
+        else if (isBill50Correct && !isDieterCorrect && !isClaraCorrect && !isBillCorrect) {
+            msgElement.innerHTML = "Bill 50% ist richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_bill50.png";
+        } else if (!isBill50Correct && isDieterCorrect && !isClaraCorrect && !isBillCorrect) {
+            msgElement.innerHTML = "Dieter ist richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_dieter.png";
+        } else if (!isBill50Correct && !isDieterCorrect && isClaraCorrect && !isBillCorrect) {
+            msgElement.innerHTML = "Clara ist richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_clara.png";
+        } else if (!isBill50Correct && !isDieterCorrect && !isClaraCorrect && isBillCorrect) {
+            msgElement.innerHTML = "Bill ist richtig!";
+            decisionTreeImage.src = basePath + "decisiontree_bill.png";
+        }
+        else { // Default case
+            msgElement.innerHTML = "Nicht ganz, versuche es nochmal!";
+            decisionTreeImage.src = basePath + "decisiontree_default.png";
+        }
+    }
+    
+    // Überschreibe den Check-Button Click Handler
+    const checkButton = document.getElementById("check_button");
+    if (checkButton) {
+        checkButton.addEventListener('click', function() {
+            // Warte einen kurzen Moment, damit die ursprüngliche check() Funktion ausgeführt wird
+            setTimeout(updateDecisionTreeImage, 100);
+        });
+    }
+    
+    // Alternative: Falls die check() Funktion global verfügbar ist, erweitere sie
+    if (typeof window.check === 'function') {
+        const originalCheck = window.check;
+        window.check = function() {
+            originalCheck();
+            setTimeout(updateDecisionTreeImage, 50);
+        };
+    }
+});
+</script>
+
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</html>
+
+<!-- alte Script mit sich ändernden Bildern -->
+<!-- <script>
+    /*globale Konstanten, in denen festgelegt wird, welche Zuordnungspaare richtig sind
+- Objekt, das die richtigen Antworten den Dropzones zuordnet*/
+const correctAnswers = {
+    "imgdiv1": "Bill50",
+    "imgdiv2": "",
+    "imgdiv3": "Dieter",
+    "imgdiv4": "Clara",
+    "imgdiv5": "",
+    "imgdiv6": "",
+    "imgdiv7": "",
+    "imgdiv8": "Bill",
+    };
+
+/*Funktion, damit der Check-Button aktiviert wird und Studierenden ab dem Zeitpunkt
+egal wie viel sie vom Quiz ausgefüllt haben, die Lösung ansehen können, da die
+Funktion "check()" hier aufgerufen wird*/
+function handle_click(cb) {
+    document.getElementById("msg").innerHTML = "Klicke auf Check für die Lösung!";
+    document.getElementById("check").src ="../../bilder/check_enabled3.png";
+    document.getElementById("check").onclick = check;
+    }
+
+/*Funktion, die aufgerufen wird, wenn ein draggable-Element geklickt und bewegt
+wird - speichert die ID des zu bewegenden Elements.*/
+function drag(ev) {
+    handle_click();
+    ev.dataTransfer.setData("text", ev.target.id);
+};
+
+/*Funktion, die es erlaubt, dass auf den Elementen, ein draggable-Element
+hingezogen werden werden kann - sorgt dafür, dass das Ablegen überhaupt
+funktioniert - Dropzone*/
+function allowDrop(ev) {
+ev.preventDefault();
+};
+
+/*Funktion, wenn draggable-Element über einer Dropzone losgelassen wird und an
+dieser Stelle bleibt, Funktion verarbeitet das Ablegen eines Elementssorgt und dass
+das draggable-Element korrekt in die Dropzone eingefügt wird.*/
+function drop(ev) {
+    ev.preventDefault();
+    let divID = ev.dataTransfer.getData("text"); // ID des Drag-Elements holen
+    let draggedElement = document.getElementById(divID); // Element holen
+    let imgdropzone = ev.target; // Ziel-Dropzone holen
+    
+    if (imgdropzone.classList.contains("individual_imgdropzone") && imgdropzone.children.length === 0) { //stellt sicher, dass nur ein Element in einer Dropzone abgelegt werden kann
+        imgdropzone.appendChild(draggedElement);
+        
+        draggedElement.style.position = "static"; //sichergestellen, dass das Element innerhalb der Dropzone bleibt
+        draggedElement.style.margin ="auto";
+
+        // Schriftgröße soll in Dropzone gleich bleiben
+        draggedElement.style.fontSize = "15px"; 
+        draggedElement.style.fontWeight = "normal"; // Falls nötig
+        draggedElement.style.lineHeight = "1"; // Verhindert Zeilenhöhen-Probleme
+        };
+    };
+
+/*Funktion, um die Eingaben der Studierenden zu überprüfen - Drag&Drop-Frage:
+überprüft, ob jede Dropzone das richtige Element enthält*/
+function check() {
+    let allCorrectOverall = true; // Tracks if all dropzones (including empty ones) are correct
+    const correctlyPlacedAnswers = { // Tracks the state of the 4 main draggable items
+        "Bill": false, // Bill
+        "Clara": false, // Clara
+        "Dieter": false, // Dieter
+        "Bill50": false  // Bill50%
+    };
+
+    // Iterate over all defined dropzones in correctAnswers
+    for (let imgdropzoneId in correctAnswers) {
+        let imgdropzone = document.getElementById(imgdropzoneId);
+        let expectedAnswerId = correctAnswers[imgdropzoneId]; // Expected ID, or "" if meant to be empty
+        let symIcon = document.getElementById("sym_" + imgdropzoneId);
+
+        if (!imgdropzone || !symIcon) {
+            console.error("Fehlendes HTML-Element für Dropzone oder Symbol-Icon:", imgdropzoneId);
+            allCorrectOverall = false;
+            continue;
+        }
+
+        if (imgdropzone.children.length === 1) { // An item is in the dropzone
+            let droppedAnswerId = imgdropzone.children[0].id;
+
+            if (droppedAnswerId === expectedAnswerId) {
+                symIcon.src = "../../bilder/tick.png";
+                if (expectedAnswerId !== "" && correctlyPlacedAnswers.hasOwnProperty(expectedAnswerId)) {
+                    correctlyPlacedAnswers[expectedAnswerId] = true;
+                }
+            } else {
+                symIcon.src = "../../bilder/cross.png";
+                allCorrectOverall = false;
+            }
+        } else { // Dropzone is empty
+            // GEÄNDERT: Zeige nur dann ein Häkchen/Kreuz, wenn die Dropzone nicht leer ist
+            
+            if (expectedAnswerId === "") {
+                symIcon.src = ""; // Kein Symbol für korrekt leere Dropzones
+                
+            } else {
+                allCorrectOverall = false;
+            }
+        }
+    }
+
+    let decisionTreeImage = document.getElementById("dropImg");
+    const basePath = "../../bilder/1_Maschinelles_Lernen/klassifikation/seite1/";
+    let msgElement = document.getElementById("msg");
+
+    const isBillCorrect = correctlyPlacedAnswers.Bill;
+    const isClaraCorrect = correctlyPlacedAnswers.Clara;
+    const isDieterCorrect = correctlyPlacedAnswers.Dieter;
+    const isBill50Correct = correctlyPlacedAnswers.Bill50;
+
+    // Alle richtig
+    if (allCorrectOverall) { 
+        msgElement.innerHTML = "Super! Das ist richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_bill_clara_dieter_bill50.png";
+    }
+   
+    // Drei richtig
+    else if (isBill50Correct && isDieterCorrect && isClaraCorrect && !isBillCorrect) {
+        msgElement.innerHTML = "Bill 50%, Dieter und Clara sind richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_clara_dieter_bill50.png";
+    } else if (isBill50Correct && isDieterCorrect && !isClaraCorrect && isBillCorrect) {
+        msgElement.innerHTML = "Bill, Dieter und Bill 50% sind richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_bill_dieter_bill50.png";
+    } else if (isBill50Correct && !isDieterCorrect && isClaraCorrect && isBillCorrect) {
+        msgElement.innerHTML = "Bill 50%, Clara und Bill sind richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_bill_clara_bill50.png";
+    } else if (!isBill50Correct && isDieterCorrect && isClaraCorrect && isBillCorrect) {
+        msgElement.innerHTML = "Bill, Clara und Dieter sind richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_bill_clara_dieter.png";
+    }
+    // Zwei richtig
+    else if (isBill50Correct && isDieterCorrect && !isClaraCorrect && !isBillCorrect) {
+        msgElement.innerHTML = "Bill 50% und Dieter sind richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_dieter_bill50.png";
+    } else if (isBill50Correct && !isDieterCorrect && isClaraCorrect && !isBillCorrect) {
+        msgElement.innerHTML = "Bill 50% und Clara sind richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_clara_bill50.png";
+    } else if (isBill50Correct && !isDieterCorrect && !isClaraCorrect && isBillCorrect) {
+        msgElement.innerHTML = "Bill 50% und Bill sind richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_bill_bill50.png";
+    } else if (!isBill50Correct && isDieterCorrect && isClaraCorrect && !isBillCorrect) {
+        msgElement.innerHTML = "Dieter und Clara sind richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_clara_dieter.png";
+    } else if (!isBill50Correct && isDieterCorrect && !isClaraCorrect && isBillCorrect) {
+        msgElement.innerHTML = "Dieter und Bill sind richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_bill_dieter.png";
+    } else if (!isBill50Correct && !isDieterCorrect && isClaraCorrect && isBillCorrect) {
+        msgElement.innerHTML = "Clara und Bill sind richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_bill_clara.png";
+    }
+    // Eins richtig
+    else if (isBill50Correct && !isDieterCorrect && !isClaraCorrect && !isBillCorrect) {
+        msgElement.innerHTML = "Bill 50% ist richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_bill50.png";
+    } else if (!isBill50Correct && isDieterCorrect && !isClaraCorrect && !isBillCorrect) {
+        msgElement.innerHTML = "Dieter ist richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_dieter.png";
+    } else if (!isBill50Correct && !isDieterCorrect && isClaraCorrect && !isBillCorrect) {
+        msgElement.innerHTML = "Clara ist richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_clara.png";
+    } else if (!isBill50Correct && !isDieterCorrect && !isClaraCorrect && isBillCorrect) {
+        msgElement.innerHTML = "Bill ist richtig!";
+        decisionTreeImage.src = basePath + "decisiontree_bill.png";
+    }
+    else { // Default case if no specific combination is met or other errors occurred
+        msgElement.innerHTML = "Nicht ganz, versuche es nochmal!";
+        decisionTreeImage.src = basePath + "decisiontree_default.png";
+    }
+
+    document.getElementById("check").onclick = null; // Disable check button after checking
+    document.getElementById("check").src ="../../bilder/check_disable.png";
+}
+
+</script> -->

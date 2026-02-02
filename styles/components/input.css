@@ -1,0 +1,88 @@
+/*////////////////////////////////////////////// Input */
+.inputValues {
+    padding-top: 64px;
+    p {
+      align-items: center;
+      justify-content: space-between;
+      background-color: #edf5ee;
+      padding: 6px 12px;
+      border-radius: var(--border-radius-standard);
+      margin-top: 20px;
+      color: #333333;
+    }
+    .inputContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 24px;
+      .iconText {
+        display: flex;
+        align-items: center;
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 4px;
+        }
+      }
+      .progressContainer {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        .progressElement {
+          width: 100px;
+          height: 10px;
+          display: flex;
+          justify-content: start;
+          border-radius: 5px;
+          background-color: var(--akzent2);
+          overflow: hidden;
+          .progressBar {
+            width: 50%;
+            height: 100%;
+            background-color: var(--primary);
+            transition: width 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+.primary-btn {
+        flex: 1;
+        align-self: flex-end;
+        max-width: fit-content;
+        font-size: clamp(0.9rem, 2vw, 1.5rem);
+        height: 50px;
+        cursor: pointer;
+        border: none;
+        background-color: #598234;
+        color: white;
+        padding: 10px 16px;
+        margin-top: auto;
+        border-radius: var(--border-radius-standard);
+        transition: 
+          background-color 0.3s ease,
+          color            0.3s ease,
+          border-radius    0.3s ease;
+        white-space: nowrap;
+      } 
+
+
+.secondary-btn {
+        flex: 1;
+        align-self: center;
+        height: 36px;
+        font-size: 24px;
+        cursor: pointer;
+        border: none;
+        background-color: #598234;
+        color: white;
+        padding: 45;
+        border-radius: var(--border-radius-standard);
+        transition: 
+          background-color 0.3s ease,
+          color            0.3s ease,
+          border-radius    0.3s ease;
+      }  

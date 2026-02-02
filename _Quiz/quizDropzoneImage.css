@@ -1,0 +1,182 @@
+#unitImageDrop_msg {
+	position: absolute;
+	width: 500px;
+    color: #566a2b;
+    top: 390px;
+    left: 0px;
+}
+
+.imageDropzone_unit {
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    width: 520px;
+    height: 270px;
+}
+
+
+.imageDropzone_unit .unit_ImageDropzone{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid #950e1d;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;     /* vertikal zentrieren */
+    justify-content: center; /* horizontal zentrieren */
+}
+
+.imageDropzone_unit .unit_ImageDropzone:hover {
+    background: rgba(149, 14, 29, 0.8);
+}
+
+.unit_ImageDropzone img {
+    margin-top: 20px;
+    z-index: 1;
+}
+
+#unit_ImageDropzone_Draggables {
+    display: flex;
+    flex-direction: column;    
+    gap: 10px;
+    justify-content: center;
+    max-width: 160px;
+   font-family: Open Sans;
+}
+
+.unit_ImageDropzone_SingleDraggable {
+    background-color: rgba(149, 14, 29);
+    border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 0px 1px 5px 0px rgb(149, 14, 29);
+    padding: 2px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;     /* vertikal zentrieren */
+    justify-content: center; /* horizontal zentrieren */
+    width: 100%;
+    height: 100%;
+}
+
+.unit_ImageDropzone_SingleDraggable:hover {
+    transform: scale(1.1);
+}
+
+.quiz-row {
+    display: flex;
+    align-items: flex-start; /* Bild und Drag-Container oben ausrichten */
+    gap: 10px;              /* Abstand zwischen Bild und Drag-Elementen */
+    margin: 0 10px;
+}
+
+.imageDropzone_standAlone {
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    max-width: 750px;
+    height: 250px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.imageDropzone_StandAlone img#imageForDrop {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.singleImageDropzone_standAlone {
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    text-align: center;
+    border-radius:5px;
+    border-color: #333333;
+}
+
+
+.singleImageDropzone_standAlone:hover {
+    background-color: #f1f0e9;
+    transform: scale(1.1);
+
+}
+
+.singleImageDropzone_standAlone img {
+    position: absolute; 
+    left: 50%; 
+    top: 100%; 
+    margin-top: 5px;
+}
+
+#ImageDrop_msg_standAlone {
+    width: 600px;
+    color: #566a2b;
+    position: absolute;
+    top: 505px;
+    left: 100px;
+}
+
+.imageDropzone_Draggables_standAlone{
+    font-family: Open Sans;
+    color: #ffffff;
+    max-width: 740px;
+    max-height: 110px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    inline-size: fit-content;
+    word-break: break-word;
+}
+
+.imageDropzone_SingleDraggable {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #0d4715;
+    box-shadow: 5px 0px 10px 0px rgba(89, 130, 52);
+    cursor: pointer;
+    display: flex;
+    transition: transform 0.2s;
+    word-break: break-word;
+
+}
+
+.imageDropzone_SingleDraggable:hover {
+    transform: scale(1.1);
+}
+
+#imageForDrop {
+    filter:drop-shadow(0px 0px 10px gray);
+    position: relative;
+}
+
+.contextual_imageDraggable {
+    margin-right: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100px;
+    p {
+    margin: 0;
+    font-size: 12px !important; 
+    word-break: normal;
+    hyphens: auto;
+    max-width: 180px;
+  }
+}
+
+.contextual_imageDraggable .imageDropzone_SingleDraggable {
+    margin-bottom: 5px;
+    display: inline-flex;
+    color: #fff;
+}
+ 
+
+
+
+

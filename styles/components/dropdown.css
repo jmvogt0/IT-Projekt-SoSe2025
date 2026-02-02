@@ -1,0 +1,10 @@
+.dropdown {
+    height: 50px;
+    background-color: var(--akzent2);
+    border-radius: var(--border-radius-standard);
+    border: 0;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+

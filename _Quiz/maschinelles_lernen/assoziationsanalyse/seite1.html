@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Maschinelles Lernen</title>
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizDropzoneSingle.css">
+
+
+    <!--JS files-->
+    <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/singleDragDrop.js"></script>
+
+</head>
+<body>
+<div id="wapper">
+    <div id="header">
+        <div id="hand">
+            <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+        </div>
+        <!-- horizontal menu -->
+        <nav id="nav_main">
+            <a href="index.html" class="currentPage">Maschinelles Lernen</a>
+            <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+            <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+            <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+            <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+			<a href="../../ethik/index.html">Ethik</a>
+
+        </nav>
+        <div id="logoHSO">
+            <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                      alt="Hochschule Offenburg"></a>
+        </div>
+    </div>
+
+    <!-- vertical menu -->
+    <div id="nav_left" data-current="Maschinelles Lernen">
+        <div id="menuItem">
+			<a href="../../maschinelles_lernen/grundlagen/index.html">Grundlagen</a><br>
+            <a href="../../maschinelles_lernen/klassifikation/index.html">Klassifikation</a><br>
+            <a href="../../maschinelles_lernen/clustering/index.html">Clustering</a><br>
+            <a href="index.html" class="currentPage">Assoziationsanalyse</a><br>
+
+        </div>
+
+    </div>
+    <!-- menuItem -->
+
+<!-- nav_left -->
+<div id="content">
+    <div>
+        <img src="../../bilder/nummer2.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+        <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+        <img src="../../bilder/nummer3.png" class="pageNr_second" width="25" height="40">
+    </div>
+    
+    <a href="index.html"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40"></a>
+    <a href="seite2.html"><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>
+    
+    <h1>Grundlagen zur Assoziationsanalyse</h1> <!--Fragentitel-->
+
+    <h2 id="question_standAlone">Ordne die folgenden Begriffe den richtigen Definitionen zu!</h2>
+
+    <div class="singleMatching" data-correct='{"div1":"answer2","div2":"answer3","div3":"answer1"}'>
+        <ul id="SingleDropzone_standAlone">
+            <li>Support
+            <section id="div1" class="Singledropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></section>
+            <img id="sym_div1">
+            </li>
+    
+            <li>Confidence
+            <section id="div2" class="Singledropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></section>
+            <img id="sym_div2">
+            </li>
+            
+            <li>Lift
+            <section id="div3" class="Singledropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></section>
+            <img id="sym_div3">
+            </li>    
+        </ul>
+
+
+        <div id="SingleDropzone_Draggables_standAlone">
+            <!-- Drag-Elemente: Für jede Antwort ein eigenes Div -->
+            <div class="SingleDraggable_standAlone" id="answer1" draggable="true" ondragstart="drag(event)">Bewertet die Stärke der Regel im Vergleich zu einer zufälligen Beziehung zwischen den Elementen.</div>
+            <div class="SingleDraggable_standAlone" id="answer2" draggable="true" ondragstart="drag(event)">Gibt an, wie oft eine Regel in den Daten vorkommt.</div> 
+            <div class="SingleDraggable_standAlone" id="answer3" draggable="true" ondragstart="drag(event)">Misst die Wahrscheinlichkeit, dass die Konsequenz einer Regel eintritt, wenn die Voraussetzung erfüllt ist.</div>                       
+        </div>
+    </div>
+    <!-- Feedback-Text (wird per JS geändert) -->
+    <h5 id="SingleDrop_msg_standAlone">Ziehe die Beschreibungen an die richtigen Stellen!</h5>
+    
+
+   <!-- Reset-Buttons (Link anpassen) -->
+   <a href="seite1.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40" style="right:430px; bottom:20px;"/></a> 
+   <!-- Check-Buttons -->              
+   <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50" style="right:370px; bottom:20px;"/> 
+
+</div>
+<footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+    </ps>
+</footer>
+</div>
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</html>

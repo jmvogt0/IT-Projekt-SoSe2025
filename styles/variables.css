@@ -1,0 +1,15 @@
+:root {
+    --primary: #598234;
+    --primary-hover: #79A64A;
+    --primary-foucs: #466829;
+    --akzent1: #ACCF62;
+    --akzent2: #D8EEC1;
+    --warning: #E85C41;
+    --success: #4CAF50;
+    --neutral-text: #333333;
+    --neutral-text-white: #FFFFFF;
+    --background: #F8F9F6;
+    --site-background: #3F4F44;
+    --rahmen: #D2D7CD;
+    --border-radius-standard: 8px;
+}

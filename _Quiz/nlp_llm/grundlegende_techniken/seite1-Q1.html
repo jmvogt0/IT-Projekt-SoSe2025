@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • NLP & LLM</title>
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizCheckbox.css">
+    <!--JS files-->
+    <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/single_mulipleChoice.js"></script>
+</head>
+<body>
+<div id="wapper">
+    <div id="header">
+        <div id="hand">
+            <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+        </div>
+        <!-- horizontal menu -->
+        <nav id="nav_main">
+			<a href="../../maschinelles_lernen/grundlagen/index.html">Maschinelles Lernen</a>
+            <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+            <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+            <a href="index.html" class="currentPage">NLP & LLM</a>
+            <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+			<a href="../../ethik/index.html">Ethik</a>
+        </nav>
+        <div id="logoHSO">
+            <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                      alt="Hochschule Offenburg"></a>
+        </div>
+    </div>
+
+    <!-- vertical menu -->
+    <div id="nav_left" data-current="NLP & LLM">
+        <div id="menuItem">
+            <a href="index.html" class="currentPage">Grundlegende Techniken</a><br>
+            <a href="../../nlp_llm/architektur_und_funktionsweise_von_llms/index.html">Architektur & Funktion</a><br>
+        </div>
+
+    </div>
+    <!-- menuItem -->
+
+<!-- nav_left -->
+<div id="content">
+    <!-- Seitenindikator (Nummerierung anpassen) -->
+    <div>
+        <img src="../../bilder/nummer1.png" id="pageIndicator" class="pageNr_first" width="25" height="40">
+        <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+        <img src="../../bilder/nummer1.png" class="pageNr_second" width="25" height="40">
+    </div>
+
+
+    <!-- obere Navigation (Links anpassen) -->
+    <!--<a href="Link_zur_vorherigen_Infoseite_oder_StandaloneFrage"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40"></a>-->
+    <a href="Link_zur_nächsten_Infoseite_oder_StandaloneFrage"><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>
+
+
+    <!-- Titel der Einheit -->
+    <h1>Von Wörtern zu Vektoren</h1> 
+    <!--Link zu externer Anwendung/Tool -->
+    <h2 class="linkText">Öffne die <a href="https://www.cs.cmu.edu/~dst/WordEmbeddingDemo/index.html" target="_blank">Word Embedding Demo</a></h2> <!--verlinkte externe Anwendung/Tool wird in einem neuen Tab geöffnet-->
+   
+    <div class="quizContent">
+	  <!-- Quiz-Navigation(Links und Tooltips anpassen) -->
+        <div id="quizNavigation">
+          <a href="index.html" class="quizNavigationElement">
+            <img src="../../bilder/infoSeite2.png" width="33" height="33"/>
+          </a>
+    <!-- Für jede Quizfrage einen Eintrag hinzufügen und je nachdem welche Frage die class=”active” hinzufügen-->
+          <a href="seite1-Q1.html" class="quizNavigationElement active" data-title="Tooltip_Frage1">
+            <p>Q1</p>
+          </a>
+          <a href="seite1-Q2.html" class="quizNavigationElement" data-title="Tooltip_Frage2">
+            <p>Q2</p>
+          </a>
+          <a href="seite1-Q3.html" class="quizNavigationElement" data-title="Tooltip_Frage2">
+            <p>Q3</p>
+          </a>
+          <a href="seite1-Q4.html" class="quizNavigationElement" data-title="Tooltip_Frage2">
+            <p>Q4</p>
+          </a>
+          <a href="seite1-Q5.html" class="quizNavigationElement" data-title="Tooltip_Frage2">
+            <p>Q5</p>
+          </a>
+          <a href="seite1-Q6.html" class="quizNavigationElement" data-title="Tooltip_Frage2">
+            <p>Q6</p>
+          </a>
+          <a href="Link_zur_nächsten_Infoseite_oder_StandaloneFrage" id="exit_icon">
+            <img src="../../bilder/exit4.png" width="60" height="60" />
+          </a>
+        </div>
+
+
+        <div class="quiz">
+	      <!-- Aufgabenstellung und Quizfrage -->
+            <h4 id="unitQuestion_left">
+            Erkunde, wie die Wörter „king“, „queen“, „man“ und „woman“ im Vektorraum angeordnet sind, indem du im "Word Vector Projection"-Diagramm klickst und ziehst, um die Ansicht zu drehen, 
+            das Scrollrad verwendest zum Vergrößern oder Verkleinern. 
+            <br><br>
+            Welche Aussage über die Positionierung der Wörter „king“ und „queen“ im Vektorraum ist korrekt?          
+            </h4>
+     
+            <!--Feedback-Text (wird per JS geändert)-->
+            <h5 id="unitCheckbox_msg">Wähle die richtigen Antworten aus!
+            </h5>
+       
+            <div class="unitBox_right">
+	          <!-- Antwort-Container: Bsp. data-correct="1" für Single-Choice, Bsp. data-correct="1,3" für Multiple-Choice -->
+                <div class="checkboxContainer" data-correct="2,3">
+	              <!-- Für jede Antwort eine Kopie dieses Blocks, 4 Items innerhalb der kleinen Antwortbox maximal-->
+                    <div class="answerCheckbox_4items">
+                        <input id="check1" type="checkbox" onclick="handleCheckboxChange();"/>
+                        <p>Sie liegen weit auseinander, weil sie unterschiedliche Bedeutungen haben.</p>                          
+                        <img id="sym1">                    
+                    </div>
+                    <div class="answerCheckbox_4items">
+                        <input id="check2" type="checkbox" onclick="handleCheckboxChange();"/>
+                        <p>Sie liegen nah beieinander, weil sie ähnliche Rollen beschreiben.</p>                         
+                        <img id="sym2">                     
+                    </div>
+                    <div class="answerCheckbox_4items">
+                        <input id="check3" type="checkbox" onclick="handleCheckboxChange();"/>
+                        <p>Sie liegen etwa auf einer Linie mit „man“ und „woman“.</p>                        
+                        <img id="sym3">                    
+                    </div>
+                    <div class="answerCheckbox_4items">
+                        <input id="check4" type="checkbox" onclick="handleCheckboxChange();"/>
+                        <p>Sie liegen unabhängig voneinander.</p>                         
+                        <img id="sym4">
+                    </div>
+                </div>
+           
+                <!-- Reset-Buttons (Link anpassen) -->
+                <a href="seite1-Q1.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40" style="right:230px; bottom:20px;"/></a>  
+                <!-- Check-Buttons -->              
+                <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50" style="right:170px; bottom:20px;"/>            
+        </div>
+    </div>
+  </div>
+</div>
+<footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+    </p>
+</footer>
+</div>
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</html>

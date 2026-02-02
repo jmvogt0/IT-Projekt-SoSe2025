@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang = "de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kapitel 2 - Schritt 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./../styles/variables.css">
+<link rel="stylesheet" href="./../styles/layout.css">
+<link rel="stylesheet" href="./../styles/base.css">
+<link rel="stylesheet" href="./../styles/header.css">
+<link rel="stylesheet" href="./../styles/animations.css">
+<link rel="stylesheet" href="./../styles/components/situationToggleSwitch.css">
+<link rel="stylesheet" href="./../styles/components/sliders.css">
+<link rel="stylesheet" href="./../styles/components/neuron.css">
+<link rel="stylesheet" href="./../styles/components/input.css">
+<link rel="stylesheet" href="./../styles/components/activationFunction.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header with logos -->
+  <header class="site-header">
+    <div class="header-content">
+      <img src="../src/AI-Learning_Logo.svg" alt="MI-Learning-Logo" class="mi-learning">
+      <div class="middle-content"></div>
+      <img src="../src/HSO-Logo.png" alt="HSO-Logo" class="header-logo">
+    </div>
+  </header>
+  <div class="container">
+<!-- Task introduction -->
+    <h1>Mehrschichtige Netzwerke (Hidden Layer)</h1>
+    <p><strong>Deine Aufgabe:</strong>
+    <br><br>Wähle zwischen den vier Netzwerkarchitekturen. Diese beginnen einfach und werden komplexer. Teste, wie gut jede Architektur funktioniert und wie Struktur und Tiefe die Genauigkeit beeinflussen. <br><br>
+    Wähle die Netzwerkarchitektur so dass die Neuronen für die Szenarien die richtigen Ausgaben liefern:
+<br>Katze läuft nachts: Licht aus, Musik aus, Alarm an.
+<br>Mensch mittags: Licht aus, Musik an, Alarm aus.
+<br>Party nachts: Licht an, Musik an, Alarm aus.
+  </p>
+
+   <!-- Input values section -->
+    <div class="tile-group-wrapper">
+      <div class="inputs">
+        <h3>Inputwerte und Szenarien</h3>
+        <!-- Toggle buttons for different situations -->
+        <div class ="situation-box">
+          <div class="situation-toggle input-toggle">
+            <button id="situation1Btn" class="active">Katze läuft nachts</button>
+            <button id="situation2Btn">Mensch kommt mittags heim</button>
+            <button id="situation3Btn">Party nachts</button>
+          </div>
+        </div>
+        <!-- Display of input values with progress bars -->
+        <div class="inputValues">
+          <!-- Input: Movement -->
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/walking16x16.svg" alt="Icon laufen">
+              <span>Bewegung:</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x1Progress" class="progressBar"></div>
+              </div>
+              <span id="x1">1.0</span>
+            </div>
+          </div>
+           <!-- Input: Darkness -->
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/moon16x16.svg" alt="Icon laufen">
+              <span>Dunkelheit:</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x2Progress" class="progressBar"></div>
+              </div>
+              <span id="x2">0.8</span>
+            </div>
+          </div>
+          <!-- Input: Noise level -->
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/sound16x16.svg" alt="Icon laufen">
+              <span>Geräuschpegel:</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x3Progress" class="progressBar"></div>
+              </div>
+              <span id="x3">0.7</span>
+            </div>
+          </div>
+          <!-- Input: Door contact -->
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/door.svg" alt="Icon Tür">
+              <span>Türkontakt:</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x4Progress" class="progressBar"></div>
+              </div>
+              <span id="x4">1.0</span>
+            </div>
+          </div>
+          <!-- Input: Time -->
+          <div class="inputContainer">
+            <div class="iconText">
+              <img class="icons" src="../src/clock.svg" alt="Icon Uhr">
+              <span>Uhrzeit:</span>
+            </div>
+            <div class="progressContainer">
+              <div class="progressElement">
+                <div id="x5Progress" class="progressBar"></div>
+              </div>
+              <span id="x5">1.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden layer configuration selection -->
+      <div class="sliders hiddenLayers">
+        <h3>Hidden Layers</h3>
+        <!-- Toggle buttons for different situations -->
+        <div class ="situation-box">
+          <div class="situation-toggle hiddenLayer-toggle">
+            <button id="HLConfig1" class="active">Einfaches Netz</button>
+            <button id="HLConfig2">Standardnetz</button>
+            <button id="HLConfig3">Tiefes Netz</button>
+            <button id="HLConfig4">Optimiertes Netz</button>
+          </div>
+        </div>
+      </div>
+
+    <!-- Activation function calculation -->
+      <div class="function">
+        <h3> Aktivierungsfunktion</h3>
+        <p id="activationFormula">g = x1*w1 + x2*w2 + x3*w3 + x4*w4 + x5*w5</p>
+
+        <div class="calculation-grid">
+          <div class="grid-header"><p>Input (x)</p></div>
+          <div class="grid-header"><p>Gewicht (w)</p></div>
+          <div class="grid-header"><p>Produkt</p></div>
+        
+          <div class="grid-cell"><p id="x1Func">-</p></div>
+          <div class="grid-cell"><p id="w1Func">-</p></div>
+          <div class="grid-cell"><p id="prod1">-</p></div>
+        
+          <div class="grid-cell"><p id="x2Func">-</p></div>
+          <div class="grid-cell"><p id="w2Func">-</p></div>
+          <div class="grid-cell"><p id="prod2">-</p></div>
+        
+          <div class="grid-cell"><p id="x3Func">-</p></div>
+          <div class="grid-cell"><p id="w3Func">-</p></div>
+          <div class="grid-cell"><p id="prod3">-</p></div>
+
+          <div class="grid-cell"><p id="x4Func">-</p></div>
+          <div class="grid-cell"><p id="w4Func">-</p></div>
+          <div class="grid-cell"><p id="prod4">-</p></div>
+
+          <div class="grid-cell"><p id="x5Func">-</p></div>
+          <div class="grid-cell"><p id="w5Func">-</p></div>
+          <div class="grid-cell"><p id="prod5">-</p></div>
+        
+          <div class="grid-sum" colspan="3"><p id="sum">-</p></div>
+        </div>
+      </div>
+    </div>
+
+
+    
+     <!-- Dynamic neuron grid with inputs, hidden layers, and outputs -->
+    <div class="dynamicNeuron" style="position: relattive">
+      <div class="grid fiveRows manyNeurons noWeightRow threeOutputs">
+        <!-- Inputs x1 to x5 with current values -->
+        <div class="input input1">
+          <div class="inputElement">
+            <div class="iconText">
+              <img class="icons" src="../src/walking16x16.svg" alt="Icon laufen">
+              <p>Bewegung</p>
+            </div>
+            <p id="x1Out" class="value">1.0</p>
+          </div>
+        </div>
+        <div class="input input2">
+          <div class="inputElement">
+            <div class="iconText">
+              <img class="icons" src="../src/moon16x16.svg" alt="Icon Dunkelheit">
+              <p>Dunkelheit</p>
+            </div>
+            <p id="x2Out" class="value">0.8</p>
+          </div>
+        </div>
+        <div class="input input3">
+          <div class="inputElement">
+            <div class="iconText">
+              <img class="icons" src="../src/sound16x16.svg" alt="Icon Lautstärke">
+              <p>Lautstärke</p>
+            </div>
+            <p id="x3Out" class="value">0.8</p>
+          </div>
+        </div>
+        <div class="input input4">
+          <div class="inputElement">
+            <div class="iconText">
+              <img class="icons" src="../src/door.svg" alt="Icon Türkontakt">
+              <p>Türkontakt</p>
+            </div>
+            <p id="x4Out" class="value">1.0</p>
+          </div>
+        </div>
+        <div class="input input5">
+          <div class="inputElement">
+            <div class="iconText">
+              <img class="icons" src="../src/clock.svg" alt="Icon Lautstärke">
+              <p>Uhrzeit</p>
+            </div>
+            <p id="x5Out" class="value">1.0</p>
+          </div>
+        </div>
+        <!-- Hidden layers container (filled dynamically with JS) -->
+        <div class="neurons">
+           <!-- Multiple hidden layer activations will be inserted here by JavaScript -->
+          <div class="activationContainer multipleLayers"></div>
+        </div>
+        <!-- Output elements for final neurons with their respective icons -->
+        <div class="output output1">
+          <div class="outputElement" data-layer="output" data-neuron-index="0">
+            <div class="outputText"><span id="sum2_neuron1"></span></div>
+            <div class="outputGraphicHorizontal">
+              <div class="progressElement">
+                <div id="resultProgress_neuron1" class="progressBar"></div>
+              </div>
+              <div class="threshold"></div>
+              <div>
+                 <svg id="resultIcon_neuron1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M16.6667 29.9999C15.75 29.9999 14.9653 29.6735 14.3125 29.0208C13.6598 28.368 13.3334 27.5833 13.3334 26.6666V24.5833C11.75 23.4999 10.5209 22.111 9.64587 20.4166C8.77087 18.7221 8.33337 16.9166 8.33337 14.9999C8.33337 11.7499 9.46532 8.99297 11.7292 6.72908C13.9931 4.4652 16.75 3.33325 20 3.33325C23.25 3.33325 26.007 4.4652 28.2709 6.72908C30.5348 8.99297 31.6667 11.7499 31.6667 14.9999C31.6667 16.9166 31.2292 18.7152 30.3542 20.3958C29.4792 22.0763 28.25 23.4721 26.6667 24.5833V26.6666C26.6667 27.5833 26.3403 28.368 25.6875 29.0208C25.0348 29.6735 24.25 29.9999 23.3334 29.9999H16.6667ZM16.6667 36.6666C16.1945 36.6666 15.7987 36.5069 15.4792 36.1874C15.1598 35.868 15 35.4721 15 34.9999V33.3333H25V34.9999C25 35.4721 24.8403 35.868 24.5209 36.1874C24.2014 36.5069 23.8056 36.6666 23.3334 36.6666H16.6667Z" fill="#E4EB19"></path>
+                </svg>
+                <p>Licht</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="output output2">
+          <div class="outputElement" data-layer="output" data-neuron-index="1">
+            <div class="outputText"><span id="sum2_neuron2"></span></div>
+            <div class="outputGraphicHorizontal">
+              <div class="progressElement">
+                <div id="resultProgress_neuron2" class="progressBar"></div>
+              </div>
+              <div class="threshold"></div>
+              <div>
+                <svg id="resultIcon_neuron2" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M16.6667 35C14.8333 35 13.2639 34.3472 11.9583 33.0417C10.6528 31.7361 10 30.1667 10 28.3333C10 26.5 10.6528 24.9306 11.9583 23.625C13.2639 22.3194 14.8333 21.6667 16.6667 21.6667C17.3056 21.6667 17.8958 21.7431 18.4375 21.8958C18.9792 22.0486 19.5 22.2778 20 22.5833V5H30V11.6667H23.3333V28.3333C23.3333 30.1667 22.6806 31.7361 21.375 33.0417C20.0694 34.3472 18.5 35 16.6667 35Z" fill="#1F1F1F"/>
+                </svg>
+                <p>Musik</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="output output3">
+          <div class="outputElement" data-layer="output" data-neuron-index="2">
+            <div class="outputText"><span id="sum2_neuron3"></span></div>
+            <div class="outputGraphicHorizontal">
+              <div class="progressElement">
+                <div id="resultProgress_neuron3" class="progressBar"></div>
+              </div>
+              <div class="threshold"></div>
+              <div>
+                <svg id="resultIcon_neuron3" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M20 36.6667C17.6945 36.6667 15.5278 36.2292 13.5 35.3542C11.4723 34.4792 9.70837 33.2917 8.20837 31.7917C6.70837 30.2917 5.52087 28.5278 4.64587 26.5C3.77087 24.4722 3.33337 22.3056 3.33337 20C3.33337 16.8333 4.15976 13.9097 5.81254 11.2292C7.46532 8.54861 9.70837 6.5 12.5417 5.08333C12.5695 5.61111 12.625 6.14583 12.7084 6.6875C12.7917 7.22917 12.9306 7.86111 13.125 8.58333C11.125 9.80556 9.54865 11.4236 8.39587 13.4375C7.2431 15.4514 6.66671 17.6389 6.66671 20C6.66671 23.7222 7.95837 26.875 10.5417 29.4583C13.125 32.0417 16.2778 33.3333 20 33.3333C23.7223 33.3333 26.875 32.0417 29.4584 29.4583C32.0417 26.875 33.3334 23.7222 33.3334 20C33.3334 17.6389 32.757 15.4444 31.6042 13.4167C30.4514 11.3889 28.8612 9.76389 26.8334 8.54167C27.0278 7.81944 27.1667 7.1875 27.25 6.64583C27.3334 6.10417 27.4028 5.58333 27.4584 5.08333C30.2917 6.5 32.5348 8.54167 34.1875 11.2083C35.8403 13.875 36.6667 16.8056 36.6667 20C36.6667 22.3056 36.2292 24.4722 35.3542 26.5C34.4792 28.5278 33.2917 30.2917 31.7917 31.7917C30.2917 33.2917 28.5278 34.4792 26.5 35.3542C24.4723 36.2292 22.3056 36.6667 20 36.6667ZM20 30C17.2223 30 14.8612 29.0278 12.9167 27.0833C10.9723 25.1389 10 22.7778 10 20C10 18.3889 10.3542 16.875 11.0625 15.4583C11.7709 14.0417 12.7778 12.8611 14.0834 11.9167C14.2223 12.3333 14.375 12.8125 14.5417 13.3542C14.7084 13.8958 14.9306 14.5694 15.2084 15.375C14.5973 16.0139 14.132 16.7222 13.8125 17.5C13.4931 18.2778 13.3334 19.1111 13.3334 20C13.3334 21.8333 13.9862 23.4028 15.2917 24.7083C16.5973 26.0139 18.1667 26.6667 20 26.6667C21.8334 26.6667 23.4028 26.0139 24.7084 24.7083C26.0139 23.4028 26.6667 21.8333 26.6667 20C26.6667 19.1111 26.507 18.2778 26.1875 17.5C25.8681 16.7222 25.4028 16.0139 24.7917 15.375C25.0139 14.7083 25.2153 14.0903 25.3959 13.5208C25.5764 12.9514 25.7362 12.4167 25.875 11.9167C27.1806 12.8611 28.1945 14.0417 28.9167 15.4583C29.6389 16.875 30 18.3889 30 20C30 22.7778 29.0278 25.1389 27.0834 27.0833C25.1389 29.0278 22.7778 30 20 30ZM18.3334 14.1667C17.3056 11.0556 16.632 8.86806 16.3125 7.60417C15.9931 6.34028 15.8334 5.19444 15.8334 4.16667C15.8334 3 16.2362 2.01389 17.0417 1.20833C17.8473 0.402778 18.8334 0 20 0C21.1667 0 22.1528 0.402778 22.9584 1.20833C23.7639 2.01389 24.1667 3 24.1667 4.16667C24.1667 5.19444 24.007 6.34028 23.6875 7.60417C23.3681 8.86806 22.6945 11.0556 21.6667 14.1667H18.3334ZM20 23.3333C19.0834 23.3333 18.2987 23.0069 17.6459 22.3542C16.9931 21.7014 16.6667 20.9167 16.6667 20C16.6667 19.0833 16.9931 18.2986 17.6459 17.6458C18.2987 16.9931 19.0834 16.6667 20 16.6667C20.9167 16.6667 21.7014 16.9931 22.3542 17.6458C23.007 18.2986 23.3334 19.0833 23.3334 20C23.3334 20.9167 23.007 21.7014 22.3542 22.3542C21.7014 23.0069 20.9167 23.3333 20 23.3333Z" fill="#1F1F1F"/>
+                </svg>
+                <p>Alarm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SVG overlay for drawing dynamic connections between elements -->
+      <svg class="connections" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;"></svg>
+    </div>
+  </div>
+  <!-- Fallback message for smartphones -->
+  <div class="notAvailable">
+    <h1>Nicht verfügbar</h1>
+    <p>Die interaktive Anwendung ist auf Smartphones leider nicht verfügbar. Bitte verwende ein Tablet oder einen Laptop/PC, um alles richtig nutzen zu können.</p>
+  </div>
+  <!-- Footer with contact information and license logo -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="text-content">
+        <p>Prof. Dr. Claudia Schmidt, c.schmidt@hs-offenburg.de</p>
+        <p>Prof. Dr. Volker Sänger, volker.saenger@hs-offenburg.de</p>
+      </div>
+      <img src="/src/CC-Logo.png" alt="CC-Lizenz" class="cc-logo">
+    </div>
+  </footer>
+</body>
+<!-- JavaScript files for interactive functionality and drawing SVG connections -->
+<script src="script.js"></script>
+<script src="./drawSVGConnections.js"></script>
+</html>

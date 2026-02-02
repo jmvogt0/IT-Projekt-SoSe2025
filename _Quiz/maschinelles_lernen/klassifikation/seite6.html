@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- ANMERKUNGEN -->
+<!-- !!!: Diese Seite benutzt Quiz-Template "Single Choice und Multiple Choice", da es kein konkretes "Textfeld mit Eingabe" - Template gibt. Deswegen wird im Header auf diese js und css Dateien zurückgegriffen. 
+ Für SectionA wird das inline Script verwendet, für SectionBC single_mulipleChoice.js -->
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Maschinelles Lernen</title>
+   
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizCheckbox.css">
+    <link rel="stylesheet" type="text/css" href="../../quizValue.css">
+
+
+    <!--JS files--> 
+    <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/single_mulipleChoice.js"></script>
+    <script type="text/javascript" src="../../js/valueInput.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+        document.getElementById("sectionA").style.display = "block";
+        document.getElementById("sectionBC").style.display = "none";
+
+        });
+
+        function showNextSection() {
+                    
+                document.getElementById("sectionA").style.display = "none"; // A ausblenden
+                document.getElementById("sectionBC").style.display = "block"; // B & C einblenden
+
+                var checkButton = document.getElementById("check_button");
+                const mainSrc = "../../bilder/check_disable.png";
+                const fallbackSrc = "../bilder/check_disable.png";
+
+                checkButton.onerror = function() {
+                    // Nur wechseln, wenn noch nicht versucht wurde, das Fallback zu laden
+                    if (!checkButton.src.endsWith(fallbackSrc)) {
+                        checkButton.src = fallbackSrc;
+                    }
+                };
+                checkButton.src = mainSrc;
+
+                document.querySelectorAll('#sectionBC input[type="checkbox"]').forEach(function(checkbox) {
+                    checkbox.checked = false;
+                });
+                
+                
+            }
+
+            
+    </script>
+</head>
+
+<body>
+    <div id="wapper">
+        <div id="header">
+            <div id="hand">
+                <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+            </div>
+            <!-- horizontal menu -->
+            <nav id="nav_main">
+                <a href="index.html" class="currentPage">Maschinelles Lernen</a>
+                <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+                <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+                <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+                <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+                <a href="../../ethik/index.html">Ethik</a>
+            </nav>
+            <div id="logoHSO">
+                <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                        alt="Hochschule Offenburg"></a>
+            </div>
+        </div>
+
+        <!-- vertical menu -->
+        <div id="nav_left" data-current="Maschinelles Lernen">
+            <div id="menuItem">
+                <a href="../../maschinelles_lernen/grundlagen/index.html">Grundlagen</a><br>
+                <a href="index.html" class="currentPage">Klassifikation</a><br> <!--Klassifikationsabschnitt-->
+                <a href="../../maschinelles_lernen/clustering/index.html">Clustering</a><br>
+                <a href="../../maschinelles_lernen/assoziationsanalyse/index.html">Assoziationsanalyse</a><br>
+
+            </div>
+        </div>
+
+        <div id="content">
+            <div>
+                <img src="../../bilder/nummer6.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+                <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+                <img src="../../bilder/nummer6.png" class="pageNr_second" width="25" height="40">
+            </div>
+            
+            <a href="seite5.html"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40"></a>
+            <!--<a href=""><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>-->
+
+            <h1>K-Nearest Neighbor-Verfahren</h1>
+   
+            <div id="sectionA" class="container">
+
+                <div id="taskarea">
+                    <h2 id="contextual_question_standAlone">
+                        Gegeben sind die folgenden Datensätze zur Klassifizierung von Pilzen in giftig und ungiftig. Ein neuer Pilzdatensatz soll nun eingeordnet werden.
+                        Berechne nun dafür zuerst die Distanz zwischen dem neuen Datensatz und jedem der vorhandenen Datensätze. 
+                        Trage die berechneten Distanzen in die letzte Spalte der Tabelle ein.
+                    </h2>
+                </div>
+
+              
+                <img src="../../bilder/1_Maschinelles_Lernen/klassifikation/seite6/tabelle.png" width="695" height="250" style="margin: 20px 50px;">
+
+                <div class="Valuequestion_standAlone" data-correct='{
+                    "input1": 4,
+                    "input2": 1,
+                    "input3": 2,
+                    "input4": 3,
+                    "input5": 3,
+                    "input6": 3,
+                    "input7": 2,
+                    "input8": 4
+                    }'>
+                    <input type="number" class="value" id="input1" style="position:absolute; top: 263px; left: 641px; width: 90px; height: 17px;"/>
+                    <img id="sym_input1" style="position: absolute;top: 270px;left: 750px;">
+
+                    <input type="number" class="value" id="input2" style="position:absolute; top: 286px; left: 641px; width: 90px; height: 15px;">
+                    <img id="sym_input2" style="position: absolute;top: 293px;left: 750px;">
+                    
+                    <input type="number" class="value" id="input3" style="position:absolute; top: 306px; left: 641px; width: 90px; height: 15px;">
+                    <img id="sym_input3" style="position: absolute;top: 310px;left: 750px;">
+
+                    <input type="number" class="value" id="input4" style="position:absolute; top: 327px; left: 641px; width: 90px; height: 16px;">
+                    <img id="sym_input4" style="position: absolute;top: 333px;left: 750px;">
+
+                    <input type="number" class="value" id="input5" style="position:absolute; top: 349px; left: 641px; width: 90px; height: 17px;">
+                    <img id="sym_input5" style="position: absolute;top: 355px;left: 750px;">
+
+                    <input type="number" class="value" id="input6" style="position:absolute; top: 372px; left: 641px; width: 90px; height: 15px;">
+                    <img id="sym_input6" style="position: absolute;top: 378px;left: 750px;">
+                    
+                    <input type="number" class="value" id="input7" style="position:absolute; top: 393px; left: 641px; width: 90px; height: 15px;">
+                    <img id="sym_input7" style="position: absolute;top: 398px;left: 750px;">
+                    
+                    <input type="number" class="value" id="input8" style="position:absolute; top: 414px; left: 641px; width: 90px; height: 15px;">
+                    <img id="sym_input8" style="position: absolute;top: 420px;left: 750px;">
+
+                </div>
+
+                <h5 id="Value_msg_standAlone">Fülle die Tabelle aus</h5>
+
+                <img id="nextButton" src="../../bilder/nextIcon.png"  width="70" style="position: absolute; top: 445px; left: 365px;">
+            </div>
+
+            <div id="sectionBC" class="container-hidden">
+             
+                <img src="../../bilder/1_Maschinelles_Lernen/klassifikation/seite6/tabelleMitLoesungen.png" width="680" height="250" style="margin: 20px 50px;">
+
+                <div class="horizontal_checkboxContainer_standAlone" data-correct="2" 
+                data-feedback-correct="Richtig! Die Datensätze 2,3 und 7 haben die kürzesten Distanzen. Da zwei der drei Datensätze als 'nicht giftig' klassifiziert sind, zählt die Mehrheitsentscheidung." 
+                data-feedback-wrong="Leider falsch. Obwohl einer der k-nächsten Pilze als giftig klassifiziert ist, gehören die zwei nächstgelegenen Pilze (2 und 3) zur Klasse 'nicht giftig'. Die richtige Klassifikation ist daher 'nicht giftig'." 
+                style="bottom: 25px;"> <!--Input-Indices, der korrekten Antworten-->
+                    
+                <h4 id="question_standAlone">
+                        Klassifiziere den neuen Datensatz mit dem K-Nearest-Neighbor-Verfahren mit K = 3. 
+                    </h4>
+
+                    <div class="answerCheckbox_standAlone">
+                        <input id="check1_1" type="checkbox" onclick="handleCheckboxChange();"/>
+                        <p>giftig</p>
+                        <img id="sym1">
+                    </div>
+                    
+                    <div class="answerCheckbox_standAlone">
+                        <input id="check1_2" type="checkbox" onclick="handleCheckboxChange();"/>
+                        <p>nicht giftig</p>
+                        <img id="sym2">
+                    </div>
+                </div>
+                
+
+                <div class="horizontal_checkboxContainer_standAlone" data-correct="2" 
+                data-feedback-correct="Richtig. Einer der drei ähnlichsten Pilze ist giftig. Das Risiko ist nicht zu vernachlässigen. Daher ist es sicherer, den Pilz nicht zu essen." 
+                data-feedback-wrong="Falsch! Obwohl zwei von drei ähnlichen Pilzen nicht giftig sind, bleibt ein gewisses Risiko bestehen. Daher sollte der Pilz lieber nichtgegessen werden." 
+                style="bottom: 25px;"> <!--Input-Indices, der korrekten Antworten-->
+                    <h4 id="question_standAlone">
+                        Würdest du den neuen Pilz auf der Grundlage der hier vorliegenden Informationen essen?
+                    </h4>
+                        
+                    <div class="answerCheckbox_standAlone">
+                        <input id="check2_1" type="checkbox" onclick="handleCheckboxChange();"/>
+                        <p>essen</p>
+                        <img id="sym3">
+                    </div>
+                        
+                    <div class="answerCheckbox_standAlone">
+                        <input id="check2_2" type="checkbox" onclick="handleCheckboxChange();"/>
+                        <p>nicht essen.</p>
+                        <img id="sym4">
+                    </div>     
+                </div>
+
+                <h5 id="Checkbox_msg_standAlone">Beantworte die beiden Fragen.</h5>
+
+                <!-- PopUp content -->
+                <div class="popUp" id="popUp">
+                <img src="../../bilder/popupImage.png">
+                <p id="popupFeedbacktext"></p>
+                <button type="button" onclick="closePopUp()">OK</button>
+                </div>
+            </div>
+
+
+            
+            
+            <!--Button, dass alle gemachten Eingaben gelöscht werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+            <a href="seite6.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40" style="right:410px; bottom:20px;"/></a> 
+
+            <!--Button, dass die gemachten Eingaben überprüft werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+            <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50" style="right:350px; bottom:20px;"/>
+
+    </div>
+
+    <footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+    </p>
+    </footer>
+
+    </div>
+
+</body>
+
+<!-- Piwik -->
+<script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+    _paq.push(["enableCrossDomainLinking"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//webanalyse.hs-offenburg.de/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '10']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<!-- End Piwik Code -->
+
+</html>
+

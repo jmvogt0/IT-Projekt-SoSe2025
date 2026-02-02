@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Maschinelles Lernen</title>
+
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizCheckbox.css">
+
+    <!--JS files-->
+    <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/single_mulipleChoice.js"></script>
+
+</head>
+
+<body>
+    <div id="wapper">
+        <!-- Header Section -->
+        <div id="header">
+            <div id="hand">
+                <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+            </div>
+            <!-- horizontal menu -->
+            <nav id="nav_main">
+                <a href="index.html" class="currentPage">Maschinelles Lernen</a>
+                <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+                <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+                <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+                <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+                <a href="../../ethik/index.html">Ethik</a>
+            </nav>
+            <div id="logoHSO">
+                <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                        alt="Hochschule Offenburg"></a>
+            </div>
+        </div>
+
+        <!-- Vertical Navigation Menu -->
+        <div id="nav_left" data-current="Maschinelles Lernen">
+            <div id="menuItem">
+                <a href="../../maschinelles_lernen/grundlagen/index.html">Grundlagen</a><br>
+                <a href="index.html" class="currentPage">Klassifikation</a><br>
+                <a href="../../maschinelles_lernen/clustering/index.html">Clustering</a><br>
+                <a href="../../maschinelles_lernen/assoziationsanalyse/index.html">Assoziationsanalyse</a><br>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div id="content">
+            <div>
+                <img src="../../bilder/nummer5.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+                <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+                <img src="../../bilder/nummer6.png" class="pageNr_second" width="25" height="40">
+            </div>
+
+            <a href="seite4.html"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40"></a>
+            <a href="seite6.html"><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>
+
+            <h1>K-Nearest Neighbor Klassifikation</h1> 
+
+            <h2 id="contextual_question_standAlone">
+                Gegeben seien die folgenden Datenpunkte im zweidimensionalen Raum,
+                die zwei verschiedenen Klassen angehören (oranges Rechteck / blauer Kreis): 
+            </h2>
+
+            <!-- ID-Namen noch ändern? -->
+            <div id="Grafik">
+                <img src="../../bilder/1_Maschinelles_Lernen/klassifikation/seite5/Datenpunkte.png" 
+                     id="Grafik-img"
+                     width="275px" 
+                     height="220px" 
+                     style="position: absolute; top: 138px; left:271px">
+            </div>
+
+            <!-- <h4 id="individual_questions" style="left:100px; font-size:13px; top: 325px; text-align: left; font-weight: 600;">
+                1. Welcher der beiden Klassen wird der neue Datenpunkt (gelber Stern) nach dem
+                K-Nearest-Neigbor-Verfahren mit K=3 zugeordnet? 
+            </h4> -->
+
+            <!-- <h4 id="individual_questions" style="left:100px; font-size:13px; top: 425px; text-align: left; font-weight: 600;">
+                2. Welcher der beiden Klassen wird der neue Datenpunkt (grüner Stern) nach dem
+                K-Nearest-Neigbor-Verfahren mit K=5 zugeordnet?
+            </h4> -->
+            
+            
+            <div class="horizontal_checkboxContainer_standAlone" data-correct="1" style="top: 210px;"> <!--Input-Indices, der korrekten Antworten-->
+                <h4 id="question_standAlone">
+                    1. Welcher der beiden Klassen wird der neue Datenpunkt (gelber Stern) nach dem K-Nearest-Neigbor-Verfahren mit K=3 zugeordnet? 
+                </h4>
+
+                <div class="answerCheckbox_standAlone">
+                    <input id="check1" type="checkbox" onclick="handleCheckboxChange();"/>
+                    <p>Oranges Rechteck</p>
+                    <img id="sym1">
+                </div>
+                
+                <div class="answerCheckbox_standAlone">
+                    <input id="check2" type="checkbox" onclick="handleCheckboxChange();"/>
+                    <p>Blauer Kreis</p>
+                    <img id="sym2">
+                </div>
+            </div>
+
+            <div class="horizontal_checkboxContainer_standAlone" data-correct="2" style=" top: 210px;"> <!--Input-Indices, der korrekten Antworten-->
+
+                <h4 id="question_standAlone">
+                    2. Welcher der beiden Klassen wird der neue Datenpunkt (grüner Stern) nach dem
+                    K-Nearest-Neigbor-Verfahren mit K=5 zugeordnet?
+                </h4>
+                    
+                <div class="answerCheckbox_standAlone">
+                    <input id="check1" type="checkbox" onclick="handleCheckboxChange();"/>
+                    <p>Oranges Rechteck</p>
+                    <img id="sym3">
+                </div>
+                    
+                <div class="answerCheckbox_standAlone">
+                    <input id="check2" type="checkbox" onclick="handleCheckboxChange();"/>
+                    <p>Blauer Kreis</p>
+                    <img id="sym4">
+                </div>     
+            </div>
+ 
+            <h5 id="Checkbox_msg_standAlone" style="top:508px;">Wähle die korrekte Lösung aus</h5>
+
+            <!--Button, dass alle gemachten Eingaben gelöscht werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+            <a href="seite5.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40" style="right:410px; bottom:2px;"/></a> 
+
+            <!--Button, dass die gemachten Eingaben überprüft werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+            <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50" style="right:350px; bottom:2px;"/>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+    </p>
+    </footer>
+</div>
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+
+</html>
+
+<!-- Script, damit Check erst aktiviert wird, wenn beide Fragen beantwortet wurden und Haken/Kreuz richtig angezeigt wird 
+<script>
+    // Alle Checkboxen zurücksetzen
+    document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+        checkbox.checked = false;
+    });
+
+    /*Funktion, damit der Check-Button aktiviert wird, aber nur wenn mindestens eine Antwort pro Frage gegeben wurde*/
+    function handle_click(cb) {
+        // Prüfen ob für beide Fragen mindestens eine Antwort gegeben wurde
+        const question1Answered = document.getElementById("check1").checked || document.getElementById("check2").checked;
+        const question2Answered = document.getElementById("check3").checked || document.getElementById("check4").checked;
+        
+        const msgBox = document.getElementById("Checkbox_msg_standAlone");
+        
+        if (question1Answered && question2Answered) {
+            // Beide Fragen beantwortet - Check-Button aktivieren
+            if (msgBox) {
+                msgBox.innerHTML = "Klicke auf Check für die Lösung!";
+            }
+            
+            const checkButton = document.getElementById("check_button");
+            const mainSrc = "../../bilder/check_enabled3.png";
+            const fallbackSrc = "../bilder/check_enabled3.png";
+
+            checkButton.onerror = function() {
+                if (!checkButton.src.endsWith(fallbackSrc)) {
+                    checkButton.src = fallbackSrc;
+                }
+            };
+            checkButton.src = mainSrc;
+            checkButton.onclick = check;
+        } else {
+            // Check-Button deaktiviert lassen
+            const checkButton = document.getElementById("check_button");
+            checkButton.onclick = null;
+            checkButton.src = "../../bilder/check_disable.png";
+        }
+    }
+
+    /*Funktion, um die Eingaben der Studierenden zu überprüfen*/
+    function check() {
+        // Die erwarteten richtigen Antworten: check1 (Frage 1: Orange Rechteck) und check4 (Frage 2: Blauer Kreis)
+        const correctAnswers = ["check1", "check4"];
+        
+        // Alle Checkboxen holen
+        const check1 = document.getElementById("check1");
+        const check2 = document.getElementById("check2");
+        const check3 = document.getElementById("check3");
+        const check4 = document.getElementById("check4");
+        
+        // Alle Checkboxen deaktivieren
+        [check1, check2, check3, check4].forEach(cb => cb.disabled = true);
+        
+        // Prüfen ob die Antworten korrekt sind
+        let allCorrect = true;
+        
+        // Frage 1: Nur check1 sollte angekreuzt sein
+        if (check1.checked && !check2.checked) {
+            // Richtig für Frage 1
+        } else {
+            allCorrect = false;
+        }
+        
+        // Frage 2: Nur check4 sollte angekreuzt sein  
+        if (!check3.checked && check4.checked) {
+            // Richtig für Frage 2
+        } else {
+            allCorrect = false;
+        }
+        
+        // Feedback geben
+        const msgBox = document.getElementById("Checkbox_msg_standAlone");
+        if (msgBox) {
+            if (allCorrect) {
+                msgBox.innerHTML = "Super! Das ist richtig!";
+            } else {
+                msgBox.innerHTML = "Nicht ganz, versuche es nochmal!";
+            }
+        }
+        
+        // Symbole anzeigen
+        const symbols = [
+            document.getElementById("sym1"),
+            document.getElementById("sym2"), 
+            document.getElementById("sym3"),
+            document.getElementById("sym4")
+        ];
+        
+        const checkboxes = [check1, check2, check3, check4];
+        const expectedStates = [true, false, false, true]; // check1=true, check2=false, check3=false, check4=true
+        
+        for (let i = 0; i < checkboxes.length; i++) {
+            let mainSrc, fallbackSrc;
+            
+            // Wenn die Checkbox im erwarteten Zustand ist (richtig angekreuzt oder richtig nicht angekreuzt)
+            if (checkboxes[i].checked === expectedStates[i]) {
+                mainSrc = "../../bilder/tick.png";
+                fallbackSrc = "../bilder/tick.png";
+            } else {
+                mainSrc = "../../bilder/cross.png";
+                fallbackSrc = "../bilder/cross.png";
+            }
+            
+            if (symbols[i]) {
+                symbols[i].onerror = function() {
+                    if (!symbols[i].src.endsWith(fallbackSrc)) {
+                        symbols[i].src = fallbackSrc;
+                    }
+                };
+                symbols[i].src = mainSrc;
+            }
+        }
+        
+        // Check-Button deaktivieren
+        const checkButton = document.getElementById("check_button");
+        checkButton.onclick = null;
+        const disabledMainSrc = "../../bilder/check_disable.png";
+        const disabledFallbackSrc = "../bilder/check_disable.png";
+
+        checkButton.onerror = function() {
+            if (!checkButton.src.endsWith(disabledFallbackSrc)) {
+                checkButton.src = disabledFallbackSrc;
+            }
+        };
+        checkButton.src = disabledMainSrc;
+    }
+</script>-->

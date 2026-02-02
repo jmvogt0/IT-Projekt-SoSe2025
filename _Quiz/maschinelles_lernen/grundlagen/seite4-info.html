@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Maschinelles Lernen</title>
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <!--JS files-->
+    <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+
+</head>
+<body>
+<div id="wapper">
+    <div id="header">
+        <div id="hand">
+            <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+        </div>
+        <!-- horizontal menu -->
+        <nav id="nav_main">
+			<a href="index.html" class="currentPage">Maschinelles Lernen</a>
+            <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+            <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+            <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+            <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+			<a href="../../ethik/index.html">Ethik</a>
+
+        </nav>
+        <div id="logoHSO">
+            <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                      alt="Hochschule Offenburg"></a>
+        </div>
+    </div>
+
+    <!-- vertical menu -->
+    <div id="nav_left" data-current="Maschinelles Lernen">
+        <div id="menuItem">
+			<a href="index.html" class="currentPage">Grundlagen</a><br>
+            <a href="../../maschinelles_lernen/klassifikation/index.html">Klassifikation</a><br>
+            <a href="../../maschinelles_lernen/clustering/index.html">Clustering</a><br>
+            <a href="../../maschinelles_lernen/assoziationsanalyse/index.html">Assoziationsanalyse</a><br>
+        </div>
+
+    </div>
+    <!-- menuItem -->
+
+<!-- nav_left -->
+<div id="content">
+    <div>
+        <img src="../../bilder/nummer4.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+        <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+        <img src="../../bilder/nummer4.png" class="pageNr_second" width="25" height="40">
+    </div>
+
+    <a href="seite3.html"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40" style="left: 120px;top: 25px;"></a>
+    <a href=""><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40" style="right: 120px;top: 25px;"></a>
+    
+    <h1>Überwachtes Lernen mit Bildern</h1> <!--Titel für eine  zusammmenhängende Einheit: hier schon darauf hinweisen, um was in der Einheit geht-->
+    
+    <h2 class="introHeadline">Überwachtes Lernen mit der Teachable Machine!</h2><br> <!--Begrüßung als Einstieg in die Einheit-->
+  
+    <div class="quizContent hideExitIcon" >
+        <div id="quizNavigation">
+          <a href="seite4-info.html" class="quizNavigationElement active">
+            <img src="../../bilder/infoSeite2.png" width="33" height="33" />
+          </a>
+          <a href="seite4-Q1.html" class="quizNavigationElement" data-title="Erkundung der Trainingsdaten">
+            <p>Q1</p>
+            <img src="../../bilder/cursor2.png" id="cursor" width="40" height="40">
+          </a>
+          <a href="seite4-Q2.html" class="quizNavigationElement" data-title="KI-Modell trainieren">
+            <p>Q2</p>
+          </a>
+          <a href="seite4-Q3.html" class="quizNavigationElement" data-title="KI-Modell testen">
+            <p>Q3</p>
+          </a>
+          <a href="seite4-Q4.html" class="quizNavigationElement" data-title="KI-Modell optimieren">
+            <p>Q4</p>
+          </a>
+          <a href="seite4-info.html" id="exit_icon">
+            <img src="../../bilder/exit4.png" width="60" height="60" id="exitIcon"/>
+          </a>
+        </div>
+      <div class="quiz">
+        <p id="introText">In dieser Lerneinheit lernst du, wie ein KI-Modell durch überwachtes Lernen, also aus bereits gekennzeichneten Beispielen, neue unbekannte Daten korrekt einordnen kann.
+                Du trainierst mit Hilfe der <strong>Teachable Machine</strong> ein eigenes Modell mit Bilddaten und erkennst spielerisch, wie sich die Auswahl und Qualität der Trainingsdaten auf das Modell auswirken. 
+                Am Ende kannst du selbst beurteilen, wie zuverlässig deine KI-Modell funktioniert und warum ausgewogene Daten dabei entscheidend sind.
+        </p> <!--Überblick über das Thema dieser Einheit und Darstellung mit welcher Anwendung sich Lernende über die nächsten Seiten hinweg beschäftigen werden-->
+  
+        <img src="../../bilder/1_Maschinelles_Lernen/TeachableMachine1.png" class="intro_image" width="400" height="230"> <!--Einbinden eines Aufhängers (z.B.ein Bild von der Anwendung,ein kurzes Video, dass das Thema betrifft, eine Anwendungsbeispiel, eine Problemstellung)-->
+        <img src="../../bilder/info_green.png" class="info_image" width="260" height="265"> <!--eingebundene Infobox für die technischen Voraussetzungen, die bneötigt werden, um die Anwendung zu nutzen-->
+    
+          <p id="info-headline">Technische <br> Voraussetzungen</p>
+          
+          <ul class="info-list"> <!--Auflistung der technischen Voraussetzungen, die für die reibungslose Nutzung der Anwendung notwendig sind-->
+              <li>stabile Internetverbindung</li>
+              <li>aktueller Webbrowser <br> (Firefox, Chrome, Safari, etc.)</li>
+              <li>Computer/Laptop empfohlen</li>
+              <li>JavaScript muss im Browser aktiviert sein</li>
+          </ul>
+  
+          <h2 id="Text_quiz">Beantworte die Fragen Q1 bis Q4!</h2> 
+          <img src="../../bilder/startQuiz.png" id="Icon_quiz" width="130" height="60">
+
+      </div>
+    </div>
+</div>
+<footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+        </p>
+</footer>
+</div>
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</html>

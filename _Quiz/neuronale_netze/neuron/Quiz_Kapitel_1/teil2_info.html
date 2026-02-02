@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Training eines Neurons</title>
+    <!-- CSS file for framework only. Not for content -->
+    <link rel="stylesheet" type="text/css" href="../../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../../quizNavigation.css">
+
+    <script type="text/javascript" src="../../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../../js/unitNavigation.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="wapper">
+        <div id="header">
+            <div id="hand">
+                <img id="hand_img" src="../../../bilder/AI-Learning_Logo.svg" width="140px">
+            </div>
+            <!-- horizontal menu -->
+            <nav id="nav_main">
+                <a href="../../../maschinelles_lernen/grundlagen/index.html">Maschinelles Lernen</a>
+                <a href="index.html" class="currentPage">Neuronale Netze</a>
+                <a href="../../../deep_learning/prinzipien/index.html">Deep Learning</a>
+                <a href="../../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+                <a href="../../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+                <a href="../../../ethik/index.html">Ethik</a>
+            </nav>
+            <div id="logoHSO">
+                <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                        alt="Hochschule Offenburg"></a>
+            </div>
+        </div>
+
+        <!-- vertical menu -->
+        <div id="nav_left" data-current="Neuronale Netze">
+            <div id="menuItem">
+                <a href="teil1_info.html" class="currentPage">Neuron</a><br>
+                <a href="../../../neuronale_netze/netze/Quiz_Kapitel_2/info.html">Netze</a><br>
+            </div>
+
+        </div>
+        <!-- menuItem -->
+
+        <!-- nav_left -->
+        <div id="content">
+            <!-- Seitenindikator (Nummerierung anpassen) -->
+            <div>
+                <img src="../../../bilder/nummer2.png" id="pageIndicator" class="pageNr_first" width="25" height="40">
+                <img src="../../../bilder/slash.png" class="pageDiv" width="50" height="50">
+                <img src="../../../bilder/nummer8.png" class="pageNr_second" width="25" height="40">
+            </div>
+            <!-- obere Navigation (Links anpassen) -->
+            <a href="teil1_info.html"><img src="../../../bilder/topBack.png" id="Icon_topBack" width="40" height="40"></a> <a
+                href="teil3_info.html"><img src="../../../bilder/topNext.png" id="Icon_topNext"
+                    width="40" height="40"></a>
+            <!-- Titel der Einheit -->
+            <h1>Training eines Neurons</h1>
+            <!-- Überschrift für interaktive Einheit mit externer Anwendung -->
+            <h2 class="introHeadline">
+                <a href="https://pa-nnie.student.mi.hs-offenburg.de/TS_aktuell/KI-learning-TS/neuronale_netze/neuron/Kapitel1-Schritt2/" target="_blank">Hier</a>
+             kannst du ein Neuron trainieren.</h2><br>
+            <div class="quizContent hideExitIcon"> <!--hideExitIcon”,um Exit-Button zu deaktivieren-->
+                <!-- Quiz-Navigation: “active” immer bei erstem a-Element (Links und Tooltips anpassen) -->
+                <div id="quizNavigation">
+                    <a href="teil2_info.html" class="quizNavigationElement active"> <img
+                            src="../../../bilder/infoSeite2.png" width="33" height="33" /> </a>
+                    <!-- Für jede Quizfrage einen Eintrag hinzufügen und je nachdem welche Frage die class=”active” hinzufügen-->
+                    <a href="teil2_frage1.html" class="quizNavigationElement" data-title="Frage1">
+                        <p>Q1</p>
+                    </a>
+                    <a href="teil2_frage2.html" class="quizNavigationElement" data-title="Frage2">
+                        <p>Q2</p>
+                    </a>
+                    <a href="teil2_frage3.html" class="quizNavigationElement" data-title="Frage3">
+                        <p>Q3</p>
+                    </a>
+                    <!-- ...weitere Fragen in derselben Syntax ergänzen... --> <a href="teil2_info.html" id="exit_icon">
+                        <img src="../../../bilder/exit4.png" width="60" height="60" /> </a>
+                </div>
+                <div class="quiz">
+                    <p id="introText"><b>Was erwartet dich?<br></b>
+                        - Du trainierst dein Neuron, damit es aus Fehlern lernt. Nach jeder Fehlentscheidung passt es
+                        seine Gewichte an.<br><br>
+                        <b>Deine Aufgabe:</b><br>
+                        - Trainiere dein Neuron in mehreren Runden. Klicke dich durch das Training und sehe, wie das
+                        Training eines Neurons funktioniert.<br><br>
+                        <b>Warum ist das wichtig?</b><br>
+                        - So funktioniert maschinelles Lernen - das Neuron verbessert sich mit jeder Rückmeldung.
+
+                    </p>
+                    <!--Überblick über das Thema dieser Einheit und Darstellung mit welcher Anwendung sich Lernende über die nächsten Seiten hinweg beschäftigen werden-->
+                    
+                    <!-- Aufforderung zur Bearbeitung -->
+                    <h2 id="Text_quiz">Beantworte die Fragen Q1 bis Q3!</h2> <img src="../../../bilder/startQuiz.png"
+                        id="Icon_quiz" width="130" height="60">
+                    <img src="../../../bilder/cursor2.png" id="cursor" width="40" height="40">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <img src="../../../bilder/license.png" id="license">
+
+            <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail"
+                    href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+                &nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail"
+                    href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

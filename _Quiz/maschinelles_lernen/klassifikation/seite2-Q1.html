@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Maschinelles Lernen</title>
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizDragDropGap.css">
+
+    <!--JS files-->
+   <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/gapDragDrop.js"></script>
+
+
+</head>
+<body>
+<div id="wapper">
+    <div id="header">
+        <div id="hand">
+            <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+        </div>
+        <!-- horizontal menu -->
+        <nav id="nav_main">
+			<a href="index.html" class="currentPage">Maschinelles Lernen</a>
+            <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+            <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+            <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+            <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+			<a href="../../ethik/index.html">Ethik</a>
+        </nav>
+        <div id="logoHSO">
+            <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                      alt="Hochschule Offenburg"></a>
+        </div>
+    </div>
+
+    <!-- vertical menu -->
+    <div id="nav_left" data-current="Maschinelles Lernen">
+        <div id="menuItem">
+			<a href="../../maschinelles_lernen/grundlagen/index.html">Grundlagen</a><br>
+            <a href="index.html" class="currentPage">Klassifikation</a><br> <!--Klassifikationsabschnitt-->
+            <a href="../../maschinelles_lernen/clustering/index.html">Clustering</a><br>
+            <a href="../../maschinelles_lernen/assoziationsanalyse/index.html">Assoziationsanalyse</a><br>
+
+        </div>
+
+    </div>
+    <!-- menuItem -->
+
+<!-- nav_left -->
+<div id="content">
+    <div>
+        <img src="../../bilder/nummer2.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+        <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+        <img src="../../bilder/nummer6.png" class="pageNr_second" width="25" height="40">
+    </div>
+
+    <a href="index.html"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40"></a>
+    <a href=""><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>
+    
+    <h1>Ähnlichkeit entscheidet</h1> <!--Titel für eine  zusammmenhängende Einheit: hier schon darauf hinweisen, um was in der Einheit geht-->
+    
+    <h2 class="linkText">Öffne die externe Seite zur <a href="https://inf-schule.de/ki/menueansicht/maschinelles_lernen_mit_python/data_science/projekt_empfehlungssysteme/modellentwicklung/knn_erlernen/knn_grundlagen" target="_blank">kNN-Klassifikation</a></h2> <!--verlinkte externe Anwendung/Tool wird in einem neuen Tab geöffent-->
+    
+    <div class="quizContent">
+        <div id="quizNavigation">
+            <a href="seite2-info.html" class="quizNavigationElement ">
+              <img src="../../bilder/infoSeite2.png" width="33" height="33" />
+            </a>
+            <a href="seite2-Q1.html" class="quizNavigationElement active" data-title="Einordnung neuer Verbindungen anhand eines Punktediagramms">
+              <p>Q1</p>
+              <img src="../../bilder/cursor2.png" id="cursor" width="40" height="40">
+            </a>
+            <a href="seite2-Q2.html" class="quizNavigationElement" data-title="Beschreibung des Parameters k">
+              <p>Q2</p>
+            </a>
+            <a href="seite2-Q3.html" class="quizNavigationElement" data-title="Einfluss der Wahl von k-Wert">
+              <p>Q3</p>
+            </a>
+            <a href="seite2-Q4.html" class="quizNavigationElement" data-title="Schritte des k-Nächste-Nachbarn-Algorithmus">
+              <p>Q4</p>
+            </a>
+            <a href="seite2-Q5.html" class="quizNavigationElement" data-title="Klassifikation neuer Daten anhand verschiedener Werte für k">
+              <p>Q5</p>
+            </a>
+            <a href="seite2-Q6.html" class="quizNavigationElement" data-title="Beispiel für Entscheidungsgrenzen bei k=4">
+              <p>Q6</p>
+            </a>
+            <a href="seite2-Q7.html" class="quizNavigationElement" data-title="Beispiel für Entscheidung bei k=3">
+              <p>Q7</p>
+            </a>
+            <a href="seite2-info.html" id="exit_icon">
+              <img src="../../bilder/exit4.png" width="60" height="60" id="exitIcon"/>
+            </a>
+          </div>
+      <div class="quiz" data-correct='{"gap_div1": ["answer1", "answer4"],"gap_div2": ["answer6","answer7"],"gap_div3": ["answer1", "answer4"],"gap_div4": ["answer6", "answer7"],"gap_div5": ["answer3"],"gap_div6": ["answer2", "answer5"]}'>
+        <h4 id="unitQuestion_top">
+            Nutze das dargestellte Punktdiagramm, um die erwartete Pünktlichkeit der drei Verbindungen aus Aufgabe 1 einzuschätzen.<!--konkrete Aufgabenstellung, was Studierende mit der Anwendung machen sollen-->
+            <br><br>
+            Fülle die Lücken mit den passenden Begriffen.<!--Aufforderung für Drag & Drop Frage-->
+        </h4>
+
+        <!-- Lückentext mit Dropzonen-->
+        <div id="drag_gaptext_long">
+            <p>Die Verbindung von <strong>Bonn nach Berlin</strong> liegt in einem Bereich mit überwiegend
+            <span id="gap_div1" class="gap_dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></span><!--1. Dropzone-->
+            <img id="sym_gap_div1"> 
+            Punkten, was auf eine
+            <span id="gap_div2" class="gap_dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></span><!--2. Dropzone-->
+            <img id="sym_gap_div2"> 
+            Ankunft hindeutet. Die Reise von <strong>Kaiserslautern nach Karlsruhe</strong> befindet sich in einer Zone mit mehreren
+            <span id="gap_div3" class="gap_dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></span><!--3. Dropzone-->
+            <img id="sym_gap_div3"> 
+            Punkten, weshalb eine
+            <span id="gap_div4" class="gap_dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></span><!--4. Dropzone-->
+            <img id="sym_gap_div4"> 
+            Ankunft zu erwarten ist. Die Strecke von <strong>Bamberg nach Dresden</strong> liegt in einem Sektor mit größtenteils
+            <span id="gap_div5" class="gap_dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></span><!--5. Dropzone-->
+            <img id="sym_gap_div5"> 
+            Punkten, was auf eine 
+            <span id="gap_div6" class="gap_dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></span><!--6. Dropzone-->
+            <img id="sym_gap_div6">
+            Ankunft schließen lässt.
+            </p>
+        </div>
+
+         <!-- Drag-Elemente -->
+         <div id="drag_gapDraggables_grid_long">
+            <div class="drag_gapSingleDraggable" id="answer1" draggable="true" ondragstart="drag(event)">grünen</div> <!-- 1.Drag-Element, mit left: so positionieren wie es passt-->
+            <div class="drag_gapSingleDraggable" id="answer2" draggable="true" ondragstart="drag(event)">verspätete</div> <!--2. Drag-Element, mit left: so positionieren wie es passt-->
+            <div class="drag_gapSingleDraggable" id="answer3" draggable="true" ondragstart="drag(event)">roten</div> <!--3. Drag-Element, mit left: so positionieren wie es passt-->
+            <div class="drag_gapSingleDraggable" id="answer4" draggable="true" ondragstart="drag(event)">grünen</div> <!--4. Drag-Element, mit left: so positionieren wie es passt-->
+            <div class="drag_gapSingleDraggable" id="answer5" draggable="true" ondragstart="drag(event)">verspätete</div> <!--5. Drag-Element, mit left: so positionieren wie es passt-->
+            <div class="drag_gapSingleDraggable" id="answer6" draggable="true" ondragstart="drag(event)">pünktliche</div> <!--6. Drag-Element, mit left: so positionieren wie es passt-->
+            <div class="drag_gapSingleDraggable" id="answer7" draggable="true" ondragstart="drag(event)">pünktliche</div> <!--7. Drag-Element, mit left: so positionieren wie es passt-->
+        </div>
+  
+
+           <!--Text, der auf das Fragenformat hinweist und sich dynamisch verändert, wenn Studierende das Quiz bearbeiten und überprüfen lassen-->
+        <h5 id="unitDragDropGap_long_msg">Ziehe den richtigen Begriff in die Lücke.</h5> <!--Single Choice, nur eine Antwort ist richtig-->
+
+          <a href="seite2-Q1.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40" style="bottom: 5px; right: 390px;"/></a> <!--Button, dass alle gemachten Eingaben gelöscht werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+          <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50" style="bottom: 5px; right: 330px;"/> <!--Button, dass die gemachten Eingaben überprüft werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+        </div>
+      </div>
+ 
+</div>
+<footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+    </p>
+</footer>
+
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</html>

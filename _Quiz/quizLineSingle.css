@@ -1,0 +1,93 @@
+#unitSingleLine_msg{
+    position: absolute;
+	width: 600px;
+    color: #566a2b;
+    top: 350px;
+    left: 110px;
+}
+
+.unit_matchingBox_Single {
+    color: #333333;
+    font-family: Open Sans;
+    font-size: 14px;
+    text-align: left; 
+    font-weight: normal;  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    max-height: 220px;
+    max-width: 685px;
+    left: 15px;
+}
+
+.unit_listLeft, .unit_listRight  {
+    list-style-type: none;
+    max-width: 300px;
+    padding: 0;
+}
+
+.unit_listLeft li{
+    display: flex;
+    align-items: center;   /* vertikal zentriert */
+    min-height: 40px;
+    justify-content: end;
+}
+
+.unit_listLeft li:last-child {
+    margin-bottom: 0;    /* Kein Abstand beim letzten Element */
+}
+
+.unit_listLeft img{
+    position: absolute;
+    left: 40px;
+}
+
+.unit_listRight li{
+    display: flex;
+    align-items: center;   /* vertikal zentriert */
+    gap: 10px;  /*anpassen je nachdem wieviel Listenelemente vorhanden sind*/
+    min-height: 40px;
+}
+
+.unit_listRight li:last-child {
+    margin-bottom: 0;    /* Kein Abstand beim letzten Element */
+}
+
+.unit_matchingBox_Single .dotLeft, .dotRight  {
+    background-color: #598234;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0 10px;
+}
+
+.svg-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+  }
+
+#svgCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.matching-grid {
+    display: grid;
+    grid-template-columns: 1fr 120px 1fr;
+    align-items: start;
+    width: 100%;
+    max-width: 650px;
+    margin: auto 0;
+    max-height: 350px; /* genug Platz für Linien */
+  }
+  

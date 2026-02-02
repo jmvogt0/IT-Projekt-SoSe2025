@@ -1,0 +1,67 @@
+.errorGroupWrapper {
+  background-color: var(--background);
+  border-radius: var(--border-radius-standard);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+  grid-area: function;
+
+  .errorContainer {
+    display: flex;
+
+    .outputElement {
+      height: 100%;
+      background-color: var(--background);
+      padding-left: 8px;
+      display: flex;
+      align-items: center;
+
+      .outputText {
+        display: flex;
+        width: 60px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .outputGraphic {
+        margin-left: 16px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+
+        .progressElement {
+          width: 10px;
+          height: 100px;
+          background-color: var(--akzent2);
+          border-radius: 5px;
+          overflow: hidden;
+          position: relative;
+
+          .progressBar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            background-color: var(--primary);
+            transition: height 0.3s ease-in-out;
+          }
+        }
+
+        .threshold {
+          width: 20px;
+          height: 3px;
+          background-color: red;
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

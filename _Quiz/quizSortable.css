@@ -1,0 +1,99 @@
+#unitSortable_msg{
+    position: absolute;
+	width: 600px;
+    color: #566a2b;
+    top: 352px;
+    left: 80px;
+}
+
+.sortable-list {
+    list-style-type: none;
+    width: 690px;
+    height: 260px;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 14px;
+    padding: 0;
+    margin: 0 10px;
+}
+.sortable-list img{
+    margin-left: 5px;
+}
+
+.sortable-list li {
+    color: #f1e3d3;
+    background-color: #780c28;
+    border: 1px solid #f1e3d3;
+    border-radius: 5px;
+    cursor: move;
+    transition: transform 0.2s ease, background 0.2s ease;
+    user-select: none;
+    touch-action: manipulation;
+    background-image: url("../KI-learning-TS/bilder/reihenfolgePfeilUnit.png");
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+    background-size: 20px;
+}
+
+.sortable-list li.dragging {
+    transform: scale(1.05);
+    opacity: 0.8;
+    z-index: 1000;
+    background: #950e1d;
+    pointer-events: none;
+}
+
+.sortable-list li.over {
+    border: 3px solid #c94823;
+}
+
+#sortable_msg_standAlone {
+	width: 600px;
+    color: #566a2b;
+    position: absolute;
+    top: 480px;
+    left: 100px;
+}
+
+
+.sortable-list_standAlone {
+    position: relative;
+    list-style-type: none;
+    width: 700px;
+    height: 360px;
+    left:20px;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 14px;
+}
+
+.sortable-list_standAlone li {
+    color: #cae0bc;
+    background-color: #0d4715;
+    border: 1px solid #cae0bc;
+    border-radius: 5px;
+    cursor: move;
+    transition: transform 0.2s ease, background 0.2s ease;
+    user-select: none;
+    touch-action: manipulation;
+    background-image: url("../KI-learning-TS/bilder/reihenfolgePfeil.png");
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+    background-size: 20px;
+}
+
+.sortable-list_standAlone li.dragging {
+    transform: scale(1.05);
+    opacity: 0.8;
+    z-index: 1000;
+    background: #598234;
+    pointer-events: none;
+}
+
+.sortable-list_standAlone li.over {
+    border: 2px dashed #0d4715;
+}
+
+.sortable-list_standAlone img{
+    margin-left: 5px;
+}

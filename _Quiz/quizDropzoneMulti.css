@@ -1,0 +1,155 @@
+.multipleDropzone_unit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* gleichmäßiger Abstand zwischen den Dropzonen */
+    align-items: flex-start;       /* alle oben ausrichten */
+    max-height: 160px;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.unit_multiDropzone h6 {
+    font-family: Open Sans;
+    font-size: 14px;
+    margin-top:0;
+    margin-bottom:8px;
+    text-align: center;
+} 
+
+.unit_multiDropzone {
+    min-height: 140px;            
+    margin: 0 4px;                
+    background-color: rgb(202, 224, 188);
+    border-radius: 8px;           
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #566a2b;
+    box-shadow: 5px 0px 5px 0px rgb(86, 106, 43);
+}
+
+.unit_multiDropzone img{
+    margin-top: 0;
+}
+
+.unit_multiDropzone:hover { /*farbige Hervorhebung der Dropzone*/
+    background-color: #f1f0e9;
+}
+
+#unit_multiDropzone_Draggables{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,160px);
+    gap: 5px;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.unit_multiDropzone_SingleDraggable {
+    border-radius: 5px;
+    font-family: Open Sans;
+    font-size: 13px;
+    text-align: center;
+    background-color: rgb(86, 106, 43);
+    box-shadow: 5px 0px 5px 0px rgb(86, 106, 43);
+    color: #fff;
+    cursor: pointer;
+    align-content: center;
+    transition: transform 0.2s;
+}
+
+.unit_multiDropzone_SingleDraggable:hover {
+    transform: scale(1.1);
+    background-color:  rgb(89, 130, 52);
+}
+
+#unitMultiDrop_msg {
+	position: absolute;
+	width: 500px;
+    color: #566a2b;
+    top: 350px;
+    left: 130px;
+}
+
+.multipleDropzone_container_standAlone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* gleichmäßiger Abstand zwischen den Dropzonen */
+    align-items: flex-start;       /* alle oben ausrichten */
+    max-height: 160px;
+    width: 740px;
+    margin: 20px auto;
+}
+
+.multipleDropzone_standAlone h6 {
+    font-family: Open Sans;
+    font-size: 14px;
+    margin-top:0;
+    margin-bottom:8px;
+    text-align: center;
+} 
+
+.multipleDropzone_standAlone {
+    flex: 1 1 0;
+    min-height: 140px;            
+    margin: 0 4px;                
+    background-color: #cae0bc;
+    border-radius: 8px;           
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0d4715;
+    box-shadow: 5px 0px 10px 0px rgba(13, 71, 21);
+}
+
+.multipleDropzone_standAlone img{
+    margin-top: 0;
+}
+
+#MultiDrop_msg_standAlone {
+    width: 600px;
+    color: #566a2b;
+    position: absolute;
+    top: 480px;
+    left: 100px;
+}
+
+#multiDropzone_Draggables_standAlone {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,160px);
+    gap: 10px;
+    padding: 20px 0;
+    justify-content: center;
+    max-height: 160px;
+    width: 740px;
+    margin: 20px auto;
+  }
+
+  .multiSingleDraggable_standAlone {
+    border-radius: 5px;
+    font-family: Open Sans;
+    font-size: 14px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: rgba(13, 71, 21, 0.8);
+    box-shadow: 5px 0px 10px 0px rgba(157, 156, 133);
+    border: 2px solid #7fa038;
+    color: #f1f0e9;
+    height: 20px;
+    cursor: pointer;
+  }
+
+.multiSingleDraggable_standAlone:hover {
+    transform: scale(1.1);
+    background-color: rgb(13, 71, 21);
+
+}
+
+
+
+

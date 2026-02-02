@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Embeddings Intro</title>
+  <style>
+    body {
+      font-family: Open Sans;
+      overflow: hidden;
+    }
+
+    .animation-area {
+      position: relative;
+      width: 370px;
+      height: 180px;
+      margin: auto;
+      box-shadow: 5px 0px 10px rgb(89,130,52);
+      border-radius: 8px;
+
+    }
+
+    .word {
+      position: absolute;
+      font-size: 14px;
+      border-radius: 8px;
+      color: white;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .arrow {
+      position: absolute;
+      font-size: 12px;
+      color: #1b4d3e;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px);}
+      50% { transform: translateY(-20px);}
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes pulse {
+      0% {  transform: scale(1.4); }
+      50% {  transform: scale(1.8); }
+      100% { transform: scale(1.4); }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="animation-area">
+      <div class="word" style="width:20px; top: 78px; left: 20px; background: #0d4715; padding: 10px 25px 10px 10px;">Mann</div>
+      <div class="arrow" style="top: 75px; left: 90px;">&rarr;</div>
+      <div class="word" style="width:15px; top: 75px; left: 125px; background: #598234; padding: 10px 25px 10px 10px;">Frau</div>
+
+     
+      
+      <div class="word" style="top: 75px; left: 200px; background: #566a2b; padding: 10px 10px 10px 10px;">König</div>
+      <div class="arrow" style="top: 75px; left: 280px;">&rarr;</div>
+      <div class="word" style="top: 75px; left: 310px; background: #7fa038; padding: 10px 10px 10px 10px;">?</div>
+    </div>
+  </div>
+</body>
+</html>

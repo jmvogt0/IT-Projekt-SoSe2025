@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Neuronale Netze</title>
+    <!-- CSS file for framework only. Not for content -->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizTrueFalse.css">
+
+    <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/trueFalse.js"></script>
+    
+</head>
+<body>
+<div id="wapper">
+    <div id="header">
+        <div id="hand">
+            <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+        </div>
+        <!--<h1 id="headline">Artificial Intelligence</h1>-->
+        <!-- horizontal menu -->
+        <nav id="nav_main">
+			<a href="../../maschinelles_lernen/grundlagen/index.html">Maschinelles Lernen</a>
+            <a href="index.html" class="currentPage">Neuronale Netze</a>
+            <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+            <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+            <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+			<a href="../../ethik/index.html">Ethik</a>
+        </nav>
+        <div id="logoHSO">
+            <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                      alt="Hochschule Offenburg"></a>
+        </div>
+    </div>
+
+    <!-- vertical menu -->
+    <div id="nav_left" data-current="Neuronale Netze">
+        <div id="menuItem">
+            <a href="../../neuronale_netze/neuron/index.html">Neuron</a><br>
+            <a href="index.html" class="currentPage">Netze</a><br>
+        </div>
+
+    </div>
+    <!-- menuItem -->
+
+<!-- nav_left -->
+<div id="content">
+
+    <div>
+        <img src="../../bilder/nummer1.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+        <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+        <img src="../../bilder/nummer5.png" class="pageNr_second" width="25" height="40">
+    </div>
+
+    <a href="index.html"><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40" style="left: 120px;top: 25px;"></a>
+    <a href="seite2.html"><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40" style="right: 120px;top: 25px;"></a>
+
+    <h1>Ziffern erkennen mit Neuronalem Netz</h1> <!--Titel für eine  zusammmenhängende Einheit: hier schon darauf hinweisen, um was in der Einheit geht-->
+    
+    <h2 class="linkText">Öffne die <a href="https://www.hartundtrocken.de/my-product/interaktiv-neuronales-netz/" target="_blank">Online-Anwendung zur Pixelziffernerkennung</a></h2> <!--verlinkte externe Anwendung/Tool wird in einem neuen Tab geöffent-->
+    
+    <div class="quizContent">
+        <div id="quizNavigation">
+          <a href="index.html" class="quizNavigationElement">
+            <img src="../../bilder/infoSeite2.png" width="33" height="33" />
+          </a>
+          <a href="seite1-Q1.html" class="quizNavigationElement" data-title="Veränderung des Gesamtfehlers während des Trainings">
+            <p>Q1</p>
+          </a>
+          <a href="seite1-Q2.html" class="quizNavigationElement" data-title="Zweck der Online-Anwendung">
+            <p>Q2</p>
+          </a>
+          <a href="seite1-Q3.html" class="quizNavigationElement active" data-title="Auswirkung des Werts der Lernrate beim Training">
+            <p>Q3</p>
+          </a>
+          <a href="seite1-Q4.html" class="quizNavigationElement">
+            <p>Q4</p>
+          </a>
+          <a href="seite1-Q5.html" class="quizNavigationElement">
+            <p>Q5</p>
+          </a>
+          <a href="index.html" id="exit_icon">
+            <img src="../../bilder/exit4.png" width="60" height="60" />
+          </a>
+        </div>
+  
+        <div class="quiz">
+            <h4 id="unitQuestion_left">
+                Verändere die Learning_Rate in den Einstellungen links. Beobachte, wie sich eine niedrige gegenüber einer hohen Lernrate auf das Training auswirkt, indem du es durch den Button "Restart Learning" neu beginnst. <!--konkrete Aufgabenstellung, was Studierende mit der Anwendung machen sollen-->
+                <br><br>
+                Die Lernrate beim Training eines neuronalen Netzes bestimmt die Schrittweite der Gewichtsaktualisierung.<!--Aussage, die entweder als RICHTIG oder FALSCH eingeordnet werden soll-->
+            </h4>
+      
+            <!--Text, der auf das Fragenformat hinweist und sich dynamisch verändert, wenn Studierende das Quiz bearbeiten und überprüfen lassen-->
+            <h5 id="unitTrueFalse_msg">Beurteile, ob die folgende Aussage richtig oder falsch ist.</h5> <!--Single Choice, nur eine Antwort ist richtig-->
+       
+            <div class="unitBox_right">
+                <div class="true_false_container" data-correct="true">
+                    <div class="true_false">
+                        <!--Input-Element für DAUMEN HOCH, auf das geklickt werden kann als Bild-->
+                        <input id="check_true" type="button" onclick="trueClicked(this);" style="background-image: url(../../bilder/true_enabled4.png);"/>
+                        <img id="sym_true"> <!--Platzhalter für die grünen Haken oder roten Kreuze als Feedback-->
+                    </div>
+                    <div class="true_false">
+                        <!--Input-Element für DAUMEN RUNTER, auf das geklickt werden kann als Bild-->
+                        <input id="check_false" type="button" onclick="falseClicked(this);" style="background-image:url(../../bilder/false_enabled4.png);"/> 
+                        <img id="sym_false"> <!--Platzhalter für die grünen Haken oder roten Kreuze als Feedback-->
+                    </div>
+                </div>
+            
+              <a href="seite1-Q3.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40"/></a> <!--Button, dass alle gemachten Eingaben gelöscht werden-->
+              <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50"/> <!--Button, dass die gemachten Eingaben überprüft werden-->
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+        </p>
+</footer>
+</div>
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Artficial Intelligence • Maschinelles Lernen</title>
+    <!--CSS files-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../browser.css">
+    <link rel="stylesheet" type="text/css" href="../../quizNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../../quizDropzoneMulti.css">
+
+
+    <!--JS files-->
+    <script type="text/javascript" src="../../js/cookies.js"></script>
+    <script type="text/javascript" src="../../js/unitNavigation.js"></script>
+    <script type="text/javascript" src="../../js/multiDragDrop.js"></script>
+
+</head>
+<body>
+<div id="wapper">
+    <div id="header">
+        <div id="hand">
+            <img id="hand_img" src="../../bilder/AI-Learning_Logo.svg" width="140px">
+        </div>
+        <!-- horizontal menu -->
+        <nav id="nav_main">
+			<a href="index.html" class="currentPage">Maschinelles Lernen</a>
+            <a href="../../neuronale_netze/neuron/index.html">Neuronale Netze</a>
+            <a href="../../deep_learning/prinzipien/index.html">Deep Learning</a>
+            <a href="../../nlp_llm/grundlegende_techniken/index.html">NLP & LLM</a>
+            <a href="../../ki_anwendungen/spracherkennung/index.html">KI-Anwendungen</a>
+			<a href="../../ethik/index.html">Ethik</a>
+        </nav>
+        <div id="logoHSO">
+            <a href="http://www.hs-offenburg.de" target="_blank"><img src="../../bilder/HO_Logo_Quer_RGB_weiss.png"
+                                                                      alt="Hochschule Offenburg"></a>
+        </div>
+    </div>
+
+    <!-- vertical menu -->
+    <div id="nav_left" data-current="Maschinelles Lernen">
+        <div id="menuItem">
+			<a href="../../maschinelles_lernen/grundlagen/index.html">Grundlagen</a><br>
+            <a href="index.html" class="currentPage">Klassifikation</a><br> <!--Klassifikationsabschnitt-->
+            <a href="../../maschinelles_lernen/clustering/index.html">Clustering</a><br>
+            <a href="../../maschinelles_lernen/assoziationsanalyse/index.html">Assoziationsanalyse</a><br>
+
+        </div>
+
+    </div>
+    <!-- menuItem -->
+
+<!-- nav_left -->
+<div id="content">
+    <div>
+        <img src="../../bilder/nummer1.png" id="pageIndicator" class="pageNr_first" width="25" height="40"> 
+        <img src="../../bilder/slash.png" class="pageDiv" width="50" height="50">
+        <img src="../../bilder/nummer6.png" class="pageNr_second" width="25" height="40">
+    </div>
+    
+    <!--<a href=""><img src="../../bilder/topBack.png" id="Icon_topBack" width="40" height="40"></a>-->
+    <a href="seite2-info.html"><img src="../../bilder/topNext.png" id="Icon_topNext" width="40" height="40"></a>
+    
+    <h1>Grundlagen zur Klassifikation</h1> <!--Fragentitel-->
+
+    <h2 id="question_standAlone">Ordne die Praxis-Beipiele der passenden Klassifikationart zu!</h2> <!--Aufforderung für Zuordnung-->
+    <div class="multiMatching" data-mappings='{
+        "binaereKlassifikation": [
+        "Kreditwürdigigkeit",
+        "Spam-Erkennung",
+        "Tumorerkennung"
+    ],
+    "multiklassenKlassifikation": [
+        "Handschriftenerkennung",
+        "Iris-Blütenklassifikation",
+        "Objekterkennung"
+    ]}'>
+        <div class="multipleDropzone_container_standAlone">
+            <div class="multipleDropzone_standAlone" ondrop="drop(event)" ondragover="allowDrop(event)" data-category="binaereKlassifikation">
+            <h6>binäre Klassifikation</h6>
+            <img id="sym_binaereKlassifikation">
+            </div>
+
+            <div class="multipleDropzone_standAlone" ondrop="drop(event)" ondragover="allowDrop(event)" data-category="multiklassenKlassifikation">
+            <h6>Multiklassen-Klassifikation</h6>
+            <img id="sym_multiklassenKlassifikation">
+            </div>
+        </div>
+
+        <div id="multiDropzone_Draggables_standAlone">
+            <div class="multiSingleDraggable_standAlone" draggable="true" ondragstart="drag(event)" id="Kreditwürdigigkeit">Kreditwürdigigkeit</div>
+            <div class="multiSingleDraggable_standAlone" draggable="true" ondragstart="drag(event)" id="Handschriftenerkennung">Handschriftenerkennung</div>
+            <div class="multiSingleDraggable_standAlone" draggable="true" ondragstart="drag(event)" id="Spam-Erkennung">Spam-Erkennung</div>
+            <div class="multiSingleDraggable_standAlone" draggable="true" ondragstart="drag(event)" id="Iris-Blütenklassifikation">Iris-Blütenklassifikation</div>
+            <div class="multiSingleDraggable_standAlone" draggable="true" ondragstart="drag(event)" id="Objekterkennung">Objekterkennung</div>
+            <div class="multiSingleDraggable_standAlone" draggable="true" ondragstart="drag(event)" id="Tumorerkennung">Tumorerkennung</div>
+        </div>
+    </div>
+    <!-- Feedback-Text (wird per JS geändert) -->
+        <h5 id="MultiDrop_msg_standAlone">Ziehe die Beispiele zu der jeweiligen Klassifikationsart!</h5>
+
+
+    <!--Button, dass alle gemachten Eingaben gelöscht werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+    <a href="index.html"><img id="undo_button" src="../../bilder/undo_enabled3.png" width="40" height="40" style="right:410px; bottom:20px;"/></a> 
+
+    <!--Button, dass die gemachten Eingaben überprüft werden - mit den Werten bei right: und bottom: passend positionieren, wenn es nicht passt-->
+    <img id="check_button" src="../../bilder/check_disable.png" width="40" height="50" style="right:350px; bottom:20px;"/>
+
+      
+</div>
+<footer>
+    <img src="../../bilder/license.png" id="license">
+
+    <p id="nameProf">Prof. Dr. Claudia Schmidt, <a id="mail" href="mailto:c.schmidt@hs-offenburg.de">c.schmidt@hs-offenburg.de</a>
+		&nbsp &nbsp Prof. Dr. Volker Sänger, <a id="mail" href="mailto:volker.saenger@hs-offenburg.de">volker.saenger@hs-offenburg.de</a>
+    </p>
+</footer>
+</div>
+</body>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDomains", ["*.mi-learning.hs-offenburg.de","*.mi-learning.hs-offenburg.de","*.mi-learning.mi.hs-offenburg.de/CNet","*.mi-learning.mi.hs-offenburg.de/SWE"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webanalyse.hs-offenburg.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '10']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</html>
